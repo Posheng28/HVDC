@@ -693,11 +693,11 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
     </div>
 
     <div class="kpiband rv">
-      <div class="kp"><div class="num">120<small>kW</small> → 1<small>MW+</small></div><div class="lbl"><span class="lk2">單櫃功率</span>GB200 → Kyber／Feynman；54V 在約 200～250kW 就撞牆</div></div>
-      <div class="kp"><div class="num tight">電流 ÷15<span class="sep">·</span>熱損 ÷219</div><div class="lbl"><span class="lk2">54V→800V</span>電流降 15 倍、導體熱損降 219 倍；省銅 45%、效率最多 +5 個百分點</div></div>
+      <div class="kp"><div class="num">120<small>kW</small> → 1<small>MW+</small></div><div class="lbl"><span class="lk2">單櫃功率</span>GB200 → Kyber／Feynman；<br>54V 在約 200～250kW 就撞牆</div></div>
+      <div class="kp"><div class="num tight">電流 ÷15<span class="sep">·</span>熱損 ÷219</div><div class="lbl"><span class="lk2">54V→800V</span>電流降 15 倍、導體熱損降 219 倍；<br>省銅 45%、效率最多 +5 個百分點</div></div>
       <div class="kp"><div class="num">3.6 → 40<small>萬美元</small></div><div class="lbl"><span class="lk2">單櫃電源價值</span>GB200 → Rubin Ultra 800V 電源櫃（&gt;10 倍）</div></div>
-      <div class="kp"><div class="num">31 → 78<small>億美元</small></div><div class="lbl">AI 伺服器電源 TAM 2025→2026（+153%）；台達市占 60～70%、光寶 15～20%</div></div>
-      <div class="kp"><div class="num tiny"><span class="nw">2026 第三季</span><span class="sep">/</span>2027<span class="sep">/</span><span class="nw">2027 下半年</span></div><div class="lbl">±400V 量產 / 800V 放量 / Kyber；台達 HVDC 占 FY26 營收 &lt;1%、FY27 5～10%</div></div>
+      <div class="kp"><div class="num">31 → 78<small>億美元</small></div><div class="lbl">AI 伺服器電源 TAM 2025→2026（+153%）；<br>台達市占 60～70%、光寶 15～20%</div></div>
+      <div class="kp"><div class="num tiny"><span class="nw">2026 第三季</span><span class="sep">/</span>2027<span class="sep">/</span><span class="nw">2027 下半年</span></div><div class="lbl">±400V 量產 / 800V 放量 / Kyber；<br>台達 HVDC 占 FY26 營收 &lt;1%、FY27 5～10%</div></div>
       <div class="kp"><div class="num">&gt;85<small>%</small></div><div class="lbl">BBU 在 AI 機櫃的滲透率（2027，HVDC 必備件）</div></div>
     </div>
 
@@ -828,8 +828,8 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
   <div class="kpiband rv" style="margin:18px 0 6px">
     <div class="kp"><div class="num">12,500<small>A</small> → 750<small>A</small></div><div class="lbl">600kW 機櫃在 54V vs 800V 的電流（NVIDIA／SemiAnalysis 口徑）</div></div>
     <div class="kp"><div class="num">÷219</div><div class="lbl">導體 I²R 熱損耗的降幅（電流降 15 倍的平方）</div></div>
-    <div class="kp"><div class="num">+157<small>%</small></div><div class="lbl">同樣粗的線，800V 直流比 415V 交流多送的功率（北美 480V、歐亞 415V，同一層）；省銅約 45%</div></div>
-    <div class="kp"><div class="num">82<small>%</small> → 87.4<small>%</small></div><div class="lbl">電網到晶片的端到端效率（SemiAnalysis 四階段）；1GW 園區可省約 69MW 持續用電</div></div>
+    <div class="kp"><div class="num">+157<small>%</small></div><div class="lbl">同樣粗的線，800V 直流比 415V 交流多送的功率（北美 480V、歐亞 415V，同一層）；<br>省銅約 45%</div></div>
+    <div class="kp"><div class="num">82<small>%</small> → 87.4<small>%</small></div><div class="lbl">電網到晶片的端到端效率（SemiAnalysis 四階段）；<br>1GW 園區可省約 69MW 持續用電</div></div>
     <div class="kp"><div class="num">64<small>U</small></div><div class="lbl">若 MW 級機櫃沿用 54V，電源擱架會吃掉的機櫃空間</div></div>
   </div>
 
@@ -2629,7 +2629,9 @@ const RX=new RegExp(keys.map(k=>isLat(k)?'(?<![A-Za-z0-9])'+esc(k)+'(?![A-Za-z0-
 const SKIP='a,button,h1,h2,h3,th,svg,code,.tk,.term,.rail,summary,.byline,.kick,.ln,.lk,.volt,.tag-en,.src,.ch-head,.sk,.chips,.twc,.num,.plain';
 const HOSTSEL='.mast .standfirst,.mast .kp .lbl,.stage .s3>div,main .lbox,main .s-ds,main .painbar .pt,main .lede,main .callout,main p,main table:not(.suptbl) td,main li,main .kp .lbl,main .sx3>div,main .cx-list li,main .kpis3 .lbl';
 let wrapped=0;
-const annotate=root=>{root.querySelectorAll(HOSTSEL).forEach(h=>{
+/* 卡片內遇「；」換行（卷首 8 站卡、各站「做什麼／改了什麼」卡） */
+const breakSemi=root=>root.querySelectorAll('.stage .s3>div,.lbox.what,.lbox.change').forEach(h=>{const w=document.createTreeWalker(h,NodeFilter.SHOW_TEXT);const nodes=[];while(w.nextNode())nodes.push(w.currentNode);nodes.forEach(n=>{const t=n.nodeValue;if(!t.includes('；')||n.parentElement.closest('.chips,i'))return;const parts=t.split('；');const frag=document.createDocumentFragment();parts.forEach((x,i)=>{frag.appendChild(document.createTextNode(i<parts.length-1?x+'；':x));if(i<parts.length-1)frag.appendChild(document.createElement('br'))});n.parentNode.replaceChild(frag,n)})});
+const annotate=root=>{breakSemi(root);root.querySelectorAll(HOSTSEL).forEach(h=>{
   if(h.closest('.term'))return;
   const used=new Set(); const nodes=[];
   const w=document.createTreeWalker(h,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest(SKIP)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
