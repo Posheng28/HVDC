@@ -678,6 +678,44 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
 .who .chips span.hasrole{cursor:help;border-bottom:2px dotted var(--copper)}
 .who .chips span.hasrole:hover,.who .chips span.hasrole.on{border-bottom-style:solid}
 .stage .who .chips{margin-top:2px}
+/* 每站的券商資料庫補充 */
+.lnews{background:linear-gradient(180deg,#fbf6ec,#f8f2e6);border:1px solid #e6d5b8;border-left:4px solid var(--copper);border-radius:12px;padding:14px 18px 6px;margin:14px 0 0}
+.lnews .nh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--serif);font-size:16px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.lnews .ntag{font-family:var(--sans);font-size:10px;letter-spacing:.16em;font-weight:800;color:#fff;background:var(--copper-d);border-radius:4px;padding:3px 7px}
+.lnews .ncnt{font-family:var(--sans);font-size:11px;font-weight:700;color:var(--faint);margin-left:auto}
+.lnews .nlist{list-style:none;margin:0;padding:0}
+.lnews .nlist li{border-top:1px dotted #e0cfae;padding:9px 0;font-size:13.5px;line-height:1.8;color:var(--body)}
+.lnews .nlist li>b:first-child{display:block;font-size:14px;color:var(--ink);margin-bottom:2px;font-family:var(--serif)}
+.lnews .nlist li b{color:var(--ink)}
+.lnews .nlist li .nsrc{display:inline-block;font-size:11px;color:var(--faint);background:#fff;border:1px solid var(--rule2);border-radius:999px;padding:1px 9px;margin-left:6px;white-space:nowrap}
+@media(max-width:1000px){.lnews{padding:12px 14px 4px}}
+/* 券商看法總表 */
+.brk td{font-size:13px;line-height:1.7;vertical-align:top}
+.brk td.c{white-space:nowrap}
+.brk td i{font-style:normal;font-size:11.5px;color:var(--faint);display:block}
+.brk td i.sm{display:block}
+.brk tr.lead{background:#fbf6ec}
+.brk .star{color:var(--rust);margin-right:3px}
+i.up,td.up{color:#2f7a5a;font-weight:700}
+i.dn,td.dn{color:#c2683f;font-weight:700}
+.segbar .hint{font-size:12px;color:var(--mut)}
+details.more-brk{margin:14px 0}
+details.more-brk summary .s-no{font-family:var(--serif);font-size:20px;color:var(--copper)}
+details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.14em;color:var(--faint);font-weight:800}
+.tk.us{background:#eef1f8;border-color:#c3cbe4;color:#4a5680}
+/* 電流才是瓶頸 */
+.ampgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.ampbox{background:var(--panel);border:1px solid var(--rule2);border-top:3px solid var(--rust);border-radius:12px;padding:15px 18px}
+.ampbox .an{font-family:var(--serif);font-size:26px;font-weight:800;color:var(--copper);line-height:1}
+.ampbox .at{font-family:var(--serif);font-size:16px;font-weight:800;color:var(--ink);margin:4px 0 6px}
+.ampbox p{font-size:13.5px;line-height:1.85;color:var(--body);margin:0}
+.evt .e.alert{background:#fbf1ea;border-radius:8px;padding:10px 12px;margin-left:-12px}
+.evt .e.alert .t{color:var(--red)}
+@media(max-width:1000px){.ampgrid{grid-template-columns:1fr}}
+.verline{display:flex;gap:12px;align-items:flex-start;background:#1d1814;color:#e8ddc9;border-radius:12px;padding:14px 18px;margin:22px 0 0;font-size:13.5px;line-height:1.8}
+.verline .vtag{flex-shrink:0;font-size:10.5px;letter-spacing:.14em;font-weight:800;color:#1d1814;background:#f0b23c;border-radius:4px;padding:4px 8px;margin-top:2px}
+.verline .vtxt b{color:#f0b23c}
+@media(max-width:1000px){.verline{flex-direction:column;gap:8px}}
 </style>
 
 <header class="mast">
@@ -699,6 +737,11 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
       <div class="kp"><div class="num">31 → 78<small>億美元</small></div><div class="lbl">AI 伺服器電源 TAM 2025→2026（+153%）；<br>台達市占 60～70%、光寶 15～20%</div></div>
       <div class="kp"><div class="num tiny"><span class="nw">2026 第三季</span><span class="sep">/</span>2027<span class="sep">/</span><span class="nw">2027 下半年</span></div><div class="lbl">±400V 量產 / 800V 放量 / Kyber；<br>台達 HVDC 占 FY26 營收 &lt;1%、FY27 5～10%</div></div>
       <div class="kp"><div class="num">&gt;85<small>%</small></div><div class="lbl">BBU 在 AI 機櫃的滲透率（2027，HVDC 必備件）</div></div>
+    </div>
+
+    <div class="verline rv">
+      <span class="vtag">2026/9/18 更新</span>
+      <span class="vtxt">本版接上使用者自建的<b>券商報告庫</b>（315 份報告、3,410 頁，另含 1,327 筆券商個股紀錄），新增：<b>8 站各一條券商資料庫補充</b>、<b>29 檔標的的券商看法總表</b>、<b>13 家新公司</b>（供應鏈共 169 家、台股 85 家）、<b>「電流才是瓶頸」</b>框架、<b>第三條路線 AMD Helios 50V</b>，以及 9 月的時程爭議（Kyber 與 Rubin Ultra 可能脫鉤、Vertiv 自述 2028 年量產）。</span>
     </div>
 
       <div class="lab rv" id="plab" style="border-top-color:var(--amber)">
@@ -797,11 +840,13 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
   <a href="#L7" class="rl"><em>→0.8V</em>板上電源</a>
   <a href="#L8" class="rl"><em>GPU</em>晶片・整機・測試</a>
   <div class="rail-h">橫切主題</div>
+  <a href="#amp" class="rx"><i>※</i>電流才是瓶頸</a>
   <a href="#routes" class="rx"><i>A</i>路線之爭</a>
   <a href="#road" class="rx"><i>B</i>時程與延後</a>
   <a href="#value" class="rx"><i>C</i>價值量</a>
   <a href="#stocks" class="rx"><i>D</i>台股總覽</a>
-  <a href="#risk" class="rx"><i>E</i>風險・來源</a>
+  <a href="#brokers" class="rx"><i>E</i>券商看法</a>
+  <a href="#risk" class="rx"><i>F</i>風險・來源</a>
   <a href="#" class="rx gl" data-open-gloss><i>📖</i>名詞速查</a>
   <div class="rail-h">公司篩選</div>
   <div class="filters" id="chainFilters">
@@ -1040,6 +1085,7 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
     <div class="lbox nums"><i>關鍵數字</i><div class="chips"><span class="num">300MW+ 園區接電 3～7 年</span><span class="num">變壓器／GIS 交期 24～48 個月</span><span class="num">Bloom 90 天供電 vs 電網 2～5 年</span><span class="num">Oracle×Bloom 最高 2.8GW</span><span class="num">美國積壓 307GW＝15 年</span><span class="num">台電暫緩桃園以北 5MW+ 申請</span></div></div>
     <div class="lbox who"><i>誰在做</i><div class="chips"><b>台廠</b><span class="twc">高力 8996</span><span class="twc">康舒 6282</span><span class="twc">安葆 7792</span><span class="twc">台達 SOFC</span></div><div class="chips"><b>國際</b><span class="">Bloom Energy</span><span class="">FuelCell Energy</span><span class="">Doosan</span><span class="">GE Vernova</span><span class="">Caterpillar</span><span class="">Brookfield</span></div></div>
   </div>
+  <div class="lnews rv"><div class="nh"><span class="ntag">券商資料庫補充</span>接電有多難，2026 年 9 月的數字<span class="ncnt">6 則</span></div><ul class="nlist"><li><b>變壓器交期還在惡化</b>發電機升壓變壓器交期從 2024 年平均 <b>143 週</b> 拉長到 2026 Q1 的 <b>逾 160 週</b>；高壓斷路器從 2023 年 77 週增到 2025 下半年 <b>125 週</b>。<span class="nsrc">富邦 2026/9/10</span></li><li><b>排隊的不只是變壓器</b>截至 2025 年底全美仍有 <b>2,061GW</b> 發電與儲能等待併網、中位商轉時間超過 5 年；ERCOT 到 2026 年 6 月追蹤的大型負載申請逾 <b>438GW</b>，其中近 <b>89% 是資料中心</b>。<span class="nsrc">富邦 2026/9/10</span></li><li><b>燃氣渦輪也塞住了</b>2025 年底全球燃氣渦輪訂單 <b>110GW</b>，但製造產能只有 60～70GW。GE Vernova 在手加保留 <b>116GW</b>、三菱重工已簽到 <b>2031～2034 年</b>交機。這才是燃料電池能賣溢價的原因。<span class="nsrc">富邦 2026/9/10（Wood Mackenzie）</span></li><li><b>Bloom 的貨怎麼疊上去</b>65kW 電力模組 → 5 個成 <b>325kW Energy Server</b> → 10 台成 <b>3.25MW Power Stamp</b> → 8 個成 <b>26MW Power Block</b>；場地就緒後每組 Power Stamp 約 <b>1～2 天</b>裝好試車。Oracle 首批設備 <b>55 天</b>交付（原定 90 天）。<span class="nsrc">富邦 2026/9/10</span></li><li><b>SOFC 的物理與風險</b>運轉溫度 <b>600～1,000°C</b>、發電效率約 60%、配汽電共生總效率最高約 <b>90%</b>；高溫加快材料劣化、限制冷啟動，<b>scandium 等特種陶瓷材料</b>的供應與價格是要盯的風險。<span class="nsrc">富邦 2026/9/10</span></li><li><b>需求端的分母</b>美國資料中心用電 2024 年 192TWh → 2030 年基準情境 <b>649TWh</b>，占全美用電 4.7% → <b>11.8%</b>，AI 伺服器約占 2030 年資料中心用電的 55%。2026～2032 年表後新增裝機約 115GW，其中燃料電池 15GW、對應收入池約 <b>600 億美元</b>。<span class="nsrc">富邦 2026/9/10（LBNL／EIA）</span></li></ul></div>
   
   <div class="chainseg" data-seg="10"></div>
 </section>
@@ -1056,6 +1102,7 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
     <div class="lbox nums"><i>關鍵數字</i><div class="chips"><span class="num">大型變壓器交期約 2.5 年、345～765kV 4～5 年</span><span class="num">全球變壓器缺口約 30%</span><span class="num">Eaton 每 MW 內容價值 2.0 → 2.9 → 3.4～3.5 百萬美元</span><span class="num">華城 AIDC 在手 >150 億、Stargate 一期</span><span class="num">中興電 GIS 市占約 8 成</span></div></div>
     <div class="lbox who"><i>誰在做</i><div class="chips"><b>台廠</b><span class="twc">華城 1519</span><span class="twc">中興電 1513</span><span class="twc">士電 1503</span><span class="twc">亞力 1514</span></div><div class="chips"><b>國際</b><span class="">Eaton</span><span class="">Siemens Energy</span><span class="">GE Vernova</span><span class="">Hitachi Energy</span><span class="">Hammond</span></div></div>
   </div>
+  <div class="lnews rv"><div class="nh"><span class="ntag">券商資料庫補充</span>台廠重電的實數（頁面原本只有名字）<span class="ncnt">4 則</span></div><ul class="nlist"><li><b>士電 1503 補完</b>在手訂單<b>逾 600 億元</b>、電力級變壓器交期 2～3 年；T3 投產後產能 10 → <b>15GVA</b>（稼動率約 90%），T4 再加 5GVA 到 <b>20GVA</b> 並升規到 <b>345kV／200MVA</b>，2028 下半年開始貢獻。重電占營收比重從 2021 年 56% 升到 <b>72%</b>。中信買進、目標價 330 元，2026／2027 年 EPS 估 9.01／11.00 元。<span class="nsrc">中信 2026/9/11</span></li><li><b>中興電 1513</b>在手訂單 <b>431 億元</b>、2026 年新接單目標 260 億元（約 65% 來自台電）；<b>已取得台積電設備認證、預計 2027 年開始出貨</b>。<span class="nsrc">中信 2026/7/14</span></li><li><b>華城 1519 的實體瓶頸</b>在手逾 200 億元、交期 2.5～3 年，已開始接 <b>2029～2030 年</b>的 AI 資料中心訂單；2026 Q2 營收低於預期，主因部分外銷大型變壓器受<b>美國鐵路板車調度不足</b>影響出貨遞延。<span class="nsrc">中信 2026/7/14</span></li><li><b>亞力 1514／東元 1504</b>亞力在手訂單 <b>120 億元</b>、產能滿載、訂單能見度延伸到 <b>2029 年</b>，半導體相關訂單今年估成長約 30%；東元 2026 年馬來西亞與泰國 AI 資料中心接單目標 <b>25 億元</b>、2027 年迎認列高峰。<span class="nsrc">中信 2026/7/14</span></li></ul></div>
   
   <div class="chainseg" data-seg="9"></div>
 </section>
@@ -1072,6 +1119,7 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
     <div class="lbox nums"><i>關鍵數字</i><div class="chips"><span class="num">SST 佔地面積 −63%、方案成本 −46%</span><span class="num">效率 97.5～98.5%（ETH 樣機 98%@400kW）</span><span class="num">SST 市場 2030 約 130 億美元</span><span class="num">SST 消耗的 SiC 是 Sidecar 的 7～10 倍</span><span class="num">台達 SST 送樣四大 CSP、FY27 少量</span><span class="num">新創 12 個月融資 >3.2 億美元</span></div></div>
     <div class="lbox who"><i>誰在做</i><div class="chips"><b>台廠</b><span class="twc">台達電 2308</span></div><div class="chips"><b>國際</b><span class="">Eaton（Resilient Power）</span><span class="">DG Matrix（MGX 唯一 SST）</span><span class="">Amperesand</span><span class="">Heron Power</span><span class="">Vertiv</span><span class="">Schneider</span><span class="">ABB</span></div></div>
   </div>
+  <div class="lnews rv"><div class="nh"><span class="ntag">券商資料庫補充</span>整流與 SST 的最新座標<span class="ncnt">4 則</span></div><ul class="nlist"><li><b>原廠圖把分水嶺畫出來了</b>Infineon 三階段圖：單櫃 ≤200kW 走傳統櫃內交流轉 48V；<b>突破 200kW</b> 進入第二階段（三相 PSU 與 BBU 移到邊櫃、±400V／800V 匯流排）；<b>超過 MW 級</b>才進 SST 直流微電網。圖上直流插座標的是 <b>800V～1,500V、趨勢 2,000V</b>——800V 不是終點。<span class="nsrc">福邦 2026/7/12（Infineon 原廠圖）</span></li><li><b>NVIDIA 參考設計的規格</b>白皮書 17.5MW 參考設計採 <b>5-to-make-4</b> 冗餘：<b>3.5MW 中壓整流器 ×5</b>、1500A 固態斷路器、<b>5000A 直流配電盤</b>；SST 單台轉換容量達 <b>7.5MVA</b>、Grid-to-Chip 效率 98.5%。<span class="nsrc">NVIDIA 800 VDC 白皮書</span></li><li><b>台廠第一次出現在 SST 驗證平台</b><b>仁寶 2324</b> 2026/9/14 與 Exascale Labs 簽合作意向書，在美國打造新一代 GPU 系統驗證平台，<b>導入 SST 建構原生 800V 直流架構</b>，整合 GPU 伺服器與液冷。<span class="nsrc">國票 2026/9/15</span></li><li><b>IDM 的 800V 佈局</b>意法半導體提供 <b>20kV 降到 0.8V</b> 的完整 800V 高壓直流產品組合，2027 年資料中心營收估翻倍；瑞薩把資本支出的 <b>8 成</b>用於擴 Digital Power 產能，產品線從 GPU 核心供電擴到電網端。<span class="nsrc">福邦 2026/7/12</span></li></ul></div>
   <div class="phz rv">
   <h3 class="sub">800V 分四個階段推，每一站什麼時候輪到？<span class="tag-en">SEMIANALYSIS · 4 PHASES</span></h3>
   <p class="lede" style="margin-top:2px">各站常提到「第一階段」「第四階段」，指的就是這張表。重點：<b>前三階段傳統變壓器都還在，第四階段才被 SST 取代</b>；電源櫃在第三階段會從「整流＋電池」縮成「電池櫃」。</p>
@@ -1100,6 +1148,7 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
     <div class="lbox nums"><i>關鍵數字</i><div class="chips"><span class="num">同線徑 HVDC 多帶 150% 功率、省銅 45%</span><span class="num">ORv3 液冷 busbar 15,625A／750kW</span><span class="num">Power Whip 60A → 100A、8 → 32 條</span><span class="num">ABB SACE Infinitus＝首款 IEC 60947-2 SSCB</span><span class="num">5,000A 液冷 busbar 供應商 ≥8 家</span><span class="num">板端浮地安規 → 熔斷器用量翻倍</span></div></div>
     <div class="lbox who"><i>誰在做</i><div class="chips"><b>台廠</b><span class="twc">貿聯 3665</span><span class="twc">良維 6290</span><span class="twc">松川 7788</span><span class="twc">德微 3675</span><span class="twc">嘉澤 3533</span><span class="twc">鴻海／鴻騰</span><span class="twc">宏致 3605</span><span class="twc">瀚荃 8103</span></div><div class="chips"><b>國際</b><span class="">ABB</span><span class="">Eaton</span><span class="">Littelfuse</span><span class="">Mersen</span><span class="">TE</span><span class="">Amphenol</span><span class="">Molex</span><span class="">Starline／E&I（Vertiv）</span></div></div>
   </div>
+  <div class="lnews rv"><div class="nh"><span class="ntag">券商資料庫補充</span>保護元件的價值量，終於有數字了<span class="ncnt">4 則</span></div><ul class="nlist"><li><b>第一個落地的是斷路器</b><b>2026/9/9 Infineon 與 SolarEdge 擴大合作</b>，共同開發 800V 直流資料中心用<b>固態斷路器</b>。這是整條「保護元件半導體化」論述目前最具體的一步。<span class="nsrc">SemiVision 2026/9/14</span></li><li><b>松川 7788 的單櫃拆解</b>800V 之後單櫃繼電器用量從傳統降到 <b>12～36 顆</b>，但<b>單顆 ASP 跳到 20～30 美元、約傳統產品的 20 倍</b>；以 Vera Rubin NVL72 單櫃 220～230kW 計，配電與電源端高壓繼電器每櫃 TAM 約 <b>2～3 萬元</b>，是 GB300 的 2～3 倍。統一目標價 405 元（前次 215）。<span class="nsrc">統一／國票 2026/8/13</span></li><li><b>凡甲 3526：連接器的規格躍升</b>單一接點電流容量從 <b>30A 提升到 140A</b>、連接器承載能力 1,200W → <b>4,200W</b>；BLADE Type 的 125～140A 產品已是<b>台達、光寶、AES-KY、順達的 BBU 關鍵供應商</b>，已切入 400V 高壓直流與 GB 系列，正在爭取 800V 認證。<span class="nsrc">國票 2026/7/6</span></li><li><b>用量倍數</b>800V 升級帶動 <b>Power MOSFET、整流二極體、熱插拔元件與 BBU 相關元件用量呈 2～3 倍成長</b>。<span class="nsrc">台新 2026/9/15</span></li></ul></div>
   
   <div class="chainseg" data-seg="4"></div><div class="chainseg" data-seg="6"></div>
 </section>
@@ -1116,6 +1165,7 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
     <div class="lbox nums"><i>關鍵數字</i><div class="chips"><span class="num">單櫃電源價值 3.6 萬 → 40 萬美元（>10×）</span><span class="num">GS 拆 880kW 櫃 BOM 34.4 萬：Shelf 57%／BBU 19%／超級電容 15%</span><span class="num">BBU 滲透率 2027 >85%</span><span class="num">BBU 單櫃 GB300 1.5 萬 → Rubin Ultra 3.3 萬美元</span><span class="num">台達 PSU 市占 >50%、光寶約 25%</span><span class="num">HVDC 占台達 FY26 <1%、FY27 5～10%</span><span class="num">光寶 660kW 全液冷 Sidecar 2027 Q1 大量出貨</span></div></div>
     <div class="lbox who"><i>誰在做</i><div class="chips"><b>台廠</b><span class="twc">台達電 2308</span><span class="twc">光寶科 2301</span><span class="twc">康舒 6282</span><span class="twc">旭隼 6409</span><span class="twc">群電 6412</span><span class="twc">順達 3211</span><span class="twc">AES-KY 6781</span><span class="twc">新盛力 4931</span><span class="twc">金山電 8042</span><span class="twc">奇鋐 3017</span><span class="twc">雙鴻 3324</span></div><div class="chips"><b>國際</b><span class="">Vertiv（PowerDirect 5000）</span><span class="">Flex</span><span class="">Schneider</span><span class="">Eaton</span><span class="">Megmeet</span><span class="">Lead Wealth</span><span class="">Panasonic（BBU 80%）</span><span class="">Samsung SDI</span></div></div>
   </div>
+  <div class="lnews rv"><div class="nh"><span class="ntag">券商資料庫補充</span>電源櫃與 BBU：算式、客戶、最新排序<span class="ncnt">6 則</span></div><ul class="nlist"><li><b>BBU 每櫃價值是怎麼算出來的</b>花旗用「機櫃功率 ÷ 模組功率 × <b>5+1 冗餘</b>」推估：120kW 機櫃配 3kW 模組＝理論 40 顆、含冗餘 <b>48 顆</b>，3kW 模組 ASP 約 270 美元 → 單櫃約 <b>1.3 萬美元</b>。模組 ASP 假設：3kW 約 270、5kW 約 400、25kW 約 <b>1,200 美元</b>。<span class="nsrc">花旗 2026/7/7</span></li><li><b>誰供誰：BBU 三層拓樸</b>電芯（Panasonic／Murata／Samsung SDI／LG）→ 模組（Panasonic 直供四大雲端、<b>AES-KY 對 AWS</b>、<b>順達對 AWS 與 Meta</b>、<b>新盛力與系統電 5309 對 Google</b>）→ 電源系統整合（台達、光寶、Vertiv）。2026 年 BBU 營收：Panasonic 約 <b>30 億美元</b>、AES 約 4 億、順達約 3 億，台廠市占各不到 10%。<span class="nsrc">花旗 2026/7/7、2026/7/12</span></li><li><b>順達 3211 的轉單事件</b>某雲端客戶因<b>日系電池大廠的 8kW BBU 未通過測試認證</b>，把訂單轉給台灣電源大廠，與該電源廠合作的順達直接受惠，<b>估可拿下該客戶 50% 以上份額</b>；在不同電源廠搭配的專案中順達均占 40% 以上。BBU 產能年底翻倍。<span class="nsrc">華南 2026/7/9</span></li><li><b>光寶 800V 電源櫃的報價出現第二個口徑</b>統一稱光寶 800V 高壓直流<b>單價估 20～40 萬美元</b>（元大口徑為 10～20 萬、尚未正式訂價）；美國德州新廠具備<b>逾 10MW 電力容量、可生產系統產品與 BBU</b>。<span class="nsrc">統一 2026/7/14</span></li><li><b>賣方 2026 年 9 月的排序</b>統一把<b>光寶列為電源首選</b>（新增兩家雲端客戶、目標價 310 元）；台達仍是技術領頭羊，但<b>「400V 訂單能見度明確，800V 則需等終端客戶實際拉貨」</b>；旭隼「靜待 2027-2028 年 800V 產品開發」維持中立。台達 8 月營收 645.86 億元、年增 35%，但 <b>7-8 月達成率 63%、低於預期</b>。<span class="nsrc">統一 2026/9/14</span></li><li><b>一手會議筆記的配置算式</b>660kW 電源櫃內配 <b>8 個 Power Shelf</b>；一個 VR200 機櫃 TDP 220kW，所以一座 660kW 電源櫃可供兩櫃，<b>有些雲端客戶會改成 2 座電源櫃配 3 個運算櫃</b>。<b>機櫃達 400kW 以上就必須用高壓直流</b>；2027 年滲透率約 10～20%（樂觀 30%），BBU 約 20～30%。<span class="nsrc">會議筆記 2026/7/11</span></li></ul></div>
   
   <div class="chainseg" data-seg="1"></div><div class="chainseg" data-seg="2"></div><div class="chainseg" data-seg="5"></div><div class="chainseg" data-seg="11"></div>
 </section>
@@ -1132,6 +1182,7 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
     <div class="lbox nums"><i>關鍵數字</i><div class="chips"><span class="num">1MW Sidecar PFC ≈408 顆 1,200V SiC＋204 顆 650V GaN</span><span class="num">IBC 每櫃 2,200 → >30,000 美元（BNP）</span><span class="num">單櫃 Power IC 1.5 萬 → 11.5 萬美元（onsemi）</span><span class="num">800V→12V 模組 2,300～2,600W/in³、效率 98.2%（Infineon）</span><span class="num">SiC＋GaN 滲透率 2026 17% → 2030 >30%</span><span class="num">Infineon AI 電源 7 → 15 → 25 億歐元</span></div></div>
     <div class="lbox who"><i>誰在做</i><div class="chips"><b>台廠</b><span class="twc">強茂 2481</span><span class="twc">德微 3675</span><span class="twc">博盛 7712</span><span class="twc">富鼎 8261</span><span class="twc">台半 5425</span><span class="twc">漢磊 3707</span><span class="twc">嘉晶 3016</span><span class="twc">世界 5347</span><span class="twc">矽力 6415</span><span class="twc">致新 8081</span><span class="twc">立錡</span></div><div class="chips"><b>國際</b><span class="">Infineon</span><span class="">TI</span><span class="">onsemi</span><span class="">STMicro</span><span class="">Navitas</span><span class="">Innoscience</span><span class="">EPC</span><span class="">Wolfspeed</span><span class="">ROHM</span><span class="">MPS</span><span class="">ADI</span><span class="">Renesas</span></div></div>
   </div>
+  <div class="lnews rv"><div class="nh"><span class="ntag">券商資料庫補充</span>電流才是瓶頸，還有 9 月這一輪漲價<span class="ncnt">4 則</span></div><ul class="nlist"><li><b>把電壓拉高，是為了把電流壓下來</b>傳輸同樣 100kW，<b>54V 需要約 1,852A、800V 只要約 125A</b>；而<b>單顆 GPU 的電流需求已突破 1,000A</b>，傳統電路板與基板的供電路徑逼近物理極限。真正的新瓶頸是配電與斷路保護，不是轉換效率。<span class="nsrc">SemiVision 2026/9/14</span></li><li><b>9 月又漲一輪</b><b>瑞薩年內二度調漲、新價 2027 年 1 月生效</b>；Infineon 與陸系士蘭微、揚杰電子跟進全面上調 <b>10～25%</b>，部分高階功率模組與二極體<b>交期延長到 30～52 週</b>。<span class="nsrc">台新 2026/9/15</span></li><li><b>功率元件的錢分在哪</b>到 2032 年 AI 伺服器 MOSFET 產值年複合成長 <b>20～25%</b>（產業平均 8%）。產值分布：<b>主板超過一半</b>（低壓大電流的 DrMOS）、<b>電源櫃約 30～35%</b>（高壓與碳化矽）、周邊 10～15%。台廠機會在<b>電源二次側、保護元件與散熱相關</b>，高壓碳化矽與 DrMOS 仍是歐美大廠主導。<span class="nsrc">國票 2026/9/15</span></li><li><b>去中化是另一條順風</b><b>安世半導體（Nexperia）</b>與<b>揚杰科技</b>接連因歐美出口禁令與制裁外銷受阻，Nexperia 全球市占約 5.2%、產品線與台廠高度重疊；台廠因自有晶圓廠與封測彈性承接轉單，訂單能見度已延伸到 2027 年。<span class="nsrc">福邦 2026/7/12、台新 2026/9/15</span></li></ul></div>
   
   <div class="chainseg" data-seg="3"></div>
 </section>
@@ -1148,6 +1199,7 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
     <div class="lbox nums"><i>關鍵數字</i><div class="chips"><span class="num">DrMOS 每 GPU 20 → 50 顆（ROHM）</span><span class="num">POL 相數 10 → 32、IBC 0.5 → 3kW</span><span class="num">TLVR／耦合電感 ASP +50～200%</span><span class="num">垂直 VR 省 5～15% 系統損耗</span><span class="num">64:1 LLC：效率 +1%、面積 −26%</span><span class="num">電感用量約通用伺服器 5～6 倍</span></div></div>
     <div class="lbox who"><i>誰在做</i><div class="chips"><b>台廠</b><span class="twc">新聿科 7912</span><span class="twc">乾坤</span><span class="twc">臺慶科 3357</span><span class="twc">強茂 2481</span><span class="twc">富鼎 8261</span><span class="twc">矽力 6415</span><span class="twc">國巨 2327</span></div><div class="chips"><b>國際</b><span class="">Vicor</span><span class="">MPS</span><span class="">TI</span><span class="">EPC</span><span class="">Infineon</span><span class="">Empower</span><span class="">PulpoSemi</span></div></div>
   </div>
+  <div class="lnews rv"><div class="nh"><span class="ntag">券商資料庫補充</span>板上電源：第二條解法與被動元件的用量階梯<span class="ncnt">4 則</span></div><ul class="nlist"><li><b>不升壓，也可以縮短路徑</b>MLCC 龍頭村田把電容整合進基板（<b>iPaS</b>）、供電改由<b>晶片正下方垂直進入</b>，<b>2027 年量產</b>。垂直供電（縮短路徑）與提高電壓（降低電流）是<b>兩條可以並行的路線</b>，不是二選一。<span class="nsrc">TechNews 2026/9/14</span></li><li><b>恆勁 6920：把功率元件埋進載板</b>團隊出身 IC 載板，客戶提供晶片、由恆勁<b>埋入載板</b>取代原本的導線架封裝。已發布產品中，一個 <b>DC-DC 體積縮小 80%、功率密度提高 3 倍</b>，另一個體積縮小 60%。<b>NVIDIA 公布的 14 家供應商中，恆勁合作超過 10 家</b>；月營收 1.5 億元 → 2026 年底 3 億 → 2027 Q1 設備到位後 3.5 億。<span class="nsrc">法說會紀要 2026/9/11</span></li><li><b>信昌電 6173：MLCC 顆數階梯</b>高階 NP0 MLCC 單機用量：<b>A100 約 800～1,000 顆 → H100 增至 1,800～2,000 顆 → GB300 進一步到 3,000～5,000 顆</b>；<b>單一機櫃電源與備援系統可維持 3 萬～5 萬顆</b>。AI 電源營收占比 2026 Q1 6.5% → Q2 9.2% → Q3 估 12% → Q4 估 16%；2027 年 800V 架構下規格往更高容量與耐壓升級。<span class="nsrc">國泰證期 2026/9/10</span></li><li><b>同欣電 6271／禾伸堂 3026</b>同欣電<b>切入高壓直流陶瓷基板</b>、開發氮化矽等高導熱材料（線寬可達 20 微米），新一代 AI 基板 2026 下半年量產、<b>月出貨規模已達約 20 萬片</b>；禾伸堂在客製化高階 NP0 MLCC 市占領先，同步切入<b>機櫃 BBU 備援電池模組</b>供應鏈。<span class="nsrc">康和 2026/9/15、投資快訊 2026/9/16</span></li></ul></div>
   
   <div class="chainseg" data-seg="7"></div>
 </section>
@@ -1164,8 +1216,47 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
     <div class="lbox nums"><i>關鍵數字</i><div class="chips"><span class="num">端到端效率 82% → 87.4%（SemiAnalysis）／92%+（中信）</span><span class="num">每 GW 年電費約 13 億美元</span><span class="num">VR NVL72 機櫃 780～909 萬美元</span><span class="num">GB200/300 機櫃 2026 出貨 6～7 萬櫃</span><span class="num">致茂 1.8MW 雙向電源支援 800VDC</span></div></div>
     <div class="lbox who"><i>誰在做</i><div class="chips"><b>台廠</b><span class="twc">鴻海 2317</span><span class="twc">廣達 2382</span><span class="twc">緯創 3231</span><span class="twc">緯穎 6669</span><span class="twc">台積電 2330</span><span class="twc">日月光 3711</span><span class="twc">致茂 2360</span></div><div class="chips"><b>國際</b><span class="">NVIDIA</span><span class="">Celestica</span><span class="">Supermicro</span></div></div>
   </div>
+  <div class="lnews rv"><div class="nh"><span class="ntag">券商資料庫補充</span>Kyber 到底還算不算數？<span class="ncnt">4 則</span></div><ul class="nlist"><li><b>最新一則查核把等式打斷了</b>摩根士丹利 2026/9/14 供應鏈查核稱 <b>Kyber 已延後，且 Rubin Ultra 預期不再使用該架構、焦點回到 Oberon</b>。若成立，本頁「Rubin Ultra ＝ Kyber ＝ 800V 放量」這條三段等式會斷在中間。目前僅單一券商查核，與富邦、國泰的口徑並陳。<span class="nsrc">摩根士丹利 2026/9/14</span></li><li><b>代工廠自己的說法更直白</b>廣達認為 Kyber 會面臨網路、電力與散熱問題，尤其散熱：<b>單顆 Feynman GPU 可能達 6kW</b>，而 NVIDIA 打算在單一機架放 <b>144 或 288 顆 GPU</b>，「除非降低單櫃 GPU 數量，否則我們不會對 Kyber 進一步延遲甚至取消感到意外」。但延遲<b>不影響代工廠</b>——客戶會繼續買 Oberon 機櫃。<span class="nsrc">富邦 2026/7/9</span></li><li><b>材料端的連鎖</b>Vera Rubin 平台導入 <b>44 層</b>電路板中介板，Kyber 架構進一步到 <b>78 層</b>；Kyber 下 M9 材料測試後無法滿足性能，材料提前往 <b>M10</b> 推進。電子布 78 層方案未來升級到 104～112 層、<b>單張價值約 4 萬美元、是普通伺服器背板的 10 倍以上</b>。<span class="nsrc">合庫 2026/7/13、上海證券 2026/9/14</span></li><li><b>當事人自述的時程</b>Vertiv 管理層：<b>800V 直流架構 2027 下半年加速放量、2028 年量產</b>；並收購 UIG 強化電表後端能力、更早介入設計流程，2030 年營益率目標上調到 27% 以上。<span class="nsrc">台新引高盛 2026/9/14</span></li></ul></div>
   
   <div class="chainseg" data-seg="12"></div>
+</section>
+
+<section id="amp" class="xsec">
+  <div class="ch-head rv">
+    <div class="ch-no">※</div>
+    <div class="ch-tt"><div class="en">CURRENT, NOT VOLTAGE</div><h2>換個方式講一次：真正的瓶頸是電流，不是電壓</h2></div>
+  </div>
+  <p class="lede rv">這一段是 2026 年 9 月才進資料庫的一個框架，把整頁的主軸換句話說。如果前面 8 站看完只記得一件事，記這件：<b>把電壓拉高，目的從來不是「電壓」，而是把電流壓下來</b>。</p>
+
+  <div class="ampgrid rv">
+    <div class="ampbox">
+      <div class="an">1</div>
+      <div class="at">先看算式</div>
+      <p>傳輸同樣的 <b>100kW</b>：54V 需要約 <b>1,852 安培</b>，800V 只要約 <b>125 安培</b>。安培數才是決定銅排要多粗、連接器要多貴、熔絲要多大的那個變數。頁面第一站講的「電流降 15 倍、熱損降 219 倍」，講的就是這件事。</p>
+    </div>
+    <div class="ampbox">
+      <div class="an">2</div>
+      <div class="at">瓶頸已經下沉到單顆晶片</div>
+      <p><b>單顆 GPU 的電流需求已經突破 1,000 安培</b>，傳統電路板與 ABF 基板的供電路徑逼近物理極限。所以真正的新瓶頸是<b>配電與斷路保護</b>，不是轉換效率——這正是站 4 保護元件全面半導體化的原因。</p>
+    </div>
+    <div class="ampbox">
+      <div class="an">3</div>
+      <div class="at">第一個落地的不是轉換器，是斷路器</div>
+      <p><b>2026/9/9，Infineon 與 SolarEdge 擴大合作，共同開發 800V 直流資料中心用固態斷路器</b>。整條「800V 帶動半導體」的論述，目前最具體的一步發生在保護元件，不在電源轉換。</p>
+    </div>
+    <div class="ampbox">
+      <div class="an">4</div>
+      <div class="at">同一個問題有第二條解法</div>
+      <p>村田把電容整合進基板（<b>iPaS</b>）、供電改由<b>晶片正下方垂直進入</b>，2027 年量產。<b>垂直供電（縮短路徑）與提高電壓（降低電流）是兩條可以並行的路線</b>，不是二選一——這是站 7 那條「水平 → 垂直供電」之外的第三方玩家。</p>
+    </div>
+  </div>
+
+  <div class="callout rv" style="background:#fbf1ea;border-left:3px solid var(--red)"><span class="cl-k" style="color:var(--red)">同一段來源自帶的冷水（務必一起看）</span>
+    ① <b>800V 目前是規格路線圖，不是已量產的標準</b>：Infineon 與 SolarEdge 是「擴大合作、共同開發」，村田 iPaS 要 2027 年，Bloom 的 800V 直流輸出目前也只在自家設備端。<b>相關標的 2026 年的 800V 營收貢獻接近零。</b>
+    ② 原文<b>沒有點名任何台股</b>，全文具名的只有 Infineon 與 SolarEdge；台股的對應是後續推導，不是原文結論。
+    ③ 富邦同期明確註記：<b>直流供電只能簡化不斷電系統的前端架構，不代表可以取消完整備援與儲能系統</b>——本頁站 5 寫的「集中式 UPS 消失」要配這句一起讀。
+    <span class="src" style="display:block;margin-top:6px">來源：SemiVision 2026/9/14、TechNews 2026/9/14、富邦投顧 2026/9/10（均為 2026/9/15 入庫的研究筆記）</span>
+  </div>
 </section>
 
 <!-- ══════════ 03 ══════════ -->
@@ -1223,6 +1314,16 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
     <div class="callout rv" style="background:#fbf1ea;border-left:3px solid var(--red)"><span class="cl-k" style="color:var(--red)">市場最容易搞錯的一件事</span>已公開的 OCP 側掛規格是 <b>±400V（Diablo 400 v0.7）</b>；原生 800V 的「Mt Diablo 2.0」<b>尚未公開</b>。台廠 2026 年真正出貨的量體是 ±400V（CSP 自研 ASIC），不是 NVIDIA 的 800V。下一個觀察點：OCP 2026 Global Summit（10/12～15）。</div>
     <div class="callout rv"><span class="cl-k">怎麼看這場</span>Sidecar／Power Rack 的「搬家」<b>兩邊都會發生</b>，差別只在 BBU、DC-DC、功率元件的耐壓等級；純寬能隙（SiC／GaN）廠要等單極 800V 才有真正的內容拐點。Ted Yu（Substack 作者，半導體供應鏈分析）：「NVIDIA 選 0-800V 是為了未來走向 ±750V。」</div>
   </div>
+
+
+      <div class="route rv" style="--rc:#4a5680;margin-top:12px">
+        <h4>第三條路線：AMD Helios 乾脆不升壓<span class="tag-en">ORW · 50V BUS</span></h4>
+        <div class="r-row"><span class="k">做法</span><span class="v">AMD Helios 採 <b>ORW 規格機櫃</b>：寬 120cm、高 44OU、<b>50V 匯流排、全銅、全機直接液冷</b>，不走高壓直流。18 組運算托盤、全櫃 72 顆 GPU、31TB HBM4、1.7PB/s。</span></div>
+        <div class="r-row"><span class="k">時程</span><span class="v"><b>2026 下半年量產</b>——比 NVIDIA 的 800V 早了整整一年以上；AMD 目標出貨 3,000 台，2027 年目標市占 15%。</span></div>
+        <div class="r-row"><span class="k">代價</span><span class="v">維持低壓就得用更多銅與更強的散熱：單一交換托盤插入力需求高達 <b>690 磅</b>；風扇驅動 IC 用量升到 400～500 顆且改用 48V（單價較 12V 倍增）。</span></div>
+        <div class="r-row"><span class="k">為什麼重要</span><span class="v">它證明「機櫃功率上去就<b>一定</b>要升壓」在 2026 年並不成立。這是第三種分流方式：不是選 ±400V、也不是選 800V，而是<b>用全銅加液冷硬扛</b>。相較 Vera Rubin NVL72，Helios 的 FP4 算力、HBM 容量、Scale-out 頻寬分別高出 15%／50%／50%。</span></div>
+        <div class="r-row"><span class="k">來源</span><span class="v">國泰證期 2026/8/28；風扇 IC 數字為元富／中信投顧 2026/8/26</span></div>
+      </div>
 
   <div class="tabpane" id="rt2">
     <div class="routes rv" style="margin-top:12px">
@@ -1386,6 +1487,11 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
     <div class="e hot"><div class="d">2026/08/11 · NVIDIA 官方部落格</div><div class="t">三段式落地藍圖定調：Power Rack → Row Power Center → DC Power Block</div><ul class="eb"><li>① Power Rack（2026 下半年）：吃既有 415/480V 交流、就地轉 800V，不動建築電氣</li><li>② Row Power Center（2027）：整排集中供電、單排最高 2MW；③ DC Power Block（未來新建廠）</li><li>80 家以上依規範開發；<b>官方原話：「不是替代品，是可並存的額外選項」</b></li></ul></div>
     <div class="e"><div class="d">2026/08/18 · 供應鏈盤點（工商時報）</div><div class="t">台達 Q3 出貨但 2026 規模有限、年底前以 ±400V 為主；光寶 10 月二階段驗證、11 月可能小量、2027 Q1 全面量產</div><ul class="eb"><li>台達 Q3 出貨但 2026 規模有限、年底前以 ±400V 為主</li><li>光寶 10 月二階段驗證、11 月可能小量、2027 Q1 全面量產</li><li>康舒發表 1MW HVDC 系統＋行競 800V 浸沒式 BBU（1.2MW 撐 90 秒）；台達 CTO：匯流排體積縮小 14 倍、SST 完成工程驗證</li></ul></div>
     <div class="e"><div class="d">2026/09/02–04 · 最新</div><div class="t">富邦：HVDC 2026 Q3 量產、2026 Q4 小量；FY26 貢獻 &lt;1%、FY27 占 5～10%</div><ul class="eb"><li>富邦：HVDC 2026 Q3 量產、2026 Q4 小量；<b>FY26 貢獻 &lt;1%、FY27 5～10%</b></li><li>統一：±400V（900kW）26 年占營收 1%，800V 需等客戶拉貨</li><li>9/2 傳台達外購電容批次問題、股價單日跌逾 7%；研究部認定換供應商即可</li></ul></div>
+
+    <div class="e"><div class="d">2026/09/10–11 · 資料庫新增</div><div class="t">士電、Bloom、信昌電三份報告把「灰區時鐘」補成實數</div><ul class="eb"><li>中信重新覆蓋士電：在手訂單逾 <b>600 億元</b>、產能 15GVA → 2027 年 20GVA、升規到 345kV／200MVA</li><li>富邦初評 Bloom：變壓器交期 <b>143 週 → 逾 160 週</b>、全美 <b>2,061GW</b> 等待併網、燃氣渦輪訂單 110GW vs 產能 60～70GW</li><li>國泰：信昌電 AI 電源占比 2026 Q2 9.2% → Q4 估 16%，<b>單櫃電源與備援 MLCC 3 萬～5 萬顆</b></li></ul></div>
+    <div class="e alert"><div class="d">2026/09/14 · 最新爭議</div><div class="t">摩根士丹利查核：Kyber 已延後，<b>Rubin Ultra 預期不再使用該架構</b>、焦點回到 Oberon</div><ul class="eb"><li>若成立，「Rubin Ultra ＝ Kyber ＝ 800V 放量」這條三段等式會<b>斷在中間</b>——800V 的載體要重新指認</li><li>同日 NVIDIA 正重新評估在 Oberon 上為 Rubin Ultra 採用 PTFE 銅箔基板，最可能先從交換托盤板開始</li><li>⚠ 目前僅單一券商的供應鏈查核，與富邦、國泰「Rubin Ultra 2027 下半年上 800V」的口徑並陳，尚未有第二方證實</li></ul></div>
+    <div class="e"><div class="d">2026/09/14 · 當事人自述</div><div class="t">Vertiv 管理層：800V 直流架構 <b>2027 下半年加速放量、2028 年量產</b></div><ul class="eb"><li>這是「三派時程」裡最缺的一塊——做這門生意的人自己講的時間表，落在保守派與中間派之間</li><li>同場：收購 UIG 強化電表後端能力、更早介入設計流程；2030 年營益率目標上調到 27% 以上</li><li>戴爾同日：AI 伺服器在手訂單 950 億美元，<b>預期 2027 年結構性半導體短缺比 2026 年更嚴重</b></li></ul></div>
+    <div class="e"><div class="d">2026/09/14–15 · 賣方排序</div><div class="t">統一：光寶為電源首選；台達「400V 能見度明確，<b>800V 需等終端客戶實際拉貨</b>」</div><ul class="eb"><li>台達 8 月營收 645.86 億元、年增 35%，但 <b>7-8 月達成率 63%、低於預期</b></li><li>光寶新增兩家雲端客戶、目標價 310 元；旭隼「靜待 2027-2028 年 800V 產品開發」維持中立</li><li>台新 9/15：瑞薩年內二度調漲、新價 2027 年 1 月生效；功率模組交期延長到 <b>30～52 週</b></li></ul></div>
   </div>
 
 
@@ -1549,6 +1655,102 @@ section{content-visibility:visible;contain-intrinsic-size:auto}
   <div class="callout rv"><span class="cl-k">一句話</span><b>台達電是唯一同時出現在 PDB、In-Row 電力、CDU、DC/DC Shelf、110kW Shelf、液冷 Busbar、冷板、Manifold 全部類別的廠商</b>；官方名單上的台股只有台達、光寶、貿聯（＋立錡），其餘台股都是二階受惠。</div>
 
 </section>
+
+  <h3 class="sub" id="brokers">券商怎麼看：29 檔標的、每檔最新一份<span class="tag-en">WHO COVERS WHAT · AS OF 2026/9/17</span></h3>
+  <p class="lede" style="margin-top:2px">資料來自使用者自建的券商報告庫（315 份報告、3,410 頁，另含 1,327 筆券商個股紀錄），篩出與 800V 高壓直流、電源櫃、BBU、重電、功率半導體相關者。每檔<b>只列最新一份</b>，同一檔其他券商的目標價收在下方摺疊區。<b>⚠ 評等與目標價是券商的意見與估算，不是投資建議；同一檔不同券商的目標價差距可達兩倍以上，看數字前先看日期與券商。</b></p>
+
+  <div class="segbar" style="margin:10px 0 6px"><span>提示</span><span class="hint">點欄位「目標價」旁的箭頭代表與該券商前次相比的調整方向</span></div>
+
+  <table class="tbl wrapall brk rv">
+    <thead><tr><th>公司</th><th>在這條鏈的位置</th><th>最新券商看法</th><th>目標價</th><th>這份報告怎麼說</th></tr></thead>
+    <tbody>
+      <tr><td class="c"><b>士電</b><span class="tk tw">1503</span></td><td>變壓器・重電</td><td>中信投顧 買進<br><i>2026/9/11</i></td><td><b>330</b><br><i>重新覆蓋</i></td><td>在手訂單逾 600 億元、電力級變壓器交期 2～3 年；2026／2027 年每股盈餘估 9.01／11.00 元</td></tr>
+      <tr><td class="c"><b>亞力</b><span class="tk tw">1514</span></td><td>變壓器・高壓配電</td><td>台新投顧 強力買進<br><i>2026/8/28</i></td><td><b>154</b></td><td>在手訂單 130 億元，資料中心機房占約 10%；2026 年每股盈餘估 3.77 元</td></tr>
+      <tr><td class="c"><b>華城</b><span class="tk tw">1519</span></td><td>大型變壓器</td><td>中信投顧 買進<br><i>2026/7/14</i></td><td><b>980</b></td><td>在手逾 200 億元、交期 2.5～3 年，已接 2029～2030 年資料中心訂單</td></tr>
+      <tr><td class="c"><b>川湖</b><span class="tk tw">2059</span></td><td>機櫃結構件・導軌</td><td>國泰證期 買進（維持）<br><i>2026/8/10</i></td><td><b>14,250</b><br><i class="up">▲ 前次 9,940</i></td><td>上修 2026 Q3 營收 47.5% 至 180.57 億元；2026 年每股盈餘估 352.18 元</td></tr>
+      <tr class="lead"><td class="c"><span class="star">★</span><b>光寶科</b><span class="tk tw">2301</span></td><td>電源櫃・電源供應器・BBU</td><td>元大 買進（維持）<br><i>2026/8/3</i></td><td><b>370</b><br><i class="up">▲ 前次 300</i></td><td>GPU 平台電源價值由 5.9 萬美元升至 Rubin Ultra 的 64.4 萬美元；同日九家券商目標價 158～370 元</td></tr>
+      <tr class="lead"><td class="c"><span class="star">★</span><b>台達電</b><span class="tk tw">2308</span></td><td>電源櫃・整流・SST</td><td>群益投顧 買進（維持）<br><i>2026/9/3</i></td><td><b>2,050</b></td><td>18.3kW 電源供應器換電容是供應商零件問題、影響有限；2026 年每股盈餘估 40.16 元</td></tr>
+      <tr><td class="c"><b>國巨</b><span class="tk tw">2327</span></td><td>被動元件・MLCC</td><td>花旗 買進<br><i>2026/9/4</i></td><td><b>1,450</b></td><td>AI 占總營收 16%、7 月漲價涵蓋約 50% 營收；十家券商目標價 688～1,465 元，差距逾兩倍</td></tr>
+      <tr><td class="c"><b>順德</b><span class="tk tw">2351</span></td><td>導線架（電源・BBU・800V）</td><td>永豐投顧 買進<br><i>2026/8/26</i></td><td><b>255</b><br><i class="up">▲ 前次 195</i></td><td>AI 在手品項由 40 增至 60，AI 占電子營收由 1% 升到 6%；均熱片薄型化 30μm 優於同業</td></tr>
+      <tr><td class="c"><b>致茂</b><span class="tk tw">2360</span></td><td>電源與整櫃測試設備</td><td>元大投顧 買進<br><i>2026/9/11</i></td><td><b>2,400</b><br><i>維持</i></td><td>8 月營收 56.3 億元、年增 156%，電源測試動能維持</td></tr>
+      <tr><td class="c"><b>偉詮電</b><span class="tk tw">2436</span></td><td>風扇馬達・電源控制 IC</td><td>合庫投顧 區間操作<br><i>2026/8/26</i></td><td><b>50～73</b></td><td>伺服器架構由 48V／54V 升到 72V／80V 使單價倍增；風扇馬達控制 IC 市占近 40%</td></tr>
+      <tr class="lead"><td class="c"><span class="star">★</span><b>順達</b><span class="tk tw">3211</span></td><td>BBU 電池模組</td><td>花旗 買進<br><i>2026/8/27</i></td><td><b>800</b><br><i>維持・加開 90 天觀察</i></td><td>8kW／12kW 新品可能 2026 Q4 初出貨、早於原假設；2027 年每股盈餘估 25.00 元</td></tr>
+      <tr><td class="c"><b>泰碩</b><span class="tk tw">3338</span></td><td>液冷・800V 直流 CDU</td><td>國票投顧 法說紀要<br><i>2026/7/20</i></td><td><i>無評等</i></td><td>COMPUTEX 2026 首度進入 NVIDIA 背板、合作產品就是 800V 直流 CDU；列間 2.6MW 樣機最快 2027 下半年出貨</td></tr>
+      <tr><td class="c"><b>凡甲</b><span class="tk tw">3526</span></td><td>高功率・BBU 連接器</td><td>國票投顧 買進（首評）<br><i>2026/7/6</i></td><td><b>445</b><br><i class="up">▲ 前次 332</i></td><td>2026 Q2 AI 伺服器占比 57.5%；已切 400V 高壓直流與 GB 系列，爭取 800V 認證</td></tr>
+      <tr><td class="c"><b>宏致</b><span class="tk tw">3605</span></td><td>高壓電源線束</td><td>宏遠投顧 買進<br><i>2026/8/12</i></td><td><b>136</b></td><td>高壓電源線取得 Bloom Energy 訂單、2026 下半年放量</td></tr>
+      <tr class="lead"><td class="c"><span class="star">★</span><b>貿聯-KY</b><span class="tk tw">3665</span></td><td>800V 匯流排・Power Whip</td><td>摩根士丹利 加碼<br><i>2026/9/6</i></td><td><b>3,665</b></td><td>8 月營收 88.92 億元、年增 54%，2026 下半年以高效能運算為主；十家券商目標價 2,750～3,665 元</td></tr>
+      <tr><td class="c"><b>世界先進</b><span class="tk tw">5347</span></td><td>電源管理 IC・氮化鎵代工</td><td>元大投顧 買進<br><i>2026/9/11</i></td><td><b>200</b><br><i>維持</i></td><td>8 月營收 50.93 億元、年增 40.5%，AI 電源管理 IC 需求強勁</td></tr>
+      <tr><td class="c"><b>信昌電</b><span class="tk tw">6173</span></td><td>高壓 MLCC（電源・BBU）</td><td>國泰證期 法說紀要<br><i>2026/9/10</i></td><td><i>無評等</i></td><td>AI 電源營收占比 2026 Q1 6.5% → Q2 9.2% → Q4 估 16%；單櫃電源與備援 MLCC 用量 3 萬～5 萬顆</td></tr>
+      <tr><td class="c"><b>同欣電</b><span class="tk tw">6271</span></td><td>氮化矽陶瓷基板</td><td>康和投顧 逢低買進（維持）<br><i>2026/9/15</i></td><td><b>258</b><br><i class="up">▲ 前次 200</i></td><td>高壓直流氮化矽基板 2026 下半年量產、月出貨已達 20 萬片；2026 年每股盈餘估 9.66 元</td></tr>
+      <tr><td class="c"><b>矽力-KY</b><span class="tk tw">6415</span></td><td>資料中心電源管理 IC</td><td>富邦投顧 買進（維持）<br><i>2026/8/31</i></td><td><b>558</b><br><i class="up">▲ 前次 555</i></td><td>資料中心占比 2026 上半年逾 15%、2027 年估逾 20%；摩根士丹利同期為減碼，是唯一明確空方</td></tr>
+      <tr><td class="c"><b>鈺邦</b><span class="tk tw">6449</span></td><td>固態電容</td><td>康和投顧 買進（首評）<br><i>2026/9/2</i></td><td><b>300</b></td><td>2026 上半年伺服器營收年增 228.9%、占比 37.9% 居首；兆豐 8/28 目標價由 193 升至 365</td></tr>
+      <tr><td class="c"><b>廣閎科</b><span class="tk tw">6693</span></td><td>機櫃電源・BBU 用 MOSFET</td><td>兆豐投顧 買進（上調）<br><i>2026/8/27</i></td><td><b>250</b><br><i class="up">▲ 前次 80</i></td><td>2026 Q2 伺服器占營收 47%，其中機櫃電源約 40%、BBU 約 40%、風扇驅動約 20%</td></tr>
+      <tr><td class="c"><b>力智</b><span class="tk tw">6719</span></td><td>電源管理 IC</td><td>富邦投顧 買進（維持）<br><i>2026/8/11</i></td><td><b>240</b><br><i class="up">▲ 前次 215</i></td><td>AI 營收占比 2026 Q2 達 7～9%、下半年目標破 10%</td></tr>
+      <tr class="lead"><td class="c"><span class="star">★</span><b>AES-KY</b><span class="tk tw">6781</span></td><td>BBU 電池模組（直供 AWS）</td><td>花旗 買進<br><i>2026/8/6</i></td><td><b>1,680</b></td><td>以 2027 年為評價基準年，「因更能反映高壓直流商業化後的獲利能力」；凱基同日目標價 1,555 元（前次 1,450）</td></tr>
+      <tr><td class="c"><b>三集瑞-KY</b><span class="tk tw">6862</span></td><td>功率電感・BBU 電感</td><td>元富投顧 買進<br><i>2026/8/26</i></td><td><b>180</b><br><i class="up">▲ 前次 160</i></td><td>2026 Q2 BBU 占營收 6%、7 月升至 9%；但 2026 全年營收仍年減 8%，轉機押 2027 年</td></tr>
+      <tr class="lead"><td class="c"><span class="star">★</span><b>松川精密</b><span class="tk tw">7788</span></td><td>高壓直流繼電器</td><td>統一投顧 強力買進<br><i>2026/8/13</i></td><td><b>405</b><br><i class="up">▲ 前次 215</i></td><td>800V 後單櫃繼電器 12～36 顆、單顆售價 20～30 美元（傳統的 20 倍）</td></tr>
+      <tr><td class="c"><b>金山電</b><span class="tk tw">8042</span></td><td>高壓牛角電容</td><td>華南投顧 強力買進<br><i>2026/8/4</i></td><td><b>140</b><br><i class="dn">▼ 前次 200</i></td><td>雲端伺服器占比 2026 Q1 躍至 35%、其中 AI 產品占半數；目標價雖調降仍維持強力買進</td></tr>
+      <tr><td class="c"><b>瀚荃</b><span class="tk tw">8103</span></td><td>電源・DC-DC 連接器</td><td>群益投顧 買進<br><i>2026/8/31</i></td><td><b>138</b></td><td>2026 Q2 AI 領域占營收 26%，伺服器中 AI 電源約占一半</td></tr>
+      <tr><td class="c"><b>高力</b><span class="tk tw">8996</span></td><td>燃料電池熱反應盒・液冷</td><td>富邦投顧 買進（初評）<br><i>2026/8/12</i></td><td><b>1,320</b></td><td>Bloom Energy 在手訂單上看 200 億美元、能見度到 2028 年</td></tr>
+      <tr><td class="c"><b>Vertiv</b><span class="tk us">VRT</span></td><td>機房級電力＋散熱整合</td><td>中信投顧 買進（維持）<br><i>2026/8/3</i></td><td><b>370 美元</b></td><td>800V 直流機架級 2026 年完成驗證、2027 年導入、2028 年到機房級；管理層 9/14 自述「2027 下半年加速放量、2028 年量產」</td></tr>
+      <tr><td class="c"><b>Bloom Energy</b><span class="tk us">BE</span></td><td>燃料電池（直接輸出直流）</td><td>中信投顧 增加持股（維持）<br><i>2026/9/11</i></td><td><b>294.6 美元</b></td><td>2026 Q2 營收 10.65 億美元、年增 166% 創單季新高；富邦 9/10 初評買進、目標價 330 美元</td></tr>
+    </tbody>
+  </table>
+
+  <details class="acc more-brk rv">
+    <summary><span class="s-no"><small>展開</small>＋</span><div class="s-mid"><div class="s-tt">同一檔、不同券商：完整目標價對照<span class="cnt">約 80 個目標價</span></div><div class="s-ds">同一天、同一件事，券商之間差距可以很大。國巨最高與最低相差逾兩倍，貿聯十家橫跨 2,750～3,665 元。引用任何一個數字都要附日期與券商。</div></div><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary>
+    <div class="s-body">
+      <table class="tbl wrapall">
+        <thead><tr><th>公司</th><th>各家目標價（元，美股為美元）</th></tr></thead>
+        <tbody>
+          <tr><td><b>光寶科 2301</b><br><i class="sm">2026/8/3 法說後九家同日</i></td><td>元大 370｜統一 310｜凱基 295（7/31）｜元富 290｜宏遠 296｜福邦 283｜富邦 280｜國泰證期 278｜華南 250｜合庫 158～236（區間，全場唯一非買進）</td></tr>
+          <tr><td><b>台達電 2308</b></td><td>富邦 2,500（7/20，由 3,000 下修）｜美銀 2,500（7/30）｜統一 2,400（8/12）｜元大 2,240（7/31；同家 7/9 版為 2,870）｜群益 2,050（9/3）｜國泰 1,930（7/31）｜國票 1,900（7/31）</td></tr>
+          <tr><td><b>國巨 2327</b></td><td>摩根士丹利 1,465（7/29）｜兆豐 1,305（7/31）｜國票 1,275（7/9）｜凱基 1,250（7/22）｜富邦 1,250（7/9）｜元富 1,200（7/30）｜華南 1,100（7/30）｜玉山 740（7/30）｜宏遠 703（8/12）｜統一 688（8/11）</td></tr>
+          <tr><td><b>貿聯-KY 3665</b></td><td>元富 3,665（8/24）｜瑞銀 3,617（9/3）｜玉山 3,140｜國票 3,125｜華南 3,100｜統一 2,950｜國泰 2,900｜元大 2,850｜中信 2,775｜宏遠 2,750（8/31）</td></tr>
+          <tr><td><b>世界先進 5347</b></td><td>中信 220（8/5）｜統一 205（8/5，由 158 上修）｜宏遠 202｜元大 200｜國泰 200｜兆豐 195｜凱基 187｜華南 185｜玉山 180｜群益 175</td></tr>
+          <tr><td><b>致茂 2360</b></td><td>中信 2,800（8/3）｜國票 2,700｜富邦 2,700｜玉山 2,696｜花旗 2,500（7/30）｜元大 2,400（7/31、9/3、9/11 三度維持）</td></tr>
+          <tr><td><b>宏致 3605</b></td><td>統一 125｜第一金 122｜元富 120｜元大 115｜玉山 111｜華南 110</td></tr>
+          <tr><td><b>矽力-KY 6415</b></td><td>中信 600（8/31）｜凱基 530｜群益 514｜元大 480｜合庫 376～540（區間）｜<b>摩根士丹利 減碼（9/6，未載目標價）</b></td></tr>
+          <tr><td><b>瀚荃 8103</b></td><td>華南 165（8/24，由 125 上修）｜元富 150｜群益 103</td></tr>
+          <tr><td><b>其他</b></td><td>順德：兆豐 252、大和 265｜偉詮電：元富 100、玉山 82｜順達：華南 600（由 475 上修）｜同欣電：富邦 250（由 217 上修）｜鈺邦：兆豐 365（由 193 上修）｜力智：凱基 240、中信 219、元大 210｜松川：國票 348（由 278 上修）｜亞力：中信 151、第一金 143｜Bloom：富邦 330 美元（初評）</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <h3 class="sub">誰被調升最多：目標價變化排行<span class="tag-en">TARGET PRICE REVISIONS</span></h3>
+  <p class="lede" style="margin-top:2px">只列同一家券商有標明前次目標價者。調升幅度大不代表股價會漲，通常代表<b>賣方把評價基準年往後挪</b>（多數改用 2027 年每股盈餘）或上修成長假設。</p>
+  <div class="two rv">
+    <table class="tbl wrapall" style="margin:0">
+      <thead><tr><th>調升</th><th>前次 → 最新</th><th>幅度</th><th>評價基準（原文）</th></tr></thead>
+      <tbody>
+        <tr><td><b>廣閎科 6693</b><br><i class="sm">兆豐 2026/8/27</i></td><td>80 → 250</td><td class="up">+212%</td><td>27 倍 2026 年／18 倍 2027 年本益比</td></tr>
+        <tr><td><b>鈺邦 6449</b><br><i class="sm">兆豐 2026/8/28</i></td><td>193 → 365</td><td class="up">+89%</td><td>24 倍 2027 年本益比（由 21 倍上修並改用 2027 年）</td></tr>
+        <tr><td><b>松川精密 7788</b><br><i class="sm">統一 2026/8/13</i></td><td>215 → 405</td><td class="up">+88%</td><td>本益比由 20 倍上修至 25 倍</td></tr>
+        <tr><td><b>川湖 2059</b><br><i class="sm">國泰證期 2026/8/10</i></td><td>9,940 → 14,250</td><td class="up">+43%</td><td>報告未列倍數</td></tr>
+        <tr><td><b>凡甲 3526</b><br><i class="sm">國票 2026/7/6</i></td><td>332 → 445</td><td class="up">+34%</td><td>由區間操作轉買進（首次）</td></tr>
+        <tr><td><b>瀚荃 8103</b><br><i class="sm">華南 2026/8/24</i></td><td>125 → 165</td><td class="up">+32%</td><td>2027 年每股盈餘，倍數由 12 倍上修至 13 倍</td></tr>
+        <tr><td><b>順德 2351</b><br><i class="sm">永豐 2026/8/26</i></td><td>195 → 255</td><td class="up">+31%</td><td>約當 2027 年每股盈餘的 30 倍</td></tr>
+        <tr><td><b>同欣電 6271</b><br><i class="sm">康和 2026/9/15</i></td><td>200 → 258</td><td class="up">+29%</td><td>22 倍 2027 年每股盈餘</td></tr>
+        <tr><td><b>順達 3211</b><br><i class="sm">華南 2026/7/9</i></td><td>475 → 600</td><td class="up">+26%</td><td>報告未列倍數</td></tr>
+        <tr><td><b>AES-KY 6781</b><br><i class="sm">凱基 2026/8/6</i></td><td>1,450 → 1,555</td><td class="up">+7%</td><td>25 倍 2026-27 年平均每股盈餘</td></tr>
+      </tbody>
+    </table>
+    <table class="tbl wrapall" style="margin:0">
+      <thead><tr><th>調降／分歧</th><th>變化</th><th>原因（原文）</th></tr></thead>
+      <tbody>
+        <tr><td><b>金山電 8042</b><br><i class="sm">華南 2026/8/4</i></td><td class="dn">200 → 140（−30%）</td><td>目標價調降但評等維持強力買進</td></tr>
+        <tr><td><b>台達電 2308</b><br><i class="sm">四家同週下修</i></td><td class="dn">富邦 3,000 → 2,500</td><td>2026 年 7 月下旬四家同週調降，國泰幅度最重（約 −28%）</td></tr>
+        <tr><td><b>台達電 2308</b><br><i class="sm">元大 2026/7/9</i></td><td class="up">2,660 → 2,870（+8%）</td><td>同一家券商，7 月上旬先升、7 月底又降到 2,240——同檔同月雙向修正</td></tr>
+        <tr><td><b>矽力-KY 6415</b><br><i class="sm">摩根士丹利 2026/9/6</i></td><td class="dn">減碼</td><td>本表唯一明確看空的外資評等</td></tr>
+        <tr><td><b>元大：滲透率下修</b><br><i class="sm">2026/7/9 台達電報告</i></td><td class="dn">2027 年高壓直流滲透率 50% → 30%</td><td>比 2026 年 6 月那波「延後」論戰更早的一次賣方下修</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout rv"><span class="cl-k">讀這張表的三個提醒</span>
+    ① <b>目標價的年份比數字重要</b>：這一輪調升多數是把評價基準從 2026 年換成 2027 年，等於賣方也承認 2026 年沒有量。② <b>同檔差兩倍是常態</b>：國巨 688～1,465、光寶 158～370，差的往往是「AI 占比怎麼算」。③ <b>「無評等」不等於不重要</b>：泰碩、信昌電只有法說紀要，但他們講的規格（800V 直流 CDU、單櫃 3 萬～5 萬顆 MLCC）反而是最一手的產業資訊。
+  </div>
 
 <!-- ══════════ 07 ══════════ -->
 <section id="risk">
@@ -1744,7 +1946,8 @@ const chain=[
    {nm:"Advanced Energy",tk:"美 AEIS",cls:"us",ro:"電源側櫃供應商，參與 Diablo 400 多供應商互操作標準。",
     mc:"國泰供應鏈分層表將其與 Delta、Lite-On、Flex 並列於「Power Shelf／PSU（110kW power shelves、DC/DC converters、高效率 PSU）」層。",
     src:"來源：華爾街見聞／SemiAnalysis 2026/05、國泰 2026/05/08"}
-  ]},
+  ,
+   {lead:0,nm:"全漢",tk:"3015",cls:"tw",ro:"電源供應器廠，被列為 800V 電源模組與高壓中間匯流排轉換器環節的台股對應者之一。",tech:"與台達、康舒、光寶同列電源模組／HV IBC／SST 環節的台股名單。",mc:"來源未提供個股財務數字，屬依技術環節推導的對應名單。",hl:"—",src:"Ted Yu EP54《數據中心 800V 直流供電架構與電源技術演進》2026/7/21"}]},
 
  {ic:"i-bbu",tt:"BBU／超級電容／機架級儲能",en:"Battery Backup Unit & Rack-Level Storage",
   ds:"800V 架構把<b>集中式 UPS 換成機架級 BBU＋超級電容（分布式 UPS）</b>。關鍵認知是 BBU 的第一功能<b>不是停電備援，而是吸收瞬態</b>——AI 機櫃負載可在<b>毫秒級從 30% idle 跳到 100% 滿載</b>，GB300／Rubin 平台瞬間功率可達平均負載的 <b>170～200%</b>，400kW 機櫃峰值可能超過 700kW。Citi 因此把 2027 年的標題寫成「<b>BBU becomes a must for HVDC AI racks</b>」：滲透率由 2025 年 40～45% → 2026 年 60～65% → <b>2027 年 &gt;85%</b>。",
@@ -1783,7 +1986,8 @@ const chain=[
     tech:"<b>GB300 目前採用武藏精密的 LIC</b>（負極改石墨）。三類儲能特性對照：LIB 能量密度 150～250Wh/kg、功率密度 0.5～2kW/kg、循環 1k～5k 次；<b>LIC 能量密度 20～50Wh/kg（為 EDLC 的 3～5 倍）、循環 10 萬～30 萬次</b>；EDLC 能量密度 3～8Wh/kg、功率密度 10～20kW/kg、<b>循環 50 萬～100 萬次</b>、反應時間毫秒級。",
     mc:"國泰電力相關評價表列 2026E／2027E EPS 173.2／227.8 日圓。國泰另估 <b>2026～2028 年為 LIC 開始大量導入的關鍵時期</b>，AI 資料中心用超級電容市場 2025～2030 年 CAGR 20～30%、2028 年後 CBU 滲透率有望 &gt;50%。",
     src:"來源：富邦 2025/11/18、國泰 2026/06/08、國泰 2026/06/16"}
-  ]},
+  ,
+   {lead:0,nm:"系統電",tk:"5309",cls:"tw",ro:"BBU 電池模組廠，主要客戶 Google；與 PSU 廠合作出貨的模式二玩家。",tech:"做電池模組與電池管理系統整合，由電源供應器廠負責 Power Shelf、控制系統與機櫃整合。",mc:"BBU 占自身營收僅個位數百分比；花旗估 2026 年 BBU 市占低於順達與 AES-KY。花旗預估 2026／2027 年每股盈餘 53.0／20.4 倍本益比（引自信昌電報告的同業估值表）。",hl:"花旗 2026/7/7 順達深度報告把系統電列為 BBU 中游五家之一（Panasonic、AES-KY、順達、新盛力、系統電）。",src:"花旗 2026/7/7、2026/7/12"}]},
 
  {ic:"i-ic",tt:"功率半導體與電源 IC：SiC／GaN／MOSFET／DrMOS／PMIC",en:"Power Semiconductor & Power IC",
   ds:"800V 架構把供電鏈從「櫃內 AC→48V→12V→0.8V」改成「中壓／480VAC→±400V 或 800VDC→HV IBC 48/50V→MV IBC 12/6V→POL 約 1V」，<b>每一處轉換與保護節點都要高頻高耐壓功率元件</b>。用量因此可以算：1MW Sidecar PFC 約需 34 個 30kW 模組 ≈ <b>408 顆 1200V SiC ＋ 204 顆 650V GaN（合計約 612 顆）</b>；ROHM 更估 AI server 從 13kW 到 1,000kW 會使<b>功率元件用量增加 36 倍</b>、每顆 GPU 的 DrMOS 由 20 顆增至 50 顆。onsemi 已把 AIDC 電源 IC 的 TAM 從 120 億美元<b>上修至 500 億美元</b>。",
@@ -1892,7 +2096,10 @@ const chain=[
    {nm:"斯達半導",tk:"滬 603290",cls:"cn",ro:"IGBT／SiC 模組廠，對應第三階段第一代 MW 級中央整流器可能先用矽基 IGBT 的邏輯。",
     mc:"東吳列為相關標的。關鍵支撐事實：<b>第一代 MW 級中央整流器未必全面切換寬禁帶，早期更可能沿用 1200～1700V 矽基 IGBT 或晶閘管；現有 1700V 工業 IGBT 模組已覆蓋 50～3600A 電流等級</b>，SiC 是中長期替代。",
     src:"來源：東吳 2026/07/22"}
-  ]},
+  ,
+   {lead:0,nm:"廣閎科",tk:"6693",cls:"tw",ro:"機櫃電源與 BBU 用功率 MOSFET，是這一輪目標價調升幅度最大的台廠。",tech:"產品用於機櫃電源、BBU 與風扇驅動三個區塊。",mc:"2026 Q2 伺服器占營收 <b>47%</b>，其中機櫃電源約 40%、BBU 約 40%、風扇驅動約 20%；伺服器占比 2024 年 2% → 2025 年 13% → 2026 Q1 25% → 2026 Q2 47%，2026 全年可望逾五成。2026 年每股盈餘估 9.14 元，超越 2021～2025 五年獲利總和。",hl:"兆豐投顧 2026/8/27 買進、目標價由 <b>80 元上調至 250 元（+212%）</b>，評價基準 27 倍 2026 年／18 倍 2027 年本益比。",src:"兆豐投顧 2026/8/27"},
+   {lead:0,nm:"順德",tk:"2351",cls:"tw",ro:"高功率導線架，產品線涵蓋電源供應器、BBU、主板與 800V 高壓直流。",tech:"導線架涵蓋 PSU、BBU、主板正反面、800V HVDC、Power Stage 與 iQFN；另有均熱片薄型化 30μm，優於同業的 50～60μm，已通過兩家雲端業者廠房稽核。",mc:"AI 在手項目由 40 個增至 60 個；AI 占電子營收由 2025 年 1% 升到 2026 上半年 6%，2026 Q3 有機會達雙位數。2026 年每股盈餘估 6.99 元。",hl:"永豐投顧 2026/8/26 買進、目標價 255 元（前次 195 元），約當 2027 年每股盈餘的 30 倍；兆豐 8/10 目標價 252 元。",src:"永豐投顧 2026/8/26、兆豐投顧 2026/8/10"},
+   {lead:0,nm:"同欣電",tk:"6271",cls:"tw",ro:"切入高壓直流電力架構的陶瓷基板廠，開發氮化矽等高導熱材料。",tech:"高壓直流用氮化矽陶瓷基板<b>線寬可達 20 微米</b>；氮化鋁雷射載板採物理氣相沉積製程，熱傳導係數可達 <b>230 W/m·K</b>、支援單顆雷射二極體約 35～42W。陶瓷電路板（含 DPC／AMB）占 2026 Q2 營收約 19%。",mc:"新一代 AI 相關基板預計 <b>2026 下半年量產、月出貨規模已達約 20 萬片</b>；2027 年營收估年增 45～55%。2026 Q2 營收 31.53 億元（季增 11.8%）、毛利率 31.1%。",hl:"康和投顧 2026/9/15 逢低買進、目標價 258 元（前次 200 元，22 倍 2027 年每股盈餘）；富邦 8/6 目標價 250 元。⚠ 與社群流傳、查無出處的「同欣電每股盈餘 9.04 元」無關，券商版 2026 年估為 9.66 元。",src:"康和投顧 2026/9/15、富邦投顧 2026/8/6"}]},
 
  {ic:"i-fuse",tt:"保護元件與直流斷路：SSCB／e-Fuse／熔絲／接觸器／TVS",en:"DC Protection & Circuit Breaker",
   ds:"這是 800V 最被低估、也最「規格被重寫」的一環。物理根因只有一句：<b>直流沒有自然過零點</b>——交流每秒過零約 100～120 次、電弧會自動熄滅，直流起弧後會持續燃燒，且電壓升到 800V 後電弧能量與維持長度呈指數級增加，瞬間熔毀傳統機械開關。結果是保護元件全面<b>半導體化</b>：SSCB 固態斷路器以 SiC 晶片在<b>微秒內</b>切斷（比機械開關快上千倍）、e-Fuse 在 <b>1 微秒</b>內主動切斷（傳統保險絲 10～50 毫秒）且可軟體重置。價值重估有三條腿：單機櫃資產價值翻倍（GB300 約 399 萬美元 → Vera Rubin NVL72 約 <b>780 萬美元</b>）使防護預算同步放大；<b>800V 採浮地安規、正負極必須對稱配置，熔斷器用量直接翻倍</b>；每一道電源轉接／熱插拔／Sidecar 調度節點都需主動防護。",
@@ -1995,7 +2202,9 @@ const chain=[
     tech:"以深溝槽製程切入矽電容代工；<b>切入 Intel EMIB、獨家供應矽電容</b>。屬封裝級元件，與 800V 機櫃供電無直接關聯。",
     mc:"<b>2026 Q2 已量產、產能滿載</b>——這是三家矽電容台廠中唯一具體的時程事實。另被準繩財經列於「成熟製程」分層名單。",
     src:"來源：國票 2026/08/06、準繩財經 2026/07/10"}
-  ]},
+  ,
+   {lead:0,nm:"信昌電",tk:"6173",cls:"tw",ro:"高壓 MLCC 廠，主力是 LLC 諧振電路用的低損耗高壓 NP0 與大尺寸電容。",tech:"透過金屬端子結構降低板彎應力造成的短路與燒機風險，兼具散熱、降噪與省板面積；應用於 AI 伺服器電源、BBU、機房冷卻系統、工業機器人與電動車車載充電器。材料（陶瓷粉末）、設備與元件垂直整合。",mc:"高階 NP0 MLCC 單機用量：<b>A100 約 800～1,000 顆 → H100 增至 1,800～2,000 顆 → GB300 進一步到 3,000～5,000 顆</b>；2026～2027 年 GB300、Vera Rubin 與 Rubin Ultra 世代，<b>單一機櫃電源與備援系統 MLCC 用量可維持 3 萬～5 萬顆</b>。AI 伺服器電源營收占比 2026 Q1 6.5% → Q2 9.2% → Q3 估 12% → Q4 估 16%。",hl:"<b>2027 年 800V 架構下，產品規格持續往更高容量與耐壓升級</b>；楊梅二廠與六甲廠規劃 2027 Q2 完工、2027 下半年量產。2026 Q2 每股盈餘 1.79 元、上半年 2.98 元（2025 上半年為 0.94 元）。",src:"國泰證期 2026/9/10 法說紀要"},
+   {lead:0,nm:"禾伸堂",tk:"3026",cls:"tw",ro:"客製化高階 NP0 MLCC 市占領先者，同步切入機櫃 BBU 備援電池模組。",tech:"800V 高壓直流與 LLC 諧振設計帶動低損耗高壓 NP0，以及 X7S、X8M 等耐高溫高容 MLCC 需求。",mc:"當季營收 40.97 億元、每股盈餘 3.87 元；今年累積營收 92.17 億元、每股盈餘 6.73 元。",hl:"同步切入機櫃 BBU 備援電池模組與下一代新架構供應鏈。",src:"投資快訊 2026/9/16"}]},
 
  {ic:"i-cable",tt:"連接器／線束／Busbar／Power Whip",en:"Connectors, Harness & Busbar",
   ds:"最被低估的一環。<b>相同線徑下 HVDC 可提升約 150% 功率承載能力</b>，全球 HVDC 市場預估由 2024 年 <b>10 億美元成長至 2029 年 157 億美元、CAGR 73.4%</b>。獨立電源櫃的架構改變直接放大用量：Power Whip 規格由 GB200/GB300 的 <b>60A 升級到 Rubin 的 100A</b>（NVL72 用量 8 條不變、靠 ASP），但進到 Rubin Ultra 的 Power Rack 架構後，IT Rack 進 Power Rack 兩排 8×2＝16 條、Power Rack 回 IT Rack 再 16 條，<b>合計 32 條、以一個 Power Rack 對兩個 IT Rack 計算即翻倍</b>；單櫃連接器產值較 GB200/300 <b>提升 3～5 倍</b>。Busbar 則有明確的液冷分水嶺：<b>電流大於 4000A 時風冷已無法散熱</b>，風冷 Busbar 額定僅 2,916A（140kW），ORv3 HPR 液冷 Busbar 可達 <b>15,625A（750kW）</b>。",
@@ -2063,7 +2272,8 @@ const chain=[
    {nm:"和勝股份",tk:"深 002824",cls:"cn",ro:"高端工業鋁合金結構件，瞄準資料中心液冷系統與智算機櫃儲能箱體。",
     mc:"客戶矩陣覆蓋<b>富士康、比亞迪電子、瑞聲科技、寧德時代、廣汽埃安、比亞迪</b>；瞄準資料中心液冷系統、智算機櫃儲能箱體、算力設備結構件。",
     src:"來源：西南證券 2026/08"}
-  ]},
+  ,
+   {lead:0,nm:"凡甲",tk:"3526",cls:"tw",ro:"高功率大電流連接器，BBU 用 BLADE Type 是台達、光寶、AES-KY、順達的關鍵供應商。",tech:"連接器承載能力由 <b>1,200W 大幅提升至 4,200W</b>，單一金屬接點（腳位）最大電流容量由 <b>30A 提升至 140A</b>，強化散熱與盲插設計。BBU 連接器主力為 <b>BLADE Type</b>，125A～140A 產品已成為台達電、光寶、AES-KY、順達等 BBU 大廠的關鍵供應商。線材採光銅並進：機櫃中 7 公尺以內因光纖與銅線有高達 10 倍價差而固守銅線。",mc:"2026 Q2 AI 伺服器占比 <b>57.5%</b>、營收年增 30%；2026／2027 年每股盈餘估 22.34／29.60 元。",hl:"已切入 <b>400V 高壓直流與 NVIDIA GB 系列供應鏈，正在爭取下一代 800V 規格認證</b>；國外品牌客戶陸續完成認證並開始交貨。國票投顧 2026/7/6 買進（首評）、目標價 445 元（前次 332 元）。",src:"國票投顧 2026/7/6"}]},
 
  {ic:"i-coil",tt:"磁性元件／電感／板載電源（IBC、VRM、VPD）",en:"Magnetics, Inductors & On-Board Power",
   ds:"800V 只換掉「機櫃以上」那一段，<b>板端的 48V→sub-1V 鏈路不論上游是 AC、±400V 或 800V 都一樣</b>——這正是這一環的防禦性來源。但規格本身在跳級：Yole 統計 IBC 單模組功率 <b>0.5kW→3kW</b>、POL 相數 <b>10→32 相</b>、IBC 輸入 <b>48V→800V</b>、輸出 <b>12V→6V</b>、開關由 Si 轉 <b>GaN</b>、效率 85-90%→90-95%。省掉傳統 IBC 那一層的效率帳很硬：含傳統 IBC 的 16:1 架構整機約 <b>80%</b>，改用 64:1 HV-IBC 直降 6V 的架構約 <b>86%</b>，<b>至少 +6%</b>。板端價值量也跳：BNP 估 VRM/機櫃由 Blackwell 的 5.9 美元-6k 升到 Rubin Ultra NVL144 的 <b>&gt;40 美元k</b>、IBC/機櫃由 2.2 美元k 升到 <b>&gt;30 美元k</b>。",
@@ -2111,7 +2321,10 @@ const chain=[
     tech:"<b>Crescendo 晶片宣稱可提供 5 A/mm²</b> 電流密度（對比 Infineon 垂直 VR 的 2 A/mm²、2027 藍圖 &gt;3 A/mm²）。",
     mc:"<b>ADI 宣布收購 Empower Semiconductor</b>，顯示 ADI 積極佈局 AI 資料中心的電源供應架構。",
     src:"來源：Ted Yu EP54 2026/07/22、永豐 2026/05/21"}
-  ]},
+  ,
+   {lead:0,nm:"恆勁",tk:"6920",cls:"tw",ro:"把功率元件埋進載板的封裝廠，NVIDIA 公布的 14 家供應商中合作逾 10 家。",tech:"團隊出身 IC 載板，<b>C2iM 為載板平台、C3iM 為面板級封裝</b>；客戶提供晶片，由恆勁埋入載板內，「希望透過載板做出原本需要導線架的封裝」，應用領域都在功率類產品。已發布兩項產品中，一個 <b>DC-DC 體積縮小 80%、功率密度提高 3 倍</b>，另一個體積縮小 60%。",mc:"月營收 1.5 億元，產能擴充一倍後 2026 年底月營收 3 億元、<b>2027 Q1 新設備到位後可達 3.5 億元</b>；瓶頸站點為研磨、其次電鍍。美系客戶在電壓調節模組相關晶片除恆勁外另有馬來西亞供應商，<b>客戶端評其技術落後恆勁 2～3 年</b>。",hl:"AI 電源新案從設計、樣品到可靠性驗證需 1～1.5 年，競爭者現在開始建置設備也要 2～3 年。朋程 8255 是面板級封裝主力客戶，另有 3～4 家 2027 年進入量產。以科技事業申請上市。",src:"法說會紀要 2026/9/11"},
+   {lead:0,nm:"三集瑞-KY",tk:"6862",cls:"tw",ro:"功率電感廠，BBU 用電感對應 400V／800V 高壓直流。",tech:"供 AI 伺服器與 BBU 用功率電感。",mc:"2026 Q2 BBU 占營收 <b>6%</b>（季增 41%）、7 月升至 <b>9%</b>；AI／伺服器占比由 36% 升到 41%。⚠ 但 2026 全年營收仍估年減 8%、稅後年減 30%，轉機押在 2027 年（估 +69%）。",hl:"元富投顧 2026/8/26 買進、目標價 180 元（前次 160 元，20 倍 2027 年每股盈餘）。",src:"元富投顧 2026/8/26"},
+   {lead:0,nm:"偉詮電",tk:"2436",cls:"tw",ro:"風扇馬達與電源控制 IC，電源客戶就是台達、光寶、群電、康舒。",tech:"伺服器架構由 48V／54V 升到 <b>72V／80V 使單價倍增</b>；散熱風扇馬達控制 IC 市占近 40%，另有液冷水泵馬達與漏液偵測 IC。",mc:"風扇 IC 用量階梯：傳統伺服器僅 12 顆 → NVIDIA GB300 機櫃 <b>300～400 顆</b> → AMD Helios 含電源 <b>400～500 顆</b>（48V，單價較 12V 倍增）。<b>Vera Rubin 採全水冷後風扇 IC 沒有歸零，而是搬到電源櫃</b>：外購 600kW 電源櫃一櫃約 80 顆、1.2MW 約 160 顆。⚠ 2026 Q2 每股盈餘 2.31 元中有 4.09 億元來自業外，本業營業利益季減 19%。",hl:"AMD Helios 2026 Q3 量產、AMD 目標出貨 3,000 台、偉詮約占 30%。合庫 2026/8/26 區間操作 50～73 元；元富目標價 100 元、玉山 82 元。",src:"元富投顧／中信投顧 2026/8/26、合庫投顧 2026/8/26"}]},
 
  {ic:"i-sst",tt:"SST 固態變壓器／整流／灰區電力電子",en:"Solid-State Transformer & Rectifier",
   ds:"終局形態：<b>SST 把中壓交流直接轉成 800VDC</b>，以單一設備取代低壓變壓器＋整流器兩個環節，理論上可把系統效率從約 82% 提升至 <b>87% 以上</b>，並實現約 <b>40 倍重量縮減、14 倍體積縮減</b>（另一版：體積與重量減約 30%、配電佔地縮減 63%）。市場規模是這一環最大的誘因：SemiAnalysis 估 <b>SST TAM 到 2030 年約 320 億美元</b>（另一版口徑 130 億美元）、單位價值量 <b>100～150 萬美元/MW</b>。資金也到位：三家 SST 新創近期合計募資 <b>2.8 億美元</b>（Heron Power 1.4 億、DG Matrix 6,000 萬、Amperesand 8,000 萬），OCP 並於 2026/07 發布 <b>LVDC Solid-State Transformer Specification v0.3</b>。",
@@ -2299,7 +2512,8 @@ const chain=[
    {nm:"Cooler Master",tk:"未上市",cls:"o",ro:"入列 NVIDIA Cold Plate、Tray Inner Manifold 與 Rack Manifold 三類名單。",
     mc:"為 VR NVL72 Cold Plate &amp; Midplane 5 家、Tray Inner Manifold 8 家、VR UQD08 Rack Manifold 10 家（新增 4 家之一）的共同成員。",
     src:"來源：MS 2026/03/19"}
-  ]},
+  ,
+   {lead:0,nm:"泰碩",tk:"3338",cls:"tw",ro:"液冷廠，COMPUTEX 2026 首度進入 NVIDIA 背板，合作產品就是 800V 直流 CDU。",tech:"水冷冷板與冷卻液分配單元；<b>列間式 2.6MW 樣機最快 2027 下半年出貨</b>。",mc:"水冷冷板稼動率僅約 10%（月產 8 萬件、目標 12 萬件）；2026 Q1 每股盈餘 0.27 元。",hl:"<b>COMPUTEX 2026 首次進入 NVIDIA 背板、合作產品即為 800V 直流 CDU</b>。",src:"國票投顧法說紀要 2026/7/20"}]},
 
  {ic:"i-srv",tt:"ODM／機櫃整合與測試",en:"ODM Integration & Test Equipment",
   ds:"機櫃本身的價值在暴增，但<b>ODM 的毛利率在縮</b>：Vera Rubin NVL72 機櫃 ODM 出貨價約 <b>780 萬美元</b>（較 GB300 的 399 萬美元 <b>+95%</b>），Bernstein 以 BOM 口徑估 <b>909 萬美元</b>；ODM 附加價值由 GB300 的 10.82 萬美元 升至 VR200 的 14.96 萬美元（+38%），但<b>隱含 ODM 毛利率由約 2.7% 降至約 1.9%</b>。純機櫃組裝附加價值 2.24 萬美元→28,800（+29%）。相對地，<b>測試設備是這一環真正的槓桿</b>：33kW power shelf 一台測試機可同時驗證 1～2 個 shelf，而 <b>110kW／800V 架構可能需要一台測試機專驗一個 shelf</b>，並需多組 DC load 與回饋式電源並聯。",
@@ -2333,7 +2547,8 @@ const chain=[
    {nm:"Rittal",tk:"未上市",cls:"o",ro:"入列 NVIDIA MGX Rack 名單的國際機櫃廠。",
     mc:"MGX Rack 9 家之一（Auras、AVC、Delta、Foxconn、Interplex、Lead Wealth、Lite-on、Rittal、Yuans Tech）；國泰供應鏈分層表亦將 Rittal 列於 Rack／Enclosure 層（與 Schneider、Vertiv、Flex 並列）。",
     src:"來源：MS 2026/03/19、國泰 2026/05/08"}
-  ]}
+  ,
+   {lead:0,nm:"仁寶",tk:"2324",cls:"tw",ro:"2026/9/14 與 Exascale Labs 簽合作意向書，在美國打造導入 SST 的原生 800V 直流驗證平台。",tech:"雙方將在美國打造新一代 GPU 系統驗證平台，<b>導入固態變壓器建構原生 800V 直流架構</b>，整合 GPU 伺服器與液冷系統，驗證下一代 AI 資料中心的電力、運算與散熱架構。",mc:"產品組合 2025 年個人電腦 70%／非個人電腦 30%，2026 年目標 60%／40%；伺服器營收占比由 2025 年個位數升至 2026 年 10%，AI 約占伺服器的 70%。2026／2027 年每股盈餘估 2.53／3.40 元。",hl:"國票投顧 2026/9/15 區間操作、目標價 45 元。",src:"國票投顧 2026/9/15"}]}
 ];
 </script>
 
@@ -2618,9 +2833,29 @@ const G={
 'BofA':'Bank of America 美國銀行（美銀），美系券商。',
 'Ted Yu':'Substack 作者，寫半導體與 AI 硬體供應鏈分析（本頁引用 EP21、EP54 兩篇）。',
 'FOMO 研究院':'Substack 投資研究電子報，本頁引用其第 46、50、52 期（看錯樓層、台達電 HVDC、功率半導體）。',
+'ORW':'AMD 的開放機櫃規格（Open Rack Wide）：寬 120cm、高 44OU，Helios 機櫃用它，走 50V 匯流排與全機直接液冷。',
+'iPaS':'村田把電容整合進基板的技術，供電改由晶片正下方垂直進入，2027 年量產；是「縮短供電路徑」這條路線的代表。',
+'Power Stamp':'Bloom Energy 的標準化電力單元：10 台 325kW Energy Server 組成一組 3.25MW，8 組再成 26MW 的 Power Block。',
+'CHP':'汽電共生（Combined Heat and Power）：發電同時回收廢熱再利用，燃料電池配 CHP 總效率最高可達約 90%。',
+'GVA':'十億伏安，變壓器產能的計算單位。士電總產能 15GVA 指的是一年能做出的變壓器容量總和。',
+'表後儲能':'裝在電表「用戶這一側」的儲能系統（Behind-the-Meter），由用電者自己擁有，用來削峰、備援或省電費，相對於電力公司蓋在電網上的儲能。',
+'NP0':'一種溫度特性極穩定的陶瓷電容材質（又稱 C0G），容量幾乎不隨溫度變化，用在 LLC 諧振這種對精度敏感的電源電路。',
+'HVLP':'低稜線銅箔（Very Low Profile 的高階版本），表面越平滑高頻損耗越低。等級越高（HVLP3／4／5+）用在越快的世代。',
+'PTFE':'鐵氟龍，一種介電損耗極低的電路板基材，適合高速訊號但機械性質軟、壓合與鑽孔困難、成本高。',
+'埋入式載板':'把功率晶片直接埋進電路載板內部，取代傳統導線架封裝，可大幅縮小體積、提高功率密度。',
+'5+1 冗餘':'備援設計：5 顆模組撐負載、第 6 顆備用，所以實際顆數是理論值的 1.2 倍。花旗用這個假設推算每櫃 BBU 價值。',
+'BMS':'電池管理系統，負責監控電芯電壓、電流、溫度與均衡，是 BBU 模組的核心技術門檻之一。',
+'Exascale Labs':'美國的 AI 系統驗證平台業者，2026/9/14 與仁寶簽合作意向書，共同打造導入固態變壓器的原生 800V 直流驗證平台。',
+'scandium':'鈧，固態氧化物燃料電池電解質用的特種陶瓷添加材料，供應與價格是 Bloom 這類廠商的原料風險。',
+'LBNL':'勞倫斯柏克萊國家實驗室，美國能源部國家實驗室，資料中心用電預測的主要官方來源。',
+'PJM':'美國東部的區域電網營運機構；其擬議規則可能限制未自備電力資源的新增負載，會推升資料中心自建電源需求。',
+'導線架':'半導體封裝裡承載晶片並導出電流的金屬支架。高功率電源與 BBU 用的導線架要求更厚、更耐流。',
+'氮化矽':'一種高導熱又耐機械應力的陶瓷材料，用來做高壓大電流功率模組的基板，比傳統氧化鋁耐操。',
+'台系投顧':'本頁引用的元大、富邦、國泰、統一、凱基、群益、華南、元富、宏遠、兆豐、康和、國票、永豐、合庫、中信、玉山、第一金、福邦等，都是台灣券商的研究部門。',
+'Oberon 架構':'NVIDIA GB200／GB300 NVL72 世代的機櫃架構代號，屬 54V 世代。2026 年 9 月有查核指出 Rubin Ultra 可能改回用它，而非 Kyber。',
 'HBM4':'第四代高頻寬記憶體，堆在 GPU 旁邊，把封裝周邊空間佔滿，逼得電源改走垂直供電。'
 };
-const AL={'2025E':'2026E','2027E':'2026E','2028E':'2026E','2029E':'2026E','2030E':'2026E','相數':'多相','大摩':'Morgan Stanley','高盛':'GS','花旗':'Citi','摩根大通':'JPM','美銀':'BofA','麥格理':'Macquarie','瑞銀':'UBS','集邦':'TrendForce','本益比':'PE','估計值':'2026E','液對液':'L2L','64U':'U','42U':'U','電流 ÷15':'800V','過零':'過零點','高盛':'GS','摩根士丹利':'Morgan Stanley','Diablo 400':'Mt. Diablo','Diablo':'Mt. Diablo','法國巴黎銀行':'BNP','蘇黎世':'ETH','800VDC':'800V','800 VDC':'800V','48V':'54V','固態變壓器':'SST','母排':'匯流排','Busbar':'匯流排','busbar':'匯流排','母線槽':'Busway','busway':'Busway','電源櫃':'Sidecar','Power Rack':'Sidecar','邊櫃':'Sidecar','Vera Rubin':'Rubin','Rubin Ultra':'Rubin','GB300':'GB200','NVL144':'NVL72','燃料電池':'SOFC','垂直供電':'VPD','固態斷路器':'SSCB','斷路器':'SSCB','Primary Power':'Bridge Power','PDU':'配電盤','整流器':'整流','磁性元件':'電感','雲端業者':'CSP','代工廠':'ODM','電源供應器':'PSU','不斷電系統':'UPS','電源層架':'Power Shelf','電子保險絲':'e-Fuse','碳化矽':'SiC','氮化鎵':'GaN','寬能隙半導體':'寬能隙','高壓直流':'HVDC'};
+const AL={'Behind-the-Meter':'表後儲能','BTM':'表後儲能','C0G':'NP0','鐵氟龍':'PTFE','汽電共生':'CHP','鈧':'scandium','Oberon':'Oberon 架構','2025E':'2026E','2027E':'2026E','2028E':'2026E','2029E':'2026E','2030E':'2026E','相數':'多相','大摩':'Morgan Stanley','高盛':'GS','花旗':'Citi','摩根大通':'JPM','美銀':'BofA','麥格理':'Macquarie','瑞銀':'UBS','集邦':'TrendForce','本益比':'PE','估計值':'2026E','液對液':'L2L','64U':'U','42U':'U','電流 ÷15':'800V','過零':'過零點','高盛':'GS','摩根士丹利':'Morgan Stanley','Diablo 400':'Mt. Diablo','Diablo':'Mt. Diablo','法國巴黎銀行':'BNP','蘇黎世':'ETH','800VDC':'800V','800 VDC':'800V','48V':'54V','固態變壓器':'SST','母排':'匯流排','Busbar':'匯流排','busbar':'匯流排','母線槽':'Busway','busway':'Busway','電源櫃':'Sidecar','Power Rack':'Sidecar','邊櫃':'Sidecar','Vera Rubin':'Rubin','Rubin Ultra':'Rubin','GB300':'GB200','NVL144':'NVL72','燃料電池':'SOFC','垂直供電':'VPD','固態斷路器':'SSCB','斷路器':'SSCB','Primary Power':'Bridge Power','PDU':'配電盤','整流器':'整流','磁性元件':'電感','雲端業者':'CSP','代工廠':'ODM','電源供應器':'PSU','不斷電系統':'UPS','電源層架':'Power Shelf','電子保險絲':'e-Fuse','碳化矽':'SiC','氮化鎵':'GaN','寬能隙半導體':'寬能隙','高壓直流':'HVDC'};
 const canon=k=>AL[k]||k;
 const keys=Object.keys(G).concat(Object.keys(AL)).sort((a,b)=>b.length-a.length);
 const esc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
