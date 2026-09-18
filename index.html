@@ -797,6 +797,16 @@ table.tbl.suptbl th{font-size:13px}
 /* 61 銅色當文字對比不足，改用深銅 */
 .rail a.rl em{color:var(--copper-d);font-size:11px}
 .tbl td a,.threads a,td a{color:var(--copper-d)}
+/* 63 未指定欄寬的表改自動分配，不再一律等寬 */
+table.tbl.wrapall{table-layout:auto}
+table.tbl.brk,table.tbl.rank,table.tbl.ecotbl,table.tbl.volttbl,table.tbl.suptbl{table-layout:fixed}
+table.tbl.wrapall td:first-child{white-space:normal}
+/* 64 TL;DR 徽章 */
+.ch-no.tldr{font-size:15px;letter-spacing:.02em;line-height:1.1;display:flex;align-items:center;justify-content:center}
+/* 65 首屏時程磚字級單獨下修 */
+.kp .num.tiny{font-size:20px}
+.tplist span.hi b{color:var(--rust)}
+.tplist span.hi{font-weight:600}
 </style>
 
 <header class="mast">
@@ -835,8 +845,8 @@ table.tbl.suptbl th{font-size:13px}
         <!-- 灰區 / 白區 底色 -->
         <rect x="14" y="24" width="440" height="252" fill="#f8f1e4" rx="4"/>
         <rect x="466" y="24" width="480" height="252" fill="#f7efdf" rx="4"/>
-        <text x="28" y="44" font-size="11" letter-spacing="3" font-weight="800" fill="#8a5f22">灰區 GRAY SPACE · 電力機房</text><text x="28" y="60" font-size="10" fill="#9a8f80">＝放變壓器、UPS 這些電力設備的機房</text>
-        <text x="480" y="44" font-size="11" letter-spacing="3" font-weight="800" fill="#8a5510">白區 WHITE SPACE · 機櫃列</text><text x="480" y="60" font-size="10" fill="#9a8f80">＝放伺服器機櫃（GPU）的地方</text>
+        <text x="28" y="44" font-size="11" letter-spacing="3" font-weight="800" fill="#8a5f22">灰區 GRAY SPACE</text><text x="28" y="60" font-size="10" fill="#9a8f80">電力機房＝放變壓器、UPS 這些設備</text>
+        <text x="480" y="44" font-size="11" letter-spacing="3" font-weight="800" fill="#8a5510">白區 WHITE SPACE</text><text x="480" y="60" font-size="10" fill="#9a8f80">機櫃列＝放伺服器機櫃（GPU）的地方</text>
         <!-- 主路徑（上排 4 站 → 下排 4 站） -->
         <path id="plabPath" d="M70 120 H190 H310 H430 H470 C500 120 490 200 510 200 H630 H750 H880" fill="none" stroke="#cfc2ac" stroke-width="3"/>
         <path id="plabHot" d="M70 120 H190" fill="none" stroke="#c2683f" stroke-width="4" stroke-linecap="round"/>
@@ -938,7 +948,7 @@ table.tbl.suptbl th{font-size:13px}
 
 <section id="amp" class="xsec">
   <div class="ch-head rv">
-    <div class="ch-no">TL;DR</div>
+    <div class="ch-no tldr">TL;DR</div>
     <div class="ch-tt"><div class="en">CURRENT, NOT VOLTAGE</div><h2>先講結論：真正的瓶頸是電流，不是電壓</h2></div>
   </div>
   <p class="lede rv">如果整頁只記得一件事，記這件：<b>把電壓拉高，目的從來不是「電壓」，而是把電流壓下來</b>。</p>
@@ -1782,14 +1792,14 @@ table.tbl.suptbl th{font-size:13px}
       <table class="tbl wrapall">
         <thead><tr><th>公司</th><th>各家目標價（元，美股為美元）</th></tr></thead>
         <tbody>
-          <tr><td><b>光寶科 2301</b><br><i class="sm">2026/8/3 法說後九家同日</i></td><td>元大 370（前次 300）｜統一 310（8/12 最新）｜凱基 295（7/31）｜元富 290｜宏遠 296｜福邦 283｜富邦 280｜國泰證期 278｜華南 250｜合庫 158～236（<b>區間</b>，全場唯一非買進；主表的 158 是此區間下緣）</td></tr>
-          <tr><td><b>台達電 2308</b></td><td><b>高盛 4,120（7/30，全場最高、約為最低價的 2.2 倍）</b>｜富邦 2,500（7/20，由 3,000 下修）｜美銀 2,500（7/30）｜統一 2,400（8/12）｜花旗 2,280（7/30）｜元大 2,240（7/31；同家 7/9 版為 2,870）｜群益 2,050（9/3）｜兆豐 2,000（7/31）｜國泰 1,930（7/31）｜國票 1,900（7/31）</td></tr>
+          <tr><td><b>光寶科 2301</b><br><i class="sm">2026/8/3 法說後九家同日</i></td><td><div class="tplist"><span>元大 <b>370</b> <i>前次 300</i></span><span>統一 <b>310</b> <i>8/12 最新</i></span><span>凱基 <b>295</b> <i>7/31</i></span><span>元富 <b>290</b></span><span>宏遠 <b>296</b></span><span>福邦 <b>283</b></span><span>富邦 <b>280</b></span><span>國泰證期 <b>278</b></span><span>華南 <b>250</b></span><span class="hi">合庫 <b>158～236</b> <i>區間，全場唯一非買進；主表的 158 是此區間下緣</i></span></div></td></tr>
+          <tr><td><b>台達電 2308</b></td><td><div class="tplist"><span class="hi">高盛 <b>4,120</b> <i>7/30，全場最高、約為最低價的 2.2 倍</i></span><span>富邦 <b>2,500</b> <i>7/20，由 3,000 下修</i></span><span>美銀 <b>2,500</b> <i>7/30</i></span><span>統一 <b>2,400</b> <i>8/12</i></span><span>花旗 <b>2,280</b> <i>7/30</i></span><span>元大 <b>2,240</b> <i>7/31；同家 7/9 版為 2,870</i></span><span>群益 <b>2,050</b> <i>9/3</i></span><span>兆豐 <b>2,000</b> <i>7/31</i></span><span>國泰 <b>1,930</b> <i>7/31</i></span><span>國票 <b>1,900</b> <i>7/31</i></span></div></td></tr>
           <tr><td><b>國巨 2327</b></td><td><div class="tplist"><span>摩根士丹利 <b>1,465</b> <i>7/29</i></span><span>兆豐 <b>1,305</b> <i>7/31</i></span><span>國票 <b>1,275</b> <i>7/9</i></span><span>凱基 <b>1,250</b> <i>7/22</i></span><span>富邦 <b>1,250</b> <i>7/9</i></span><span>元富 <b>1,200</b> <i>7/30</i></span><span>華南 <b>1,100</b> <i>7/30</i></span><span>玉山 <b>740</b> <i>7/30</i></span><span>宏遠 <b>703</b> <i>8/12</i></span><span>統一 <b>688</b> <i>8/11</i></span></div></td></tr>
           <tr><td><b>貿聯-KY 3665</b></td><td><div class="tplist"><span>元富 <b>3,665</b> <i>8/24</i></span><span>瑞銀 <b>3,617</b> <i>9/3</i></span><span>玉山 <b>3,140</b> <i></i></span><span>國票 <b>3,125</b> <i></i></span><span>華南 <b>3,100</b> <i></i></span><span>統一 <b>2,950</b> <i></i></span><span>國泰 <b>2,900</b> <i></i></span><span>元大 <b>2,850</b> <i></i></span><span>中信 <b>2,775</b> <i></i></span><span>宏遠 <b>2,750</b> <i>8/31</i></span></div></td></tr>
           <tr><td><b>世界先進 5347</b></td><td><div class="tplist"><span>中信 <b>220</b> <i>8/5</i></span><span>統一 <b>205</b> <i>8/5，由 158 上修</i></span><span>宏遠 <b>202</b> <i></i></span><span>元大 <b>200</b> <i></i></span><span>國泰 <b>200</b> <i></i></span><span>兆豐 <b>195</b> <i></i></span><span>凱基 <b>187</b> <i></i></span><span>華南 <b>185</b> <i></i></span><span>玉山 <b>180</b> <i></i></span><span>群益 <b>175</b> <i></i></span></div></td></tr>
           <tr><td><b>致茂 2360</b></td><td><div class="tplist"><span>中信 <b>2,800</b> <i>8/3</i></span><span>國票 <b>2,700</b> <i></i></span><span>富邦 <b>2,700</b> <i></i></span><span>玉山 <b>2,696</b> <i></i></span><span>花旗 <b>2,500</b> <i>7/30</i></span><span>元大 <b>2,400</b> <i>7/31、9/3、9/11 三度維持</i></span></div></td></tr>
           <tr><td><b>宏致 3605</b></td><td><div class="tplist"><span>統一 <b>125</b> <i></i></span><span>第一金 <b>122</b> <i></i></span><span>元富 <b>120</b> <i></i></span><span>元大 <b>115</b> <i></i></span><span>玉山 <b>111</b> <i></i></span><span>華南 <b>110</b> <i></i></span></div></td></tr>
-          <tr><td><b>矽力-KY 6415</b></td><td>中信 600（8/31）｜凱基 530｜群益 514｜元大 480｜合庫 376～540（區間）｜<b>摩根士丹利 減碼（9/6，未載目標價）</b></td></tr>
+          <tr><td><b>矽力-KY 6415</b></td><td><div class="tplist"><span>中信 <b>600</b> <i>8/31</i></span><span>凱基 <b>530</b></span><span>群益 <b>514</b></span><span>元大 <b>480</b></span><span>合庫 <b>376～540</b> <i>區間</i></span><span class="hi">摩根士丹利 減碼（ <b>9</b> <i>/6，未載目標價）</i></span></div></td></tr>
           <tr><td><b>瀚荃 8103</b></td><td><div class="tplist"><span>華南 <b>165</b> <i>8/24，由 125 上修</i></span><span>元富 <b>150</b> <i>8/24</i></span><span>群益 <b>103</b> <i>8/24</i></span></div></td></tr>
           <tr><td><b>其他</b></td><td><div class="tplist"><span>順德：兆豐 <b>252</b> <i></i></span><span>偉詮電：元富 <b>100</b> <i></i></span><span>順達：華南 <b>600</b> <i>由 475 上修</i></span><span>同欣電：富邦 <b>250</b> <i>由 217 上修</i></span><span>鈺邦：兆豐 <b>365</b> <i>由 193 上修</i></span><span>力智：凱基 <b>240</b> <i></i></span><span>松川：國票 <b>348</b> <i>由 278 上修</i></span><span>亞力：中信 <b>151</b> <i></i></span><span>Bloom：富邦 <b>330 美元</b> <i>初評</i></span></div></td></tr>
         </tbody>
