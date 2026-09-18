@@ -929,7 +929,7 @@ button.more{font-size:12px;padding:4px 8px}
 <div class="wrap page">
 <aside class="rail" id="rail">
   <div class="rail-h">跟著電走</div>
-  <a href="#amp" class="rx"><i>先讀</i>電流才是瓶頸</a>
+  <a href="#amp" class="rx"><i>※</i>電流才是瓶頸</a>
   <a href="#why" class="rx"><i>00</i>為什麼 800V</a>
   <a href="#L1" class="rl"><em>13.8kV</em>電網・自備電力</a>
   <a href="#L2" class="rl"><em>480V AC</em>變壓器・重電</a>
@@ -959,10 +959,10 @@ button.more{font-size:12px;padding:4px 8px}
 
 <section id="amp" class="xsec">
   <div class="ch-head rv">
-    <div class="ch-no tldr">TL;DR</div>
-    <div class="ch-tt"><div class="en">CURRENT, NOT VOLTAGE</div><h2>先講結論：真正的瓶頸是電流，不是電壓</h2></div>
+    <div class="ch-no">※</div>
+    <div class="ch-tt"><div class="en">CURRENT, NOT VOLTAGE</div><h2>真正的瓶頸是電流，不是電壓</h2></div>
   </div>
-  <p class="lede rv">如果整頁只記得一件事，記這件：<b>把電壓拉高，目的從來不是「電壓」，而是把電流壓下來</b>。</p>
+  <p class="lede rv">把電壓拉高，目的不是電壓本身，<b>是把電流壓下來</b>。整條 800V 的邏輯都從這裡長出來。</p>
 
   <div class="ampgrid rv">
     <div class="ampbox">
@@ -987,7 +987,7 @@ button.more{font-size:12px;padding:4px 8px}
     </div>
   </div>
 
-  <div class="callout rv" style="background:#fbf1ea;border-left:3px solid var(--red)"><span class="cl-k" style="color:var(--red)">這段的反面證據（務必一起看）</span>
+  <div class="callout rv" style="background:#fbf1ea;border-left:3px solid var(--red)"><span class="cl-k" style="color:var(--red)">這段的反面證據</span>
     ① <b>800V 目前是規格路線圖，不是已量產的標準</b>：Infineon 與 SolarEdge 是「擴大合作、共同開發」，村田 iPaS 要 2027 年，Bloom 的 800V 直流輸出目前也只在自家設備端。<b>相關標的 2026 年的 800V 營收貢獻接近零。</b>
     ② 原文<b>沒有點名任何台股</b>，全文具名的只有 Infineon 與 SolarEdge；台股的對應是後續推導，不是原文結論。
     ③ 富邦同期明確註記：<b>直流供電只能簡化不斷電系統的前端架構，不代表可以取消完整備援與儲能系統</b>——本頁<a href="#L5">第 5 站</a>寫的「集中式 UPS 消失」要配這句一起讀。
@@ -999,11 +999,11 @@ button.more{font-size:12px;padding:4px 8px}
 <section id="why">
   <div class="ch-head rv">
     <div class="ch-no">00</div>
-    <div class="ch-tt"><div class="en">WHY 800V</div><h2>先秒懂：為什麼 54V 撐不住，非得跳到 800V</h2></div>
+    <div class="ch-tt"><div class="en">WHY 800V</div><h2>為什麼 54V 撐不住，非得跳到 800V</h2></div>
   </div>
 
   <div class="why rv">
-    <span class="big">一句話：GPU 機櫃的功率從 GB200 的 120kW 一路衝向 Kyber 的 1MW，電壓不變的話電流會大到「銅排比人粗、電源擱架佔滿整櫃」。電壓拉高 15 倍，電流就剩 1/15、線損剩 1/219——這是物理，不是選擇。</span>
+    <span class="big">GPU 機櫃的功率從 GB200 的 120kW 一路衝向 Kyber 的 1MW，電壓不變的話電流會大到「銅排比人粗、電源擱架佔滿整櫃」。電壓拉高 15 倍，電流就剩 1/15、線損剩 1/219——這是物理，不是選擇。</span>
     功率 P ＝ 電壓 V × 電流 I。同樣 600kW，<b>54V 要推 11,111A，800V 只要 750A</b>；導體損耗 I²R 跟電流平方成正比，所以電流降約 14.8 倍、熱損降約 219 倍。<span class="src">⚠ 部分報告（SemiAnalysis 經轉述）寫「54V 需 12,500A」，那個數字是<b>用 48V 級推算</b>的（600kW÷48V＝12,500A）；本頁一律用 54V 實算的 11,111A，才能和「電流降約 15 倍、熱損降 219 倍」這組比值自洽。</span>⚠ 效率的 87.4% 指的是<b>第四階段 SST 終態</b>，800V 第二階段為 86.5%；另一套中信口徑是 87.6% → 92% 以上，兩套基準不同不要混用。<br>NVIDIA 官方口徑：同樣線規下 800V 直流的傳輸功率比 415V 交流<b>多 157%</b>、整體省 <b>45% 銅</b>、端到端效率最多<b>提升 5 個百分點</b>；如果 1MW 機櫃還留在 54V，<b>光是電源擱架就要佔掉 64U</b>——一整個機櫃都不夠放電源。
   </div>
 
@@ -1182,7 +1182,7 @@ button.more{font-size:12px;padding:4px 8px}
       <tr><td><b>1,500V</b></td><td>≈400A</td><td>1,700V+ SiC</td><td>跨進高壓法規、PPE 與訓練門檻跳級</td><td>太陽能案場 1,500V 直流</td><td>同線規 +382% 傳輸功率，但資料中心暫不採用</td></tr>
     </tbody>
   </table>
-  <p class="lede" style="margin-top:6px">法規是最少被講的理由。<b>簡單說：美國電工法規還沒寫到 800V 直流，所以沒人敢大規模裝，這才是延後的硬約束。</b>細節：IEEE 1584 不覆蓋直流電弧、NFPA 70E 缺 600～1,000VDC 的 PPE 等級表、UL 857 第 14 版（2025）才把母線槽上限從 600V 提到 1,000VDC——這也是「延後」背後的硬約束。</p>
+  <p class="lede" style="margin-top:6px">法規是最少被講的理由。<b>美國電工法規還沒寫到 800V 直流，沒人敢大規模裝，這才是延後的硬約束。</b>細節：IEEE 1584 不覆蓋直流電弧、NFPA 70E 缺 600～1,000VDC 的 PPE 等級表、UL 857 第 14 版（2025）才把母線槽上限從 600V 提到 1,000VDC——這也是「延後」背後的硬約束。</p>
 
   <details class="fold rv"><summary><span class="pm"></span>把數字攤開：同一條 800V 電源櫃裡，錢花在哪（GS 拆解 880kW 電源櫃 BOM）</summary>
     <figure class="plate">
@@ -1390,7 +1390,7 @@ button.more{font-size:12px;padding:4px 8px}
       <text x="500" y="104" font-size="10.5" fill="#2f7a5a">+800V</text><text x="500" y="160" font-size="10.5" fill="#2f7a5a">0V　→ 2 線、對地 800V、未來可升 ±750V</text>
       <text x="430" y="200" text-anchor="middle" font-size="11" fill="#786d5c">兩邊的匯流排「極間」都是 800V——差在對地電壓、線數與安規；元件耐壓需求 650V 級 vs 1,200V 級</text>
     </svg>
-  <p class="figleg">看圖小抄：「極間」＝兩條線之間的電壓（兩邊都是 800V）；「對地」＝人或機殼碰到時承受的電壓，越低越安全、零件越便宜。±400V 對地只有 400V，所以安規門檻低一級；800V 單極對地就是 800V。</p>
+  <p class="figleg">「極間」＝兩條線之間的電壓（兩邊都是 800V）；「對地」＝人或機殼碰到時承受的電壓，越低越安全、零件越便宜。±400V 對地只有 400V，所以安規門檻低一級；800V 單極對地就是 800V。</p>
     </div>
     <div class="routes rv">
       <div class="route" style="--rc:#7a5cb8">
@@ -1611,7 +1611,7 @@ button.more{font-size:12px;padding:4px 8px}
     </div>
   </div>
 
-  <div class="callout rv" style="background:#fbf1ea;border-left:3px solid var(--red)"><span class="cl-k" style="color:var(--red)">怎麼用這張時程表</span>
+  <div class="callout rv" style="background:#fbf1ea;border-left:3px solid var(--red)"><span class="cl-k" style="color:var(--red)">判讀這張時程表的三個原則</span>
     ① <b>2026 是驗證年，不是收成年</b>：看的是認證、送樣、小量出貨的「有沒有」，不是營收。② <b>真正的營收引擎仍是 PSU＋液冷</b>：台達 2026 PSU 市占 55～65%、液冷 L2A 營收 2026 上半年 約 50 億 → 2026 下半年 約 120 億元；光寶 AI 營收占比 &gt;30%。③ <b>看 ASIC 不看 GPU</b>：±400V 給 CSP 自研晶片機櫃的量會先來，明年 ASIC 機架可達台達 HVDC 出貨的 1/3。④ <b>Kyber 出貨時點＝800V 放量時點</b>，多空最大分歧就在「2027 上半年 有沒有 Kyber」。
   </div>
 </section>
@@ -1851,7 +1851,7 @@ button.more{font-size:12px;padding:4px 8px}
     </table>
   </div>
 
-  <div class="callout rv"><span class="cl-k">讀這張表的三個提醒</span>
+  <div class="callout rv"><span class="cl-k">三個提醒</span>
     ① <b>目標價的年份比數字重要</b>：這一輪調升多數是把評價基準從 2026 年換成 2027 年，等於賣方也承認 2026 年沒有量。② <b>同檔差兩倍是常態</b>：國巨 688～1,465、光寶 158～370，差的往往是「AI 占比怎麼算」。③ <b>「無評等」不等於不重要</b>：泰碩、信昌電只有法說紀要，但他們講的規格（800V 直流 CDU、單櫃 3 萬～5 萬顆 MLCC）反而是最一手的產業資訊。
   </div>
 
