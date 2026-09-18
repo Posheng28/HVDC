@@ -547,8 +547,8 @@ table.tbl.ztbl td b{color:var(--ink)}
 .segbar .vw.on{background:var(--copper);border-color:var(--copper);color:#fff}
 table.tbl.suptbl{margin:0 0 6px}
 table.tbl.suptbl th:nth-child(1),table.tbl.suptbl td.st1{width:22px;padding-left:10px;padding-right:0}
-table.tbl.suptbl th:nth-child(2),table.tbl.suptbl td.st2{width:19%}
-table.tbl.suptbl th:nth-child(3),table.tbl.suptbl td.st3{width:33%}
+table.tbl.suptbl th:nth-child(2),table.tbl.suptbl td.st2{width:24%}
+table.tbl.suptbl th:nth-child(3),table.tbl.suptbl td.st3{width:30%}
 table.tbl.suptbl th:nth-child(5),table.tbl.suptbl td.st5{width:74px;text-align:right}
 table.tbl.suptbl td{font-size:13px;color:var(--body)}
 table.tbl.suptbl td.st2 b{font-family:var(--serif);font-size:14.5px;color:var(--ink);margin-right:6px}
@@ -785,6 +785,18 @@ table.tbl th{white-space:normal}
 .eb b,.evt .e .t{font-size:14px}
 .acc .s-ds{font-size:13.5px;line-height:1.8}
 .painbar,.painbar .pt{font-size:13.5px;line-height:1.8}
+/* 59 覆蓋舊規則：公司總覽表與展開卡是全頁字最多的地方 */
+table.tbl.suptbl td{font-size:14px;line-height:1.8}
+table.tbl.suptbl th{font-size:13px}
+.sup .tech,.sup .mc,.sup .ro,.sup .hl2{font-size:14px;line-height:1.8}
+.sup .nm{font-size:15px}
+.sx3>div{font-size:14px;line-height:1.8}
+.sx3>div i{font-size:12px}
+/* 60 硬編碼淺色統一走變數 */
+.tagline{color:var(--copper-d)!important;font-size:13px}
+/* 61 銅色當文字對比不足，改用深銅 */
+.rail a.rl em{color:var(--copper-d);font-size:11px}
+.tbl td a,.threads a,td a{color:var(--copper-d)}
 </style>
 
 <header class="mast">
@@ -803,7 +815,7 @@ table.tbl th{white-space:normal}
       <div class="kp"><div class="num">120<small>kW</small> → 1<small>MW+</small></div><div class="lbl"><span class="lk2">單櫃功率</span>GB200 → Kyber／Feynman；<br>54V 在約 200～250kW 就撞牆</div></div>
       <div class="kp"><div class="num tight">電流 ÷15<span class="sep">·</span>熱損 ÷219</div><div class="lbl"><span class="lk2">54V→800V</span>電流降 15 倍、導體熱損降 219 倍；<br>省銅 45%、效率最多 +5 個百分點</div></div>
       <div class="kp"><div class="num">3.6 → 40<small>萬美元</small></div><div class="lbl"><span class="lk2">單櫃電源價值</span>GB200 → Rubin Ultra 800V 電源櫃（&gt;10 倍）</div></div>
-      <div class="kp"><div class="num">31 → 78<small>億美元</small></div><div class="lbl">AI 伺服器電源 TAM 2025→2026（約 +150%；富邦原文寫 +153%，依 31→78 實算為 +151.6%）；<br>台達市占 60～70%、光寶 15～20%</div></div>
+      <div class="kp"><div class="num">31 → 78<small>億美元</small></div><div class="lbl">AI 伺服器電源市場 2025→2026（約 +150%）；<br>台達市占 60～70%、光寶 15～20%</div></div>
       <div class="kp"><div class="num tiny"><span class="nw">2026 第三季</span><span class="sep">/</span>2027<span class="sep">/</span><span class="nw">2027 下半年</span></div><div class="lbl">±400V 量產 / 800V 放量 / Kyber；<br>台達 HVDC 占 FY26 營收 &lt;1%、FY27 5～10%</div></div>
       <div class="kp"><div class="num">&gt;85<small>%</small></div><div class="lbl">BBU 在 AI 機櫃的滲透率（2027，HVDC 必備件）</div></div>
     </div>
@@ -1087,33 +1099,33 @@ table.tbl th{white-space:normal}
   <svg viewBox="0 0 900 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="傳統 AC 架構 vs 800V HVDC 架構" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif">
     <text x="20" y="30" font-size="13.5" font-weight="800" fill="#6a6156" font-family="Georgia,PMingLiU,serif">今天：交流架構（54V in-rack）</text>
     <g font-size="11.5" font-weight="700" text-anchor="middle">
-      <rect x="20" y="50" width="78" height="46" rx="4" fill="#fff" stroke="#9a8f80" stroke-width="1.2"/><text x="59" y="70" fill="#221f1b">13.8kV AC</text><text x="59" y="86" fill="#9a8f80" font-size="10.5" font-weight="600">電網</text>
-      <rect x="110" y="50" width="77" height="46" rx="4" fill="#fff" stroke="#9a8f80" stroke-width="1.2"/><text x="148" y="70" fill="#221f1b">變壓器</text><text x="148" y="86" fill="#9a8f80" font-size="10.5" font-weight="600">→ 480V AC</text>
+      <rect x="20" y="50" width="78" height="46" rx="4" fill="#fff" stroke="#786d5c" stroke-width="1.2"/><text x="59" y="70" fill="#221f1b">13.8kV AC</text><text x="59" y="86" fill="#786d5c" font-size="10.5" font-weight="600">電網</text>
+      <rect x="110" y="50" width="77" height="46" rx="4" fill="#fff" stroke="#786d5c" stroke-width="1.2"/><text x="148" y="70" fill="#221f1b">變壓器</text><text x="148" y="86" fill="#786d5c" font-size="10.5" font-weight="600">→ 480V AC</text>
       <rect x="199" y="50" width="76" height="46" rx="4" fill="#fbf1ea" stroke="#c2683f" stroke-width="1.4" stroke-dasharray="4 3"/><text x="237" y="70" fill="#c2683f">UPS</text><text x="237" y="86" fill="#c2683f" font-size="10.5" font-weight="600">AC→DC→AC</text>
       <rect x="287" y="50" width="39" height="46" rx="4" fill="#fbf1ea" stroke="#c2683f" stroke-width="1.4" stroke-dasharray="4 3"/><text x="306" y="70" fill="#c2683f">PDU</text><text x="306" y="86" fill="#c2683f" font-size="10.5" font-weight="600">配電</text>
       <rect x="338" y="50" width="121" height="46" rx="4" fill="#fbf1ea" stroke="#c2683f" stroke-width="1.4" stroke-dasharray="4 3"/><text x="398" y="70" fill="#c2683f">機櫃內 PSU</text><text x="398" y="86" fill="#c2683f" font-size="10.5" font-weight="600">AC→54V・佔 8～18U</text>
-      <rect x="471" y="50" width="68" height="46" rx="4" fill="#fff" stroke="#9a8f80" stroke-width="1.2"/><text x="505" y="70" fill="#221f1b">54V 銅排</text><text x="505" y="86" fill="#9a8f80" font-size="10.5" font-weight="600">數千安培</text>
-      <rect x="551" y="50" width="88" height="46" rx="4" fill="#fff" stroke="#9a8f80" stroke-width="1.2"/><text x="595" y="70" fill="#221f1b">IBC／VRM</text><text x="595" y="86" fill="#9a8f80" font-size="10.5" font-weight="600">54→12→0.8V</text>
+      <rect x="471" y="50" width="68" height="46" rx="4" fill="#fff" stroke="#786d5c" stroke-width="1.2"/><text x="505" y="70" fill="#221f1b">54V 銅排</text><text x="505" y="86" fill="#786d5c" font-size="10.5" font-weight="600">數千安培</text>
+      <rect x="551" y="50" width="88" height="46" rx="4" fill="#fff" stroke="#786d5c" stroke-width="1.2"/><text x="595" y="70" fill="#221f1b">IBC／VRM</text><text x="595" y="86" fill="#786d5c" font-size="10.5" font-weight="600">54→12→0.8V</text>
       <rect x="651" y="50" width="38" height="46" rx="4" fill="#f8f1e4" stroke="#b8863b" stroke-width="1.6"/><text x="670" y="78" fill="#8a5f22">GPU</text>
     </g>
     <text x="20" y="128" font-size="11" fill="#8f4a2b">紅色虛線＝800V 架構裡被拿掉或搬走的方塊。UPS 兩次轉換＋PSU 各掉 2～5%；端到端約 82～87.6%。</text>
 
     <text x="20" y="176" font-size="13.5" font-weight="800" fill="#8a5f22" font-family="Georgia,PMingLiU,serif">明天：800V HVDC（Kyber 世代）</text>
     <g font-size="11.5" font-weight="700" text-anchor="middle">
-      <rect x="20" y="196" width="81" height="46" rx="4" fill="#fff" stroke="#9a8f80" stroke-width="1.2"/><text x="60" y="216" fill="#221f1b">13.8kV AC</text><text x="60" y="232" fill="#9a8f80" font-size="10.5" font-weight="600">電網／自備電</text>
+      <rect x="20" y="196" width="81" height="46" rx="4" fill="#fff" stroke="#786d5c" stroke-width="1.2"/><text x="60" y="216" fill="#221f1b">13.8kV AC</text><text x="60" y="232" fill="#786d5c" font-size="10.5" font-weight="600">電網／自備電</text>
       <rect x="113" y="196" width="119" height="46" rx="4" fill="#eef5ee" stroke="#2f7a5a" stroke-width="1.6"/><text x="172" y="216" fill="#2f7a5a">SST／變壓器＋整流</text><text x="172" y="232" fill="#2f7a5a" font-size="10.5" font-weight="600">一次變 800V DC</text>
       <rect x="244" y="196" width="91" height="46" rx="4" fill="#eef5ee" stroke="#2f7a5a" stroke-width="1.6"/><text x="290" y="216" fill="#2f7a5a">800V Busway</text><text x="290" y="232" fill="#2f7a5a" font-size="10.5" font-weight="600">SSCB 固態斷路</text>
       <rect x="347" y="196" width="130" height="46" rx="4" fill="#eef5ee" stroke="#2f7a5a" stroke-width="1.6"/><text x="412" y="216" fill="#2f7a5a">獨立電源櫃 Sidecar</text><text x="412" y="232" fill="#2f7a5a" font-size="10.5" font-weight="600">Shelf＋BBU＋超級電容</text>
-      <rect x="489" y="196" width="62" height="46" rx="4" fill="#fff" stroke="#9a8f80" stroke-width="1.2"/><text x="520" y="216" fill="#221f1b">800V</text><text x="520" y="232" fill="#9a8f80" font-size="10.5" font-weight="600">2 線進櫃</text>
+      <rect x="489" y="196" width="62" height="46" rx="4" fill="#fff" stroke="#786d5c" stroke-width="1.2"/><text x="520" y="216" fill="#221f1b">800V</text><text x="520" y="232" fill="#786d5c" font-size="10.5" font-weight="600">2 線進櫃</text>
       <rect x="563" y="196" width="137" height="46" rx="4" fill="#eef5ee" stroke="#2f7a5a" stroke-width="1.6"/><text x="632" y="216" fill="#2f7a5a">64:1 LLC</text><text x="632" y="232" fill="#2f7a5a" font-size="10.5" font-weight="600">800→12V／每 GPU 一顆</text>
-      <rect x="712" y="196" width="65" height="46" rx="4" fill="#fff" stroke="#9a8f80" stroke-width="1.2"/><text x="744" y="216" fill="#221f1b">VRM</text><text x="744" y="232" fill="#9a8f80" font-size="10.5" font-weight="600">12→0.8V</text>
+      <rect x="712" y="196" width="65" height="46" rx="4" fill="#fff" stroke="#786d5c" stroke-width="1.2"/><text x="744" y="216" fill="#221f1b">VRM</text><text x="744" y="232" fill="#786d5c" font-size="10.5" font-weight="600">12→0.8V</text>
       <rect x="789" y="196" width="38" height="46" rx="4" fill="#f8f1e4" stroke="#b8863b" stroke-width="1.6"/><text x="808" y="224" fill="#8a5f22">GPU</text>
     </g>
     <path id="archBeam" d="M112 219 H775" fill="none" stroke="#b8863b" stroke-width="1.2" stroke-dasharray="3 4" opacity=".5"/>
     <circle r="4" fill="#c2683f"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#archBeam"/></animateMotion></circle>
     <text x="20" y="274" font-size="11" fill="#2f7a5a">綠色＝新增或改造的方塊。UPS 消失 → 由機架級 BBU＋超級電容取代；PSU 搬出 GPU 機櫃；SST 是終極版（2028+）。端到端 87.4～92%+。</text>
-    <text x="20" y="296" font-size="11" fill="#9a8f80">過渡期（Vera Rubin，2026～27）：800V 先在機櫃入口用「800V→50V DC-DC Power Shelf」降回 54V，保留既有 IBC／VRM——54V 這一層並沒有立刻消失。</text>
-    <text x="20" y="316" font-size="11" fill="#9a8f80">Morgan Stanley 分水嶺：&lt;250kW 機櫃用 50V DC 即可、&gt;250kW 才走 800V Sidecar；SST 單體 3～6MW。</text>
+    <text x="20" y="296" font-size="11" fill="#786d5c">過渡期（Vera Rubin，2026～27）：800V 先在機櫃入口用「800V→50V DC-DC Power Shelf」降回 54V，保留既有 IBC／VRM——54V 這一層並沒有立刻消失。</text>
+    <text x="20" y="316" font-size="11" fill="#786d5c">Morgan Stanley 分水嶺：&lt;250kW 機櫃用 50V DC 即可、&gt;250kW 才走 800V Sidecar；SST 單體 3～6MW。</text>
   </svg>
   <p class="figleg">圖例（滑過去有解釋）：UPS＝不斷電系統，交流→直流→交流轉兩次；PDU＝配電盤，把電分給各機櫃；IBC／VRM＝板上兩級降壓；64:1 LLC＝一顆把 800V 直接降到 12V 的轉換器；Sidecar＝獨立電源櫃；BBU＝機櫃級電池備援。</p>
   </div>
@@ -1161,7 +1173,7 @@ table.tbl th{white-space:normal}
         <rect x="24" y="80" width="490" height="34" fill="#b8863b"/><text x="34" y="102" fill="#fff">AC/DC Power Shelf 57%（≈19.6 萬美元）</text>
         <rect x="514" y="80" width="163" height="34" fill="#a6691a"/><text x="524" y="102" fill="#fff">BBU Shelf 19%（6.6 萬）</text>
         <rect x="677" y="80" width="129" height="34" fill="#2f7a5a"/><text x="684" y="102" fill="#fff" font-size="10.5">超級電容 15%・5.3 萬</text>
-        <rect x="806" y="80" width="70" height="34" fill="#9a8f80"/><text x="814" y="102" fill="#fff" font-size="10.5">其他 9%</text>
+        <rect x="806" y="80" width="70" height="34" fill="#786d5c"/><text x="814" y="102" fill="#fff" font-size="10.5">其他 9%</text>
       </g>
       <g font-size="12" fill="#3a342c">
         <text x="24" y="150">對照：GB200 NVL72 整櫃 PSU 內含價值約 <tspan font-weight="800">2.9～4.0 萬美元</tspan>（5.5kW × 36～48 顆）；VR200 NVL144 維持 54V 約 <tspan font-weight="800">4.3～5.8 萬美元</tspan>（12～18kW × 36 顆）</text>
@@ -1169,8 +1181,8 @@ table.tbl th{white-space:normal}
         <text x="24" y="198">→ 但賣方也提醒：整櫃是「系統」生意，<tspan font-weight="800" fill="#c2683f">毛利率低於零組件、有稀釋效果</tspan>（台達電自述約 35% 是合理水準）</text>
       </g>
       <line x1="24" y1="230" x2="876" y2="230" stroke="#e6dccb"/>
-      <text x="24" y="252" font-size="11" fill="#9a8f80">Power Value 階梯（國泰口徑，USD/Rack）：GB200 36,000 → GB300 57,600～69,100 → Vera Rubin 76,000 → Vera Rubin CPX 398,160 → Rubin Ultra &gt;10 倍</text>
-      <text x="24" y="272" font-size="11" fill="#9a8f80">口徑提醒：MS 的 VR200 電源 76k 美元 vs Bernstein 的 150k 美元差在是否含 BBU／匯流排／PDU 等系統件；同世代數字可差 2～3 倍</text>
+      <text x="24" y="252" font-size="11" fill="#786d5c">Power Value 階梯（國泰口徑，USD/Rack）：GB200 36,000 → GB300 57,600～69,100 → Vera Rubin 76,000 → Vera Rubin CPX 398,160 → Rubin Ultra &gt;10 倍</text>
+      <text x="24" y="272" font-size="11" fill="#786d5c">口徑提醒：MS 的 VR200 電源 76k 美元 vs Bernstein 的 150k 美元差在是否含 BBU／匯流排／PDU 等系統件；同世代數字可差 2～3 倍</text>
     </svg></div>
     <figcaption><span class="fno">圖 1</span><span class="ft">800V 電源櫃 BOM 拆解——AC/DC Power Shelf 是最大塊，BBU 與超級電容合計逾三成</span><span class="fs">GS · 國泰 · 富邦 · MS · Bernstein</span></figcaption>
     </figure>
@@ -1348,14 +1360,14 @@ table.tbl th{white-space:normal}
       <text x="210" y="58" text-anchor="middle" font-size="15" font-weight="800" fill="#5e46a0" font-family="Georgia,PMingLiU,serif">±400V · Mt. Diablo（OCP）</text>
       <text x="210" y="78" text-anchor="middle" font-size="11.5" fill="#6a6156">Google・Meta・Microsoft（＋AWS 部分）</text>
       <g stroke="#5e46a0" stroke-width="2"><path d="M60 110h300"/><path d="M60 128h300" stroke-dasharray="4 3"/><path d="M60 146h300"/></g>
-      <text x="60" y="104" font-size="10.5" fill="#5e46a0">+400V</text><text x="60" y="124" font-size="10.5" fill="#9a8f80">0V（中點）</text><text x="60" y="160" font-size="10.5" fill="#5e46a0">−400V　→ 3 線、極間 800V、對地 400V</text>
+      <text x="60" y="104" font-size="10.5" fill="#5e46a0">+400V</text><text x="60" y="124" font-size="10.5" fill="#786d5c">0V（中點）</text><text x="60" y="160" font-size="10.5" fill="#5e46a0">−400V　→ 3 線、極間 800V、對地 400V</text>
       <circle cx="430" cy="105" r="24" fill="#221f1b"/><text x="430" y="112" text-anchor="middle" font-size="15" font-weight="800" fill="#fff" font-family="Georgia,serif">VS</text>
       <rect x="470" y="30" width="360" height="150" fill="#eef5ee" stroke="#2f7a5a" stroke-width="1.6"/>
       <text x="650" y="58" text-anchor="middle" font-size="15" font-weight="800" fill="#2f7a5a" font-family="Georgia,PMingLiU,serif">0–800V 單極（NVIDIA）</text>
       <text x="650" y="78" text-anchor="middle" font-size="11.5" fill="#6a6156">NVIDIA・AWS 傾向；Kyber 標榜「Mt. Diablo 電氣相容」</text>
       <g stroke="#2f7a5a" stroke-width="2"><path d="M500 110h300"/><path d="M500 146h300"/></g>
       <text x="500" y="104" font-size="10.5" fill="#2f7a5a">+800V</text><text x="500" y="160" font-size="10.5" fill="#2f7a5a">0V　→ 2 線、對地 800V、未來可升 ±750V</text>
-      <text x="430" y="200" text-anchor="middle" font-size="11" fill="#9a8f80">兩邊的匯流排「極間」都是 800V——差在對地電壓、線數與安規；元件耐壓需求 650V 級 vs 1,200V 級</text>
+      <text x="430" y="200" text-anchor="middle" font-size="11" fill="#786d5c">兩邊的匯流排「極間」都是 800V——差在對地電壓、線數與安規；元件耐壓需求 650V 級 vs 1,200V 級</text>
     </svg>
   <p class="figleg">看圖小抄：「極間」＝兩條線之間的電壓（兩邊都是 800V）；「對地」＝人或機殼碰到時承受的電壓，越低越安全、零件越便宜。±400V 對地只有 400V，所以安規門檻低一級；800V 單極對地就是 800V。</p>
     </div>
@@ -1393,7 +1405,7 @@ table.tbl th{white-space:normal}
 
   <div class="tabpane" id="rt2">
     <div class="routes rv" style="margin-top:12px">
-      <div class="route" style="--rc:#9a8f80">
+      <div class="route" style="--rc:#786d5c">
         <h4>電源留在 GPU 機櫃內（Oberon／OCP 54V in-rack）</h4>
         <div class="r-row"><span class="k">做法</span><span class="v">AC 進機櫃 → Power Shelf（PSU）→ 54V 銅排 → 托盤；GB200 4 個 33kW Shelf、Vera Rubin 3×3U 110kW Shelf</span></div>
         <div class="r-row"><span class="k">極限</span><span class="v">約 200～250kW：MS 分水嶺「&lt;250kW 用 50V DC、&gt;250kW 走 800V Sidecar」；Vera Rubin NVL72（190～230kW）被視為 Oberon 機櫃最後一代</span></div>
@@ -1413,7 +1425,7 @@ table.tbl th{white-space:normal}
 
   <div class="tabpane" id="rt3">
     <div class="routes rv" style="margin-top:12px">
-      <div class="route" style="--rc:#9a8f80">
+      <div class="route" style="--rc:#786d5c">
         <h4>變壓器＋MW 級整流器（第一～三階段）</h4>
         <div class="r-row"><span class="k">做法</span><span class="v">中壓 → 電磁式變壓器 → 480V AC → 集中整流成 800V DC；第一代整流器可能先用 1,200～1,700V 矽 IGBT／晶閘管，SiC 是中長期替代</span></div>
         <div class="r-row"><span class="k">好處</span><span class="v">技術成熟、有 UL 認證、重電廠現成產品線；Eaton「四大積木」＝MV SST／DC 斷路器／UPS／液冷</span></div>
@@ -1452,7 +1464,7 @@ table.tbl th{white-space:normal}
 
   <div class="tabpane" id="rt5">
     <div class="grid rv" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));margin-top:12px">
-      <div class="card" style="--cc:#9a8f80"><span class="corner"></span>
+      <div class="card" style="--cc:#786d5c"><span class="corner"></span>
         <h4>矽 Si</h4><div class="tagline">1～12V · &lt;1kW POL · 未來 5 年仍主流</div>
         <p>板端 POL、DrMOS、中低壓 MOSFET；±400V 架構還能用 650V 矽超接面。用量隨 DC-DC 相數（10→32 相）與 DrMOS（每 GPU 20→50 顆）倍增——<b>第三代半導體不是取代 Si，是疊上去</b>。</p>
         <div class="kd">玩家：Infineon、TI、MPS、onsemi、Vishay；<b>台廠主場</b>：強茂 2481（80～100V Si MOSFET、AI 占比 11%→15%）、富鼎 8261（48V 中壓、ORing／同步整流）、大中、尼克森、杰力、台半、漢磊／嘉晶（磊晶）、世界（代工）</div>
@@ -1621,10 +1633,10 @@ table.tbl th{white-space:normal}
         <rect x="${x}" y="240" width="${W}" height="0" fill="${i>=4?'#c2683f':(i==3?'#a6691a':'#b8863b')}" opacity=".85"><animate attributeName="height" from="0" to="${h.toFixed(1)}" dur=".8s" begin="${(i*0.12).toFixed(2)}s" fill="freeze"/><animate attributeName="y" from="240" to="${y.toFixed(1)}" dur=".8s" begin="${(i*0.12).toFixed(2)}s" fill="freeze"/></rect>
         <text x="${x+W/2}" y="${y-8}" text-anchor="middle" font-size="12" font-weight="800" fill="#221f1b" paint-order="stroke" stroke="#fffdf9" stroke-width="4">${g.lab}</text>
         <text x="${x+W/2}" y="262" text-anchor="middle" font-size="12" font-weight="700" fill="#3a342c">${g.n}</text>
-        <text x="${x+W/2}" y="278" text-anchor="middle" font-size="10" fill="#9a8f80">${['~40kW','132kW','140–180kW','200–220kW','380kW','600kW–1MW'][i]}</text>
+        <text x="${x+W/2}" y="278" text-anchor="middle" font-size="10" fill="#786d5c">${['~40kW','132kW','140–180kW','200–220kW','380kW','600kW–1MW'][i]}</text>
       </g>`;
     });
-    html+=`<text x="60" y="30" font-size="11" fill="#9a8f80">對數尺度（每格差 10 倍）· 美元／櫃</text><text x="880" y="30" text-anchor="end" font-size="11" fill="#9a8f80">來源：富邦 2025/11、國泰 2026/06、MS、Bernstein、BNP、華南、元大</text>`;
+    html+=`<text x="60" y="30" font-size="11" fill="#786d5c">對數尺度（每格差 10 倍）· 美元／櫃</text><text x="880" y="30" text-anchor="end" font-size="11" fill="#786d5c">來源：富邦 2025/11、國泰 2026/06、MS、Bernstein、BNP、華南、元大</text>`;
     bars.innerHTML=html;
     function show(i){txt.innerHTML=G[i].t; document.querySelectorAll('#vladBars .vb rect').forEach((r,j)=>r.setAttribute('opacity',j===i?'1':'.45'))}
     document.querySelectorAll('#vladBars .vb').forEach(g=>{g.addEventListener('click',()=>show(+g.dataset.i));g.addEventListener('mouseenter',()=>show(+g.dataset.i))});
@@ -1856,7 +1868,7 @@ table.tbl th{white-space:normal}
       <p>大型電力變壓器交期 2.5 年、345～765kV 要 4～5 年；TrendForce 直言基礎設施延遲「可能反而遞延先進電力架構的採用」。NERC 2026/5 三級警報、ERCOT NOGRR282 強制建模；紐約州 50MW 以上資料中心禁建令、十餘州研議審議機制。</p>
       <div class="kd">電網側受惠（華城、中興電、Eaton）與 800V 受惠是兩個不同的時鐘。</div>
     </div>
-    <div class="card" style="--cc:#9a8f80"><span class="corner"></span>
+    <div class="card" style="--cc:#786d5c"><span class="corner"></span>
       <h4>⑥ 客戶垂直整合與供應商分散</h4><div class="tagline">最大威脅是客戶，不是同業</div>
       <p>NVIDIA 與四大 CSP 正把「電與熱整合」收回去；參考架構的鎖定效應可能隨多供應商策略鬆動。Sidecar 階段競爭其實激烈（Vertiv、Flex、Schneider 都能分食），台達的優勢牌「有時效性」，2027 後才比 SST 與電熱整合的硬實力。</p>
       <div class="kd">個股品質風險已出現一次：2026/9 台達電外購電容批次問題、股價單日重挫逾 7%。</div>
@@ -1891,6 +1903,7 @@ table.tbl th{white-space:normal}
     <table class="tbl wrapall" style="margin:0">
       <thead><tr><th>議題</th><th>券商／市場常見說法</th><th>Threads 異見</th></tr></thead>
       <tbody>
+      <tr><td>AI 伺服器電源市場成長率</td><td>富邦原文寫 <b>+153%</b></td><td>依 31 → 78 億美元實算為 <b>+151.6%</b>；本頁首屏取整寫「約 +150%」</td></tr>
         <tr><td>Rubin 是否上 800V</td><td>「Rubin 世代＝800V」</td><td>Rubin 初代仍 HPR2／50V，800V 是 Rubin Ultra（2027 下半年）</td></tr>
         <tr><td>800V busbar 受惠時點</td><td>2026 就開始</td><td>2026 走 Power Whip／Cross Cable，busway 在後續階段</td></tr>
         <tr><td>貿聯地位</td><td>800V 高壓匯流排獨家</td><td>至少 8 家在同一區塊競爭</td></tr>
@@ -2626,7 +2639,7 @@ document.body.classList.add('js');
 /* ===== 供應鏈：總覽表（預設）＋ 點開詳情 ＋ 卡片檢視 ===== */
 function icon(id){return `<svg class="s-ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><use href="#${id}"/></svg>`}
 const strip=h=>h.replace(/<[^>]+>/g,'');
-const short=(h,n)=>{const t=strip(h||'');const cut=t.split(/[；。]/)[0];return (cut.length>n?cut.slice(0,n)+'…':cut)||t.slice(0,n)};
+const short=(h,n)=>{const t=strip(h||'').trim(); if(t.length<=n)return t; const seg=t.slice(0,n+14); let m=seg.match(/^[\s\S]*[。；]/); let cut=m?m[0]:null; if(!cut){m=seg.match(/^[\s\S]*[，、）)]/); cut=m?m[0]:seg.slice(0,n);} cut=cut.replace(/[，、（(]$/,''); cut=cut.replace(/[\d][\d,.，]*\s*[A-Za-z%％／\/]*$/,function(x){return /[。；]$/.test(cut)?x:''}); cut=cut.trim(); return (cut.length?cut:t.slice(0,n))+(t.length>cut.length?'…':'')};
 const flow=document.querySelector('main.main');
 const segHTML=chain.map((c,i)=>{
   const tw=c.items.filter(x=>x.cls==='tw').length;
