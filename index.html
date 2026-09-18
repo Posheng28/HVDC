@@ -457,7 +457,7 @@ details.acc[open] .s-no{color:var(--rust);opacity:1}
 .sup .rk{border-radius:999px}
 .sup .tech{border-radius:0 6px 6px 0}
 .filters .fl,.tabs button,.steps button,.lab .presets button{border-radius:999px}
-.filters .fl.on,.tabs button.on,.steps button.on,.lab .presets button.on{background:var(--copper);border-color:var(--copper);color:#fff}
+.filters .fl.on,.tabs button.on,.steps button.on,.lab .presets button.on{background:var(--copper-d);border-color:var(--copper-d);color:#fff;font-weight:800}
 /* labs */
 .lab{border-top:none;border-left:5px solid var(--copper);border-radius:0 14px 14px 0}
 #plab{border-left-color:var(--rust)}
@@ -544,7 +544,7 @@ table.tbl.ztbl td b{color:var(--ink)}
 /* ===== 供應鏈總覽表 ===== */
 .segbar{display:flex;gap:6px;align-items:center;margin:12px 0 8px;font-size:11.5px;color:var(--faint);letter-spacing:.08em;font-weight:800}
 .segbar .vw{font-size:12px;font-weight:700;border:1px solid var(--rule2);background:var(--panel);color:var(--mut);padding:5px 12px;border-radius:999px;cursor:pointer;letter-spacing:.04em}
-.segbar .vw.on{background:var(--copper);border-color:var(--copper);color:#fff}
+.segbar .vw.on{background:var(--copper-d);border-color:var(--copper-d);color:#fff}
 table.tbl.suptbl{margin:0 0 6px}
 table.tbl.suptbl th:nth-child(1),table.tbl.suptbl td.st1{width:22px;padding-left:10px;padding-right:0}
 table.tbl.suptbl th:nth-child(2),table.tbl.suptbl td.st2{width:24%}
@@ -817,6 +817,9 @@ button.on,.steps button.on,.tabs button.on,.fl.on,.vw.on{background:var(--copper
 /* ＋詳情按鈕不要頂到欄位右緣 */
 .suptbl .st5{padding-right:8px}
 button.more{font-size:12px;padding:4px 8px}
+/* 最後兩個功能性低對比 */
+.presets button.on,.steps button.on,.tabs button.on,.segbar button.on,.filters button.on{background:var(--copper-d);border-color:var(--copper-d);color:#fff;font-weight:800}
+.painbar b,.painbar .pt b{color:#a33f16}
 </style>
 
 <header class="mast">
