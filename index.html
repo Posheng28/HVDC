@@ -8,7 +8,7 @@
 
 <style>
 :root{
-  --paper:#f7f3ec; --panel:#ffffff; --ink:#221f1b; --body:#3a342c; --mut:#6a6156; --faint:#9a8f80;
+  --paper:#f7f3ec; --panel:#ffffff; --ink:#221f1b; --body:#3a342c; --mut:#6a6156; --faint:#786d5c;
   --rule:#e6dccb; --rule2:#d5c8b2;
   --teal:#b8863b; --teal-d:#8a5f22; --amber:#a6691a; --red:#c2683f; --green:#2f7a5a; --blue:#2b4f9c; --gold:#9a6a1f;
   --serif:"Noto Serif TC",Georgia,"Times New Roman","PMingLiU","MingLiU",serif;
@@ -716,6 +716,75 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
 .verline .vtag{flex-shrink:0;font-size:10.5px;letter-spacing:.14em;font-weight:800;color:#1d1814;background:#f0b23c;border-radius:4px;padding:4px 8px;margin-top:2px}
 .verline .vtxt b{color:#f0b23c}
 @media(max-width:1000px){.verline{flex-direction:column;gap:8px}}
+/* ===== 第四輪可讀性：字級、對比、欄寬 ===== */
+/* 42 內文字級全面上調 */
+.lbox{font-size:15px;line-height:1.8}
+.lnews .nlist li{font-size:14.5px;line-height:1.85}
+.lnews .nlist li>b:first-child{font-size:15px}
+table.tbl{font-size:13.5px}
+table.tbl th{font-size:13px}
+.lede,.callout,.cx-list li{font-size:14.5px;line-height:1.85}
+.lbox i,.lnews .nlist li .nsrc,.figleg,.cx-note,.src,.srcs,.disc{font-size:12px}
+.lh .plain{font-size:14.5px}
+.kp .lbl{font-size:13.5px}
+.stage .s3>div{font-size:14px;line-height:1.8}
+.chips span,.lbox .chips span{font-size:12.5px}
+.brk td{font-size:13.5px;line-height:1.75}
+.brk td i,.brk td i.sm{font-size:12.5px}
+.suptbl td{font-size:13.5px}
+.rail a{font-size:13.5px}
+.eb li{font-size:14px;line-height:1.85}
+/* 44 表格欄寬：依內容量分配（取代一律等寬） */
+table.tbl.brk{table-layout:fixed}
+.brk td:nth-child(1),.brk th:nth-child(1){width:13%}
+.brk td:nth-child(2),.brk th:nth-child(2){width:15%}
+.brk td:nth-child(3),.brk th:nth-child(3){width:16%}
+.brk td:nth-child(4),.brk th:nth-child(4){width:11%}
+.brk td:nth-child(5),.brk th:nth-child(5){width:45%}
+.rank td:nth-child(1),.rank th:nth-child(1){width:24%}
+.rank td:nth-child(2),.rank th:nth-child(2){width:19%}
+.rank td:nth-child(3),.rank th:nth-child(3){width:11%}
+.rank td:nth-child(4),.rank th:nth-child(4){width:46%}
+.ecotbl td:nth-child(1),.ecotbl th:nth-child(1){width:22%}
+.ecotbl td:nth-child(2),.ecotbl th:nth-child(2){width:54%}
+.ecotbl td:nth-child(3),.ecotbl th:nth-child(3){width:24%}
+.volttbl td:nth-child(1),.volttbl th:nth-child(1){width:13%}
+.volttbl td:nth-child(2),.volttbl th:nth-child(2){width:13%}
+.volttbl td:nth-child(3),.volttbl th:nth-child(3){width:15%}
+.volttbl td:nth-child(4),.volttbl th:nth-child(4){width:17%}
+.volttbl td:nth-child(5),.volttbl th:nth-child(5){width:17%}
+.volttbl td:nth-child(6),.volttbl th:nth-child(6){width:25%}
+table.tbl th{white-space:normal}
+/* 47 長英文公司名不要擠在一起 */
+.suptbl .st2,.brk td.c{overflow-wrap:anywhere;word-break:normal}
+.suptbl .st2 b{margin-right:4px}
+.tbl td a{overflow-wrap:anywhere}
+/* 45 堆疊條：窄段不顯示副標，改用下方圖例 */
+.cx-bar .seg small{display:none}
+.cx-bar .seg b{font-size:13.5px}
+.cx-legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:8px 0 0;font-size:13px;color:var(--body)}
+.cx-legend span{display:inline-flex;align-items:center;gap:6px}
+.cx-legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+/* 46 站卡三欄各自高度、公司膠囊排得下 */
+.stage .s3{align-items:start}
+.stage .s3>div{align-self:start}
+.stage .who .chips{display:flex;flex-wrap:wrap;gap:2px 4px}
+/* 54 目標價對照改成可掃讀的方格 */
+.tplist{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:5px 14px;margin:2px 0 0}
+.tplist span{font-size:13px;color:var(--body);line-height:1.6}
+.tplist span b{color:var(--ink)}
+.tplist span i{font-style:normal;color:var(--faint);font-size:12px}
+.verline-lite{font-size:12.5px;color:var(--faint);margin:14px 0 0;letter-spacing:.02em}
+.verline-lite a{color:var(--copper-d);text-decoration:underline dotted}
+.brk th i.sm{display:block;white-space:normal;font-size:11.5px;line-height:1.4;margin-top:2px}
+.brk th{overflow-wrap:anywhere}
+/* 42b 剩餘小字：來源列與卡片內文一律 ≥12.5px */
+.src,div.src,.sup .src,.sx3 .src{font-size:12.5px!important;line-height:1.7;color:var(--faint)}
+.sup .hl2,.sup .mc,.sup .tech,.sup .ro{font-size:13px;line-height:1.75}
+.kd,.tagline{font-size:13px;line-height:1.75}
+.eb b,.evt .e .t{font-size:14px}
+.acc .s-ds{font-size:13.5px;line-height:1.8}
+.painbar,.painbar .pt{font-size:13.5px;line-height:1.8}
 </style>
 
 <header class="mast">
@@ -739,10 +808,7 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
       <div class="kp"><div class="num">&gt;85<small>%</small></div><div class="lbl">BBU 在 AI 機櫃的滲透率（2027，HVDC 必備件）</div></div>
     </div>
 
-    <div class="verline rv">
-      <span class="vtag">2026/9/18 更新</span>
-      <span class="vtxt">本版接上使用者自建的<b>券商報告庫</b>（315 份報告、3,410 頁，另含 1,327 筆券商個股紀錄），新增：<b>8 站各一條券商資料庫補充</b>、<b>29 檔標的的券商看法總表</b>、<b>12 家新公司</b>（供應鏈共 167 家、台股 83 家）、<b>「電流才是瓶頸」</b>框架、<b>第三條路線 AMD Helios 50V</b>，以及 9 月的時程爭議（Kyber 與 Rubin Ultra 可能脫鉤、Vertiv 自述 2028 年量產）。</span>
-    </div>
+    <p class="verline-lite">2026/9/18 更新：新增 29 檔標的的券商看法、「電流才是瓶頸」框架、12 家公司與 8 站的券商補充。<a href="#risk">完整資料來源與查核紀錄 ↓</a></p>
 
       <div class="lab rv" id="plab" style="border-top-color:var(--amber)">
     <div class="lab-h"><b>跟著電走一趟：從電網到 GPU 的 8 站</b><span style="color:var(--amber)">STEP-BY-STEP · GRID TO CHIP</span></div>
@@ -830,6 +896,7 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
 <div class="wrap page">
 <aside class="rail" id="rail">
   <div class="rail-h">跟著電走</div>
+  <a href="#amp" class="rx"><i>先讀</i>電流才是瓶頸</a>
   <a href="#why" class="rx"><i>00</i>為什麼 800V</a>
   <a href="#L1" class="rl"><em>13.8kV</em>電網・自備電力</a>
   <a href="#L2" class="rl"><em>480V AC</em>變壓器・重電</a>
@@ -840,7 +907,6 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
   <a href="#L7" class="rl"><em>→0.8V</em>板上電源</a>
   <a href="#L8" class="rl"><em>GPU</em>晶片・整機・測試</a>
   <div class="rail-h">橫切主題</div>
-  <a href="#amp" class="rx"><i>※</i>電流才是瓶頸</a>
   <a href="#routes" class="rx"><i>A</i>路線之爭</a>
   <a href="#road" class="rx"><i>B</i>時程與延後</a>
   <a href="#value" class="rx"><i>C</i>價值量</a>
@@ -857,6 +923,44 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
   </div>
 </aside>
 <main class="main">
+
+<section id="amp" class="xsec">
+  <div class="ch-head rv">
+    <div class="ch-no">TL;DR</div>
+    <div class="ch-tt"><div class="en">CURRENT, NOT VOLTAGE</div><h2>先講結論：真正的瓶頸是電流，不是電壓</h2></div>
+  </div>
+  <p class="lede rv">如果整頁只記得一件事，記這件：<b>把電壓拉高，目的從來不是「電壓」，而是把電流壓下來</b>。</p>
+
+  <div class="ampgrid rv">
+    <div class="ampbox">
+      <div class="an">1</div>
+      <div class="at">先看算式</div>
+      <p>傳輸同樣的 <b>100kW</b>：54V 需要約 <b>1,852 安培</b>，800V 只要約 <b>125 安培</b>（同一條導體、電阻不變的前提下）。安培數才是決定銅排要多粗、連接器要多貴、熔絲要多大的那個變數。下一節「為什麼 800V」講的「電流降 15 倍、熱損降 219 倍」，講的就是這件事。</p>
+    </div>
+    <div class="ampbox">
+      <div class="an">2</div>
+      <div class="at">瓶頸已經下沉到單顆晶片</div>
+      <p><b>單顆 GPU 的電流需求已經突破 1,000 安培</b>，傳統電路板與 ABF 基板的供電路徑逼近物理極限。所以真正的新瓶頸是<b>配電與斷路保護</b>，不是轉換效率——這正是第 4 站保護元件全面半導體化的原因。</p>
+    </div>
+    <div class="ampbox">
+      <div class="an">3</div>
+      <div class="at">第一個落地的不是轉換器，是斷路器</div>
+      <p><b>2026/9/9，Infineon 與 SolarEdge 擴大合作，共同開發 800V 直流資料中心用固態斷路器</b>。整條「800V 帶動半導體」的論述，目前最具體的一步發生在保護元件，不在電源轉換。</p>
+    </div>
+    <div class="ampbox">
+      <div class="an">4</div>
+      <div class="at">同一個問題有第二條解法</div>
+      <p>村田把電容整合進基板（<b>iPaS</b>）、供電改由<b>晶片正下方垂直進入</b>，2027 年量產。<b>垂直供電（縮短路徑）與提高電壓（降低電流）是兩條可以並行的路線</b>，不是二選一——這是第 7 站「水平 → 垂直供電」之外的第三方玩家。</p>
+    </div>
+  </div>
+
+  <div class="callout rv" style="background:#fbf1ea;border-left:3px solid var(--red)"><span class="cl-k" style="color:var(--red)">同一段來源自帶的冷水（務必一起看）</span>
+    ① <b>800V 目前是規格路線圖，不是已量產的標準</b>：Infineon 與 SolarEdge 是「擴大合作、共同開發」，村田 iPaS 要 2027 年，Bloom 的 800V 直流輸出目前也只在自家設備端。<b>相關標的 2026 年的 800V 營收貢獻接近零。</b>
+    ② 原文<b>沒有點名任何台股</b>，全文具名的只有 Infineon 與 SolarEdge；台股的對應是後續推導，不是原文結論。
+    ③ 富邦同期明確註記：<b>直流供電只能簡化不斷電系統的前端架構，不代表可以取消完整備援與儲能系統</b>——本頁第 5 站寫的「集中式 UPS 消失」要配這句一起讀。
+    <span class="src" style="display:block;margin-top:6px">來源：SemiVision 2026/9/14、TechNews 2026/9/14、富邦投顧 2026/9/10。⚠ 其中①②兩點是<b>研究筆記在 2026/9/15 入庫時所加的編者總結</b>，不是上述三份原文的字句；③ 出自富邦報告原文。</span>
+  </div>
+</section>
 
 <!-- ══════════ 01 ══════════ -->
 <section id="why">
@@ -1036,7 +1140,7 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
   </div>
 
   <h3 class="sub">為什麼是 800V，不是 400V 也不是 1500V？<span class="tag-en">VOLTAGE OPTIONS</span></h3>
-  <table class="tbl wrapall rv">
+  <table class="tbl wrapall volttbl rv">
     <thead><tr><th>選項</th><th>600kW 機櫃電流</th><th>零件要撐多少電壓</th><th>安規</th><th>生態系可借</th><th>判斷</th></tr></thead>
     <tbody>
       <tr><td><b>54V（今天）</b></td><td>≈11,111A<br><i class="sm">48V 口徑為 12,500A</i></td><td>80～100V 矽</td><td>低壓，最熟</td><td>整個 OCP 54V 生態</td><td>約 200～250kW 撞牆；MW 級機櫃電源擱架要佔 64U</td></tr>
@@ -1219,44 +1323,6 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
   <div class="lnews rv"><div class="nh"><span class="ntag">券商資料庫補充</span>Kyber 到底還算不算數？<span class="ncnt">4 則</span></div><ul class="nlist"><li><b>最新一則查核把等式打斷了</b>摩根士丹利 2026/9/14 供應鏈查核稱 <b>Kyber 已延後，且 Rubin Ultra 預期不再使用該架構、焦點回到 Oberon</b>。若成立，本頁「Rubin Ultra ＝ Kyber ＝ 800V 放量」這條三段等式會斷在中間。目前僅單一券商查核，與富邦、國泰的口徑並陳。<span class="nsrc">摩根士丹利 2026/9/14</span></li><li><b>賣方在廣達報告裡的判斷</b>⚠ <b>這是富邦投顧研究員的判斷，不是廣達管理層發言</b>。報告認為 Kyber 會面臨網路、電力與散熱問題，尤其散熱：<b>單顆 Feynman GPU 可能達 6kW</b>，而 NVIDIA 打算在單一機架放 <b>144 或 288 顆 GPU</b>，「除非降低單櫃 GPU 數量，否則<u>我們</u>不會對 Kyber 進一步延遲甚至取消感到意外」（「我們」指富邦研究團隊）。但延遲<b>不影響代工廠</b>——客戶會繼續買 Oberon 機櫃。<span class="nsrc">富邦 2026/7/9</span></li><li><b>材料端的連鎖</b>Vera Rubin 平台導入 <b>44 層</b>電路板中介板，Kyber 架構進一步到 <b>78 層</b>；Kyber 下 M9 材料測試後無法滿足性能，材料提前往 <b>M10</b> 推進。電子布 78 層方案未來升級到 104～112 層、<b>單張價值約 4 萬美元、是普通伺服器背板的 10 倍以上</b>。<span class="nsrc">合庫 2026/7/13、上海證券 2026/9/14</span></li><li><b>當事人自述的時程</b>Vertiv 管理層：<b>800V 直流架構 2027 下半年加速放量、2028 年量產</b>；並收購 UIG 強化電表後端能力、更早介入設計流程，2030 年<b>調整後</b>營益率目標上調到 27% 以上。<span class="nsrc">台新引高盛 2026/9/14</span></li></ul></div>
   
   <div class="chainseg" data-seg="12"></div>
-</section>
-
-<section id="amp" class="xsec">
-  <div class="ch-head rv">
-    <div class="ch-no">※</div>
-    <div class="ch-tt"><div class="en">CURRENT, NOT VOLTAGE</div><h2>換個方式講一次：真正的瓶頸是電流，不是電壓</h2></div>
-  </div>
-  <p class="lede rv">這一段是 2026 年 9 月才進資料庫的一個框架，把整頁的主軸換句話說。如果前面 8 站看完只記得一件事，記這件：<b>把電壓拉高，目的從來不是「電壓」，而是把電流壓下來</b>。</p>
-
-  <div class="ampgrid rv">
-    <div class="ampbox">
-      <div class="an">1</div>
-      <div class="at">先看算式</div>
-      <p>傳輸同樣的 <b>100kW</b>：54V 需要約 <b>1,852 安培</b>，800V 只要約 <b>125 安培</b>（同一條導體、電阻不變的前提下）。安培數才是決定銅排要多粗、連接器要多貴、熔絲要多大的那個變數。頁面第一站講的「電流降 15 倍、熱損降 219 倍」，講的就是這件事。</p>
-    </div>
-    <div class="ampbox">
-      <div class="an">2</div>
-      <div class="at">瓶頸已經下沉到單顆晶片</div>
-      <p><b>單顆 GPU 的電流需求已經突破 1,000 安培</b>，傳統電路板與 ABF 基板的供電路徑逼近物理極限。所以真正的新瓶頸是<b>配電與斷路保護</b>，不是轉換效率——這正是站 4 保護元件全面半導體化的原因。</p>
-    </div>
-    <div class="ampbox">
-      <div class="an">3</div>
-      <div class="at">第一個落地的不是轉換器，是斷路器</div>
-      <p><b>2026/9/9，Infineon 與 SolarEdge 擴大合作，共同開發 800V 直流資料中心用固態斷路器</b>。整條「800V 帶動半導體」的論述，目前最具體的一步發生在保護元件，不在電源轉換。</p>
-    </div>
-    <div class="ampbox">
-      <div class="an">4</div>
-      <div class="at">同一個問題有第二條解法</div>
-      <p>村田把電容整合進基板（<b>iPaS</b>）、供電改由<b>晶片正下方垂直進入</b>，2027 年量產。<b>垂直供電（縮短路徑）與提高電壓（降低電流）是兩條可以並行的路線</b>，不是二選一——這是站 7 那條「水平 → 垂直供電」之外的第三方玩家。</p>
-    </div>
-  </div>
-
-  <div class="callout rv" style="background:#fbf1ea;border-left:3px solid var(--red)"><span class="cl-k" style="color:var(--red)">同一段來源自帶的冷水（務必一起看）</span>
-    ① <b>800V 目前是規格路線圖，不是已量產的標準</b>：Infineon 與 SolarEdge 是「擴大合作、共同開發」，村田 iPaS 要 2027 年，Bloom 的 800V 直流輸出目前也只在自家設備端。<b>相關標的 2026 年的 800V 營收貢獻接近零。</b>
-    ② 原文<b>沒有點名任何台股</b>，全文具名的只有 Infineon 與 SolarEdge；台股的對應是後續推導，不是原文結論。
-    ③ 富邦同期明確註記：<b>直流供電只能簡化不斷電系統的前端架構，不代表可以取消完整備援與儲能系統</b>——本頁站 5 寫的「集中式 UPS 消失」要配這句一起讀。
-    <span class="src" style="display:block;margin-top:6px">來源：SemiVision 2026/9/14、TechNews 2026/9/14、富邦投顧 2026/9/10。⚠ 其中①②兩點是<b>研究筆記在 2026/9/15 入庫時所加的編者總結</b>，不是上述三份原文的字句；③ 出自富邦報告原文。</span>
-  </div>
 </section>
 
 <!-- ══════════ 03 ══════════ -->
@@ -1574,7 +1640,8 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
       <div class="seg b" style="flex:112"><b>機電 112 億・24%</b><small>變壓器／開關／UPS／整流／配電／冷卻</small></div>
       <div class="seg c" style="flex:38"><b>土建 38 億</b></div>
     </div>
-    <ul class="cx-list">
+    <div class="cx-legend"><span><i style="background:var(--copper)"></i>IT 設備（伺服器與網通）</span><span><i style="background:var(--rust)"></i>機電：變壓器／開關／UPS／整流／配電／冷卻</span><span><i style="background:var(--moss)"></i>土建</span></div>
+      <ul class="cx-list">
       <li>機電（變壓器／開關／UPS／整流／配電／冷卻）約 <b>112 億美元/GW</b>；新建頂級設施的「out-of-rack」（機櫃以外的全部投資）實際落在 <b>120～150 億美元/GW</b>（原文 US$12～15bn/GW）</li>
       <li>機櫃內電源交付：GB200 4.4 萬 → VR 15 萬美元／櫃（占機櫃 1.0% → 1.6%）——這是「800V 採用早期階段」的直接財務證據</li>
       <li>每 GW 年電費約 <b>13 億美元</b>（0.15 美元/kWh）；效率 +1% ≈ 省 1,300 萬美元／年</li>
@@ -1642,7 +1709,7 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
   <p class="figleg">證據強度由強到弱：<b>展會實物</b>（親眼看到產品）＞ <b>法說＋新聞</b>（公司自己說）＞ <b>券商報告</b>（分析師整理）＞ <b>技術對照文</b>（用規格推論，還沒有公司證實）。</p>
 
   <h3 class="sub">NVIDIA 800VDC 生態夥伴：誰在名單上<span class="tag-en">ECOSYSTEM</span></h3>
-  <table class="tbl wrapall rv">
+  <table class="tbl wrapall ecotbl rv">
     <thead><tr><th>類別（官方分類）</th><th>公司</th><th>台系</th></tr></thead>
     <tbody>
       <tr><td><b>矽晶 Silicon（14）</b></td><td class="chips"><span>Infineon</span><span>TI</span><span>onsemi</span><span>STMicro</span><span>ROHM</span><span>ADI</span><span>MPS</span><span>Renesas</span><span>Navitas</span><span>Innoscience</span><span>EPC</span><span>Power Integrations</span><span>Alpha &amp; Omega</span><span class="twc">立錡 Richtek</span></td><td>立錡（聯發科集團）</td></tr>
@@ -1659,17 +1726,17 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
   <h3 class="sub" id="brokers">券商怎麼看：29 檔標的、每檔最新一份<span class="tag-en">WHO COVERS WHAT · AS OF 2026/9/17</span></h3>
   <p class="lede" style="margin-top:2px">資料來自使用者自建的券商報告庫（315 份報告、3,410 頁，另含 1,327 筆券商個股紀錄），篩出與 800V 高壓直流、電源櫃、BBU、重電、功率半導體相關者。每檔<b>只列最新一份</b>，同一檔其他券商的目標價收在下方摺疊區。<b>⚠ 評等與目標價是券商的意見與估算，不是投資建議；同一檔不同券商的目標價差距可達兩倍以上，看數字前先看日期與券商。</b></p>
 
-  <div class="segbar" style="margin:10px 0 6px"><span>提示</span><span class="hint">點欄位「目標價」旁的箭頭代表與該券商前次相比的調整方向</span></div>
+  <div class="segbar" style="margin:10px 0 6px"><span>提示</span><span class="hint">「最新目標價」欄位旁的箭頭＝與<b>該券商自己前次</b>相比的調整方向；左側「公司篩選」也會作用在這張表</span></div>
 
   <table class="tbl wrapall brk rv">
-    <thead><tr><th>公司</th><th>在這條鏈的位置</th><th>最新券商看法</th><th>目標價</th><th>這份報告怎麼說</th></tr></thead>
+    <thead><tr><th>公司</th><th>在這條鏈的位置</th><th>最新券商看法</th><th>最新目標價<br><i class="sm">新台幣元，美股標美元</i></th><th>這份報告怎麼說</th></tr></thead>
     <tbody>
       <tr><td class="c"><b>士電</b><span class="tk tw">1503</span></td><td>變壓器・重電</td><td>中信投顧 買進<br><i>2026/9/11</i></td><td><b>330</b><br><i>重新覆蓋</i></td><td>在手訂單逾 600 億元、電力級變壓器交期 2～3 年；2026／2027 年每股盈餘估 9.01／11.00 元</td></tr>
       <tr><td class="c"><b>亞力</b><span class="tk tw">1514</span></td><td>變壓器・高壓配電</td><td>台新投顧 強力買進<br><i>2026/8/28</i></td><td><b>154</b></td><td>在手訂單 130 億元，資料中心機房占約 10%；2026 年每股盈餘估 3.77 元</td></tr>
       <tr><td class="c"><b>華城</b><span class="tk tw">1519</span></td><td>大型變壓器</td><td>中國信託投顧 買進<br><i>2026/7/14</i></td><td><b>980</b></td><td>在手逾 200 億元、交期 2.5～3 年，已接 2029～2030 年資料中心訂單</td></tr>
       <tr><td class="c"><b>川湖</b><span class="tk tw">2059</span></td><td>機櫃結構件・導軌</td><td>玉山投顧 <b>中立</b>（初次評等）<br><i>2026/8/11</i></td><td><b>12,500</b></td><td>全檔唯一保留意見。前一日（8/10）華南、中信、國票、國泰四家大幅調升，目標價 14,000～17,810 元，其中華南由 4,200 上修至 14,000（+233%）</td></tr>
       <tr class="lead"><td class="c"><span class="star">★</span><b>光寶科</b><span class="tk tw">2301</span></td><td>電源櫃・電源供應器・BBU</td><td>統一投顧 買進<br><i>2026/8/12</i></td><td><b>310</b></td><td>8/3 法說後九家同日出報告、目標價 158（合庫區間下緣）～370 元（元大，前次 300）；元大版稱 GPU 平台電源價值由 5.9 萬美元升至 Rubin Ultra 的 64.4 萬美元</td></tr>
-      <tr class="lead"><td class="c"><span class="star">★</span><b>台達電</b><span class="tk tw">2308</span></td><td>電源櫃・整流・SST</td><td>群益投顧 買進（維持）<br><i>2026/9/3</i></td><td><b>2,050</b></td><td>18.3kW 電源供應器換電容是供應商零件問題、影響有限；2026 年每股盈餘估 40.16 元</td></tr>
+      <tr class="lead"><td class="c"><span class="star">★</span><b>台達電</b><span class="tk tw">2308</span></td><td>電源櫃・整流・SST</td><td>群益投顧 買進（維持）<br><i>2026/9/3</i></td><td><b>2,050</b></td><td>18.3kW 電源供應器換電容是供應商零件問題、影響有限；2026 年每股盈餘估 40.16 元。<b>同檔十家目標價 1,900～4,120 元</b>（高盛最高、國票最低）</td></tr>
       <tr><td class="c"><b>國巨</b><span class="tk tw">2327</span></td><td>被動元件・MLCC</td><td>花旗 買進<br><i>2026/9/4</i></td><td><b>1,450</b></td><td>AI 占總營收 16%、7 月漲價涵蓋約 50% 營收；十家券商目標價 688～1,465 元，差距逾兩倍</td></tr>
       <tr><td class="c"><b>順德</b><span class="tk tw">2351</span></td><td>導線架（電源・BBU・800V）</td><td>永豐投顧 買進<br><i>2026/8/26</i></td><td><b>255</b><br><i class="up">▲ 前次 195</i></td><td>AI 在手品項由 40 增至 60，AI 占電子營收由 1% 升到 6%；導線架共平面度可達 20～30 微米，客戶要求為 70～80 微米</td></tr>
       <tr><td class="c"><b>致茂</b><span class="tk tw">2360</span></td><td>電源與整櫃測試設備</td><td>元大投顧 買進<br><i>2026/9/11</i></td><td><b>2,400</b><br><i>維持</i></td><td>8 月營收 56.3 億元、年增 156%；元大 7/31、9/3、9/11 三份報告目標價皆為 2,400 元</td></tr>
@@ -1678,7 +1745,7 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
       <tr><td class="c"><b>泰碩</b><span class="tk tw">3338</span></td><td>液冷・800V 直流 CDU</td><td>國票投顧 法說紀要<br><i>2026/7/20</i></td><td><i>無評等</i></td><td>COMPUTEX 2026 首度進入 NVIDIA 背板、合作產品就是 800V 直流 CDU；列間 2.6MW 樣機最快 2027 下半年出貨</td></tr>
       <tr><td class="c"><b>凡甲</b><span class="tk tw">3526</span></td><td>高功率・BBU 連接器</td><td>國票投顧 買進（首評）<br><i>2026/7/6</i></td><td><b>445</b><br><i class="up">▲ 前次 332</i></td><td>2026 Q2 AI 伺服器占比 57.5%；已切 400V 高壓直流與 GB 系列，爭取 800V 認證</td></tr>
       <tr><td class="c"><b>宏致</b><span class="tk tw">3605</span></td><td>高壓電源線束</td><td>宏遠投顧 買進<br><i>2026/8/12</i></td><td><b>136</b></td><td>高壓電源線取得 Bloom Energy 訂單、2026 下半年放量</td></tr>
-      <tr class="lead"><td class="c"><span class="star">★</span><b>貿聯-KY</b><span class="tk tw">3665</span></td><td>800V 匯流排・Power Whip</td><td>摩根士丹利 加碼<br><i>2026/9/6</i></td><td><b>3,665</b></td><td>8 月營收 88.92 億元、年增 54%，2026 下半年以高效能運算為主；十家券商目標價 2,750～3,665 元。<b>⚠ 原始紀錄自帶警語</b>：此目標價恰等於股票代號、且與 30 倍乘積差 1.2%，待覆核</td></tr>
+      <tr class="lead"><td class="c"><span class="star">★</span><b>貿聯-KY</b><span class="tk tw">3665</span></td><td>800V 匯流排・Power Whip</td><td>摩根士丹利 加碼<br><i>2026/9/6</i></td><td><b>3,665</b></td><td>8 月營收 88.92 億元、年增 54%，2026 下半年以高效能運算為主；<b>同檔十家目標價 2,750～3,665 元</b>。<b>⚠ 原始紀錄自帶警語</b>：此目標價恰等於股票代號、且與 30 倍乘積差 1.2%，待覆核</td></tr>
       <tr><td class="c"><b>世界先進</b><span class="tk tw">5347</span></td><td>電源管理 IC・氮化鎵代工</td><td>元大投顧 買進<br><i>2026/9/11</i></td><td><b>200</b><br><i>維持</i></td><td>8 月營收 50.93 億元、年增 40.5%，AI 電源管理 IC 需求強勁</td></tr>
       <tr><td class="c"><b>信昌電</b><span class="tk tw">6173</span></td><td>高壓 MLCC（電源・BBU）</td><td>中信投顧 法說座談摘要<br><i>2026/9/11</i></td><td><i>無評等</i></td><td>國泰 9/10 紀要：AI 電源營收占比 2026 Q1 6.5% → Q2 9.2% → Q4 估 16%；GB300／Vera Rubin／Rubin Ultra 世代單一機櫃<b>高階 NP0 MLCC</b> 用量可維持 3 萬～5 萬顆</td></tr>
       <tr><td class="c"><b>同欣電</b><span class="tk tw">6271</span></td><td>氮化矽陶瓷基板</td><td>康和投顧 逢低買進（維持）<br><i>2026/9/15</i></td><td><b>258</b><br><i class="up">▲ 前次 200</i></td><td>高壓直流氮化矽基板 2026 下半年量產、月出貨已達 20 萬片；2026 年每股盈餘估 9.66 元</td></tr>
@@ -1705,14 +1772,14 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
         <tbody>
           <tr><td><b>光寶科 2301</b><br><i class="sm">2026/8/3 法說後九家同日</i></td><td>元大 370（前次 300）｜統一 310（8/12 最新）｜凱基 295（7/31）｜元富 290｜宏遠 296｜福邦 283｜富邦 280｜國泰證期 278｜華南 250｜合庫 158～236（<b>區間</b>，全場唯一非買進；主表的 158 是此區間下緣）</td></tr>
           <tr><td><b>台達電 2308</b></td><td><b>高盛 4,120（7/30，全場最高、約為最低價的 2.2 倍）</b>｜富邦 2,500（7/20，由 3,000 下修）｜美銀 2,500（7/30）｜統一 2,400（8/12）｜花旗 2,280（7/30）｜元大 2,240（7/31；同家 7/9 版為 2,870）｜群益 2,050（9/3）｜兆豐 2,000（7/31）｜國泰 1,930（7/31）｜國票 1,900（7/31）</td></tr>
-          <tr><td><b>國巨 2327</b></td><td>摩根士丹利 1,465（7/29）｜兆豐 1,305（7/31）｜國票 1,275（7/9）｜凱基 1,250（7/22）｜富邦 1,250（7/9）｜元富 1,200（7/30）｜華南 1,100（7/30）｜玉山 740（7/30）｜宏遠 703（8/12）｜統一 688（8/11）</td></tr>
-          <tr><td><b>貿聯-KY 3665</b></td><td>元富 3,665（8/24）｜瑞銀 3,617（9/3）｜玉山 3,140｜國票 3,125｜華南 3,100｜統一 2,950｜國泰 2,900｜元大 2,850｜中信 2,775｜宏遠 2,750（8/31）</td></tr>
-          <tr><td><b>世界先進 5347</b></td><td>中信 220（8/5）｜統一 205（8/5，由 158 上修）｜宏遠 202｜元大 200｜國泰 200｜兆豐 195｜凱基 187｜華南 185｜玉山 180｜群益 175</td></tr>
-          <tr><td><b>致茂 2360</b></td><td>中信 2,800（8/3）｜國票 2,700｜富邦 2,700｜玉山 2,696｜花旗 2,500（7/30）｜元大 2,400（7/31、9/3、9/11 三度維持）</td></tr>
-          <tr><td><b>宏致 3605</b></td><td>統一 125｜第一金 122｜元富 120｜元大 115｜玉山 111｜華南 110</td></tr>
+          <tr><td><b>國巨 2327</b></td><td><div class="tplist"><span>摩根士丹利 <b>1,465</b> <i>7/29</i></span><span>兆豐 <b>1,305</b> <i>7/31</i></span><span>國票 <b>1,275</b> <i>7/9</i></span><span>凱基 <b>1,250</b> <i>7/22</i></span><span>富邦 <b>1,250</b> <i>7/9</i></span><span>元富 <b>1,200</b> <i>7/30</i></span><span>華南 <b>1,100</b> <i>7/30</i></span><span>玉山 <b>740</b> <i>7/30</i></span><span>宏遠 <b>703</b> <i>8/12</i></span><span>統一 <b>688</b> <i>8/11</i></span></div></td></tr>
+          <tr><td><b>貿聯-KY 3665</b></td><td><div class="tplist"><span>元富 <b>3,665</b> <i>8/24</i></span><span>瑞銀 <b>3,617</b> <i>9/3</i></span><span>玉山 <b>3,140</b> <i></i></span><span>國票 <b>3,125</b> <i></i></span><span>華南 <b>3,100</b> <i></i></span><span>統一 <b>2,950</b> <i></i></span><span>國泰 <b>2,900</b> <i></i></span><span>元大 <b>2,850</b> <i></i></span><span>中信 <b>2,775</b> <i></i></span><span>宏遠 <b>2,750</b> <i>8/31</i></span></div></td></tr>
+          <tr><td><b>世界先進 5347</b></td><td><div class="tplist"><span>中信 <b>220</b> <i>8/5</i></span><span>統一 <b>205</b> <i>8/5，由 158 上修</i></span><span>宏遠 <b>202</b> <i></i></span><span>元大 <b>200</b> <i></i></span><span>國泰 <b>200</b> <i></i></span><span>兆豐 <b>195</b> <i></i></span><span>凱基 <b>187</b> <i></i></span><span>華南 <b>185</b> <i></i></span><span>玉山 <b>180</b> <i></i></span><span>群益 <b>175</b> <i></i></span></div></td></tr>
+          <tr><td><b>致茂 2360</b></td><td><div class="tplist"><span>中信 <b>2,800</b> <i>8/3</i></span><span>國票 <b>2,700</b> <i></i></span><span>富邦 <b>2,700</b> <i></i></span><span>玉山 <b>2,696</b> <i></i></span><span>花旗 <b>2,500</b> <i>7/30</i></span><span>元大 <b>2,400</b> <i>7/31、9/3、9/11 三度維持</i></span></div></td></tr>
+          <tr><td><b>宏致 3605</b></td><td><div class="tplist"><span>統一 <b>125</b> <i></i></span><span>第一金 <b>122</b> <i></i></span><span>元富 <b>120</b> <i></i></span><span>元大 <b>115</b> <i></i></span><span>玉山 <b>111</b> <i></i></span><span>華南 <b>110</b> <i></i></span></div></td></tr>
           <tr><td><b>矽力-KY 6415</b></td><td>中信 600（8/31）｜凱基 530｜群益 514｜元大 480｜合庫 376～540（區間）｜<b>摩根士丹利 減碼（9/6，未載目標價）</b></td></tr>
-          <tr><td><b>瀚荃 8103</b></td><td>華南 165（8/24，由 125 上修）｜元富 150（8/24）｜群益 103（8/24）→ 138（8/31，主表採用此值）</td></tr>
-          <tr><td><b>其他</b></td><td>順德：兆豐 252、大和 265｜偉詮電：元富 100、玉山 82｜順達：華南 600（由 475 上修）｜同欣電：富邦 250（由 217 上修）｜鈺邦：兆豐 365（由 193 上修）｜力智：凱基 240、中信 219、元大 210｜松川：國票 348（由 278 上修）｜亞力：中信 151、第一金 143｜Bloom：富邦 330 美元（初評）</td></tr>
+          <tr><td><b>瀚荃 8103</b></td><td><div class="tplist"><span>華南 <b>165</b> <i>8/24，由 125 上修</i></span><span>元富 <b>150</b> <i>8/24</i></span><span>群益 <b>103</b> <i>8/24</i></span></div></td></tr>
+          <tr><td><b>其他</b></td><td><div class="tplist"><span>順德：兆豐 <b>252</b> <i></i></span><span>偉詮電：元富 <b>100</b> <i></i></span><span>順達：華南 <b>600</b> <i>由 475 上修</i></span><span>同欣電：富邦 <b>250</b> <i>由 217 上修</i></span><span>鈺邦：兆豐 <b>365</b> <i>由 193 上修</i></span><span>力智：凱基 <b>240</b> <i></i></span><span>松川：國票 <b>348</b> <i>由 278 上修</i></span><span>亞力：中信 <b>151</b> <i></i></span><span>Bloom：富邦 <b>330 美元</b> <i>初評</i></span></div></td></tr>
         </tbody>
       </table>
     </div>
@@ -1721,7 +1788,7 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
   <h3 class="sub">誰被調升最多：目標價變化排行<span class="tag-en">TARGET PRICE REVISIONS</span></h3>
   <p class="lede" style="margin-top:2px">只列同一家券商有標明前次目標價者。調升幅度大不代表股價會漲，通常代表<b>賣方把評價基準年往後挪</b>（多數改用 2027 年每股盈餘）或上修成長假設。</p>
   <div class="two rv">
-    <table class="tbl wrapall" style="margin:0">
+    <table class="tbl wrapall rank" style="margin:0">
       <thead><tr><th>調升（每檔取該檔最大幅度）</th><th>前次 → 最新</th><th>幅度</th><th>評價基準（原文）</th></tr></thead>
       <tbody>
         <tr><td><b>川湖 2059</b><br><i class="sm">華南投顧 2026/8/10</i></td><td>4,200 → 14,000</td><td class="up">+233%</td><td>該檔 8/7～8/10 共 <b>6 家</b>調升，幅度 +43%～+233%（中信 +168%、國票 +151%、高盛 +57%、凱基 +46%、國泰 +43%）</td></tr>
@@ -1736,7 +1803,7 @@ details.more-brk summary .s-no small{display:block;font-family:var(--sans);font-
         <tr><td><b>順德 2351</b><br><i class="sm">永豐投顧 2026/8/26</i></td><td>195 → 255</td><td class="up">+31%</td><td>約當 2027 年每股盈餘的 30 倍（兆豐 8/10 另由 240 上修至 252）</td></tr>
       </tbody>
     </table>
-    <table class="tbl wrapall" style="margin:0">
+    <table class="tbl wrapall rank" style="margin:0">
       <thead><tr><th>調降（每檔取該檔最大跌幅）</th><th>前次 → 最新</th><th>幅度</th><th>備註</th></tr></thead>
       <tbody>
         <tr><td><b>金山電 8042</b><br><i class="sm">華南投顧 2026/8/4</i></td><td>200 → 140</td><td class="dn">−30%</td><td>目標價調降但評等維持強力買進</td></tr>
@@ -2641,8 +2708,14 @@ const applyFilter=f=>{
   document.querySelectorAll('#chainFilters .fl').forEach(b=>b.classList.toggle('on',b.dataset.f===f));
   document.querySelectorAll('.chainseg tr.sr').forEach(tr=>{total++; const ok=f==='all'||(f==='tw'&&tr.dataset.cls==='tw')||(f==='lead'&&tr.dataset.lead); tr.hidden=!ok; if(!ok){tr.nextElementSibling.hidden=true} if(ok)shown++});
   document.querySelectorAll('.chainseg .sup').forEach(x=>{const ok=f==='all'||(f==='tw'&&x.dataset.cls==='tw')||(f==='lead'&&x.dataset.lead); x.style.display=ok?'':'none'});
+  document.querySelectorAll('table.brk tbody tr').forEach(tr=>{
+    const isTW=!!tr.querySelector('.tk.tw'), isLead=tr.classList.contains('lead');
+    const ok = f==='all' || (f==='tw'&&isTW) || (f==='lead'&&isLead);
+    tr.hidden=!ok;
+  });
   document.querySelectorAll('.who .chips').forEach(ch=>{const intl=(ch.querySelector('b')||{}).textContent==='國際'; ch.querySelectorAll('span').forEach(sp=>{const ok=f==='all'||(f==='tw'&&!intl)||(f==='lead'&&sp.dataset.lead); sp.style.display=ok?'':'none'}); ch.style.display=(f==='tw'&&intl)?'none':''});
-  fltNote.textContent=f==='all'?'':`顯示 ${shown} / ${total} 家（8 站的「誰在做」與公司表都已套用；公司表在各站「供應鏈環節」卡片內）`;
+  const brkShown=[...document.querySelectorAll('table.brk tbody tr')].filter(t=>!t.hidden).length;
+  fltNote.textContent=f==='all'?'':`顯示 ${shown} / ${total} 家（8 站的「誰在做」、各站公司表、以及 E 段券商看法表 ${brkShown} 檔都已套用）`;
 };
 document.querySelectorAll('#chainFilters .fl').forEach(btn=>btn.addEventListener('click',()=>{
   const f=btn.dataset.f;
