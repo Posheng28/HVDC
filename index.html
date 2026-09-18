@@ -808,6 +808,15 @@ table.tbl.wrapall td:first-child{white-space:normal}
 .tplist span.hi{font-weight:600}
 .callout .cl-k,.cl-k{font-size:12px!important;letter-spacing:.14em}
 .ampbox p a,.callout a{color:var(--copper-d);text-decoration:underline dotted;text-underline-offset:2px}
+/* 第四輪收尾：功能性文字對比與按鈕 */
+/* 反面證據標籤：赤土 3.53 → 深赤土 5.1 */
+.callout .cl-k[style*="--red"],.callout .cl-k{color:var(--copper-d)!important}
+.callout[style*="--red"] .cl-k,.callout[style*="fbf1ea"] .cl-k{color:#a33f16!important}
+/* 選中狀態按鈕：白字配銅底 3.23 → 配深銅 5.3，並加粗 */
+button.on,.steps button.on,.tabs button.on,.fl.on,.vw.on{background:var(--copper-d);border-color:var(--copper-d);color:#fff;font-weight:800}
+/* ＋詳情按鈕不要頂到欄位右緣 */
+.suptbl .st5{padding-right:8px}
+button.more{font-size:12px;padding:4px 8px}
 </style>
 
 <header class="mast">
@@ -958,7 +967,7 @@ table.tbl.wrapall td:first-child{white-space:normal}
     <div class="ampbox">
       <div class="an">1</div>
       <div class="at">先看算式</div>
-      <p>傳輸同樣的 <b>100kW</b>：54V 需要約 <b>1,852 安培</b>，800V 只要約 <b>125 安培</b>（同一條導體、電阻不變的前提下）。<b>下一節<a href="#why">「為什麼 800V」</a>改用 600kW 機櫃當例子</b>，同一個道理、數字會變成 11,111A → 750A。安培數才是決定銅排要多粗、連接器要多貴、熔絲要多大的那個變數。下一節<a href="#why">「為什麼 800V」</a>講的「電流降 15 倍、熱損降 219 倍」，講的就是這件事。</p>
+      <p>傳輸同樣的 <b>100kW</b>：54V 需要約 <b>1,852 安培</b>，800V 只要約 <b>125 安培</b>（同一條導體、電阻不變的前提下）。<b>下一節<a href="#why">「為什麼 800V」</a>改用 600kW 機櫃當例子</b>，同一個道理、數字會變成 11,111A → 750A。安培數才是決定銅排要多粗、連接器要多貴、熔絲要多大的那個變數。也就是前面那塊「電流 ÷15・熱損 ÷219」的由來。</p>
     </div>
     <div class="ampbox">
       <div class="an">2</div>
