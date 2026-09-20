@@ -1003,7 +1003,7 @@ button.more{font-size:12px;padding:4px 8px}
   </div>
 
   <div class="why rv">
-    <span class="big">GPU 機櫃的功率從 GB200 的 120kW 一路衝向 Kyber 的 1MW，電壓不變的話電流會大到「銅排比人粗、電源擱架佔滿整櫃」。電壓拉高 15 倍，電流就剩 1/15、線損剩 1/219——這是物理，不是選擇。</span>
+    <span class="big">GPU 機櫃的功率從 GB200 的 120kW 一路衝向 Kyber 的 1MW，電壓不變的話電流會大到「銅排比人粗、電源擱架佔滿整櫃」。於是電壓拉高 15 倍，電流就剩 1/15、線損剩 1/219。</span>
     功率 P ＝ 電壓 V × 電流 I。同樣 600kW，<b>54V 要推 11,111A，800V 只要 750A</b>；導體損耗 I²R 跟電流平方成正比，所以電流降約 14.8 倍、熱損降約 219 倍。<span class="src">⚠ 部分報告（SemiAnalysis 經轉述）寫「54V 需 12,500A」，那個數字是<b>用 48V 級推算</b>的（600kW÷48V＝12,500A）；本頁一律用 54V 實算的 11,111A，才能和「電流降約 15 倍、熱損降 219 倍」這組比值自洽。</span>⚠ 效率的 87.4% 指的是<b>第四階段 SST 終態</b>，800V 第二階段為 86.5%；另一套中信口徑是 87.6% → 92% 以上，兩套基準不同不要混用。<br>NVIDIA 官方口徑：同樣線規下 800V 直流的傳輸功率比 415V 交流<b>多 157%</b>、整體省 <b>45% 銅</b>、端到端效率最多<b>提升 5 個百分點</b>；如果 1MW 機櫃還留在 54V，<b>光是電源擱架就要佔掉 64U</b>——一整個機櫃都不夠放電源。
   </div>
 
@@ -1752,7 +1752,7 @@ button.more{font-size:12px;padding:4px 8px}
       <tr><td><b>資料中心設計夥伴（6）</b></td><td class="chips"><span>CoreWeave</span><span>Foxconn</span><span>Lambda</span><span>Nebius</span><span>Oracle</span><span>together.ai</span></td><td>鴻海 2317</td></tr>
     </tbody>
   </table>
-  <div class="callout rv"><span class="cl-k">一句話</span><b>台達電是唯一同時出現在 PDB、In-Row 電力、CDU、DC/DC Shelf、110kW Shelf、液冷 Busbar、冷板、Manifold 全部類別的廠商</b>；官方名單上的台股只有台達、光寶、貿聯（＋立錡），其餘台股都是二階受惠。</div>
+  <div class="callout rv"><span class="cl-k">台達電的位置</span><b>台達電是唯一同時出現在 PDB、In-Row 電力、CDU、DC/DC Shelf、110kW Shelf、液冷 Busbar、冷板、Manifold 全部類別的廠商</b>；官方名單上的台股只有台達、光寶、貿聯（＋立錡），其餘台股都是二階受惠。</div>
 
 </section>
 
@@ -1899,7 +1899,7 @@ button.more{font-size:12px;padding:4px 8px}
     <h3 class="sub">Threads 大神觀點：券商少講、但值得記的<span class="tag-en">THREADS · 48 則篩出 16 則</span></h3>
   <p class="lede" style="margin-top:2px">2026-09-13 搜 Threads（threads.com）48 則、約 40 個帳號，依可信度篩選；純追價、AI 帳號無出處推測的已剔除（見下方「不採用」）。點帳號可開原文。</p>
   <table class="tbl wrapall rv">
-    <thead><tr><th>帳號</th><th>論點一句話</th><th>關鍵數字</th><th>受惠股</th><th>可信度</th></tr></thead>
+    <thead><tr><th>帳號</th><th>論點</th><th>關鍵數字</th><th>受惠股</th><th>可信度</th></tr></thead>
     <tbody>
       <tr><td><a href="https://www.threads.com/@georytyy/post/Dcde-XuFMfT" target="_blank" rel="noopener">@georytyy</a></td><td><b>800V busway 要等 Power Center／Power Block 階段</b>；2026 Power Rack 第一階段走 AC Power Whip＋DC Cross Cable</td><td>1MW 機櫃用 54V 需約 200kg 銅排</td><td>貿聯 3665（時點往後）</td><td>一手技術整理</td></tr>
       <tr><td><a href="https://www.threads.com/@linvalue/post/DZBme--kok3/" target="_blank" rel="noopener">@linvalue</a></td><td>Busbar 分「模組級 HPM」與「機櫃級 5,000A 液冷」兩層，<b>供應商池至少 8 家</b>——「貿聯獨家」是誤讀</td><td>5,000A 液冷 busbar</td><td>Pinda、立訊、Lead Wealth、Interplex、鴻海、台達、貿聯、Amphenol</td><td>一手技術整理</td></tr>
@@ -1952,7 +1952,7 @@ button.more{font-size:12px;padding:4px 8px}
 
   <h3 class="sub">本頁提到的機構是誰<span class="tag-en">WHO IS WHO</span></h3>
   <table class="tbl wrapall inst rv">
-    <thead><tr><th>類型</th><th>名稱（本頁寫法）</th><th>一句話</th></tr></thead>
+    <thead><tr><th>類型</th><th>名稱（本頁寫法）</th><th>是什麼</th></tr></thead>
     <tbody>
       <tr><td>外資券商</td><td>Morgan Stanley（大摩）、Goldman Sachs（GS／高盛）、UBS（瑞銀）、JPM（摩根大通）、Bernstein、Citi（花旗）、BNP（法巴）、Macquarie（麥格理）、BofA（美銀）</td><td>研究部門出的產業報告，常給供應商名單、價值量與市場規模估算；「E」結尾的數字是他們的預估</td></tr>
       <tr><td>台系券商</td><td>國泰、富邦、統一、永豐、凱基、華南、宏遠、元大、中信</td><td>台股個股的訪談紀要與財務預估，是台廠時程與市占數字的主要來源</td></tr>
