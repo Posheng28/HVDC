@@ -638,9 +638,9 @@ button.mo:hover{border-color:var(--rust)}
 .mast h1{font-size:clamp(30px,3.6vw,52px);line-height:1.22}
 .standfirst{max-width:none;font-size:17px}
 .kp .lbl .lk2{display:block;color:var(--ink);font-weight:700;margin-bottom:2px}
-/* 白話一句 / 四階段表 */
+/* 站副標 / 四階段表 */
 .lh .plain{font-size:14px;color:var(--mut);margin-top:5px;line-height:1.5}
-.lh .plain b{font-size:10.5px;letter-spacing:.18em;color:var(--copper-d);margin-right:8px;font-weight:800}
+.lh .plain b{font-weight:700;color:var(--ink)}
 .phz{margin:6px 0 14px}
 /* 小白名詞 */
 .term{border-bottom:1px dotted var(--copper);cursor:help;transition:.12s}
@@ -894,7 +894,7 @@ button.more{font-size:12px;padding:4px 8px}
     const S=[
       {k:'1｜電網進線：13.8～34.5kV 交流',w:'資料中心從公用電網拉中壓交流電進來。真正的瓶頸叫 <b>Time-to-Power</b>：300MW 以上園區接電 3～7 年、大型變壓器交期 24～48 個月。',c:'800V 沒直接改這一層，但把「自備電力」推成主流題材：燃料電池不用等電網，90 天內就能供電。',tw:['華城 1519（變壓器）','中興電 1513（GIS 開關設備）','高力 8996（燃料電池熱交換器）','康舒 6282（燃料電池電源）'],intl:['Eaton（電力設備）','GE Vernova（燃氣機組）','Bloom Energy（燃料電池）']},
       {k:'2｜變壓器：中壓降到 480V 級',w:'電磁式變壓器把中壓降到 480V 三相交流，送進 UPS 與配電盤。',c:'800V 分四個階段推（四階段表在下方站 3）：前三階段（2026～2029）傳統變壓器都還要用，要到第四階段（2029 以後）才被 SST 固態變壓器取代。全球變壓器缺口約 30%，交期就是定價權。',tw:['華城 1519（大型變壓器）','士電 1503（變壓器／配電盤）','亞力 1514（變壓器／開關設備）','中興電 1513（GIS）'],intl:['Eaton','Siemens Energy','Hitachi Energy（變壓器與開關設備）']},
-      {k:'3｜整流／SST：交流變 800V 直流',w:'第一階段用整流器（AC→DC）把 480V 變 800V 直流；終極版 SST 一顆吃 13.8～35kV、直接吐 800V，省掉變壓器＋UPS 兩層。',c:'全新品類。SST 佔地面積 −63%、效率 97.5～98.5%，但 2026/5 前無資料中心 UL 認證、NEC 2029 才支援 → 普及 2028 年後。',tw:['台達電 2308（SST 已送樣四大雲端業者）'],intl:['Eaton','DG Matrix','Amperesand','Heron Power（SST 固態變壓器）','Vertiv','Schneider','ABB（整流／配電系統）']},
+      {k:'3｜整流／SST：交流變 800V 直流',w:'第一階段用整流器（AC→DC）把 480V 變 800V 直流；終極版 SST 一顆吃 13.8～35kV、直接吐 800V，取代站 2 的低壓變壓器與 UPS；出來已經是直流，交流配電盤也換成直流母線槽。',c:'全新品類。SST 佔地面積 −63%、效率 97.5～98.5%，但 2026/5 前無資料中心 UL 認證、NEC 2029 才支援 → 普及 2028 年後。',tw:['台達電 2308（SST 已送樣四大雲端業者）'],intl:['Eaton','DG Matrix','Amperesand','Heron Power（SST 固態變壓器）','Vertiv','Schneider','ABB（整流／配電系統）']},
       {k:'4｜直流匯流排：800V 送到每一列機櫃',w:'800V 直流沿液冷 Busway／銅排送到機櫃列。',c:'直流沒有過零點、電弧不會自己熄滅 → 傳統機械斷路器來不及切 → 微秒級 SSCB、e-Fuse、高壓熔絲、磁吹接觸器全是新市場；&gt;4,000A 必須液冷。',tw:['貿聯 3665（Busway／Power Whip 線束）','松川 7788（直流接觸器）','德微 3675（TVS 保護二極體）'],intl:['ABB','Eaton（固態斷路器）','Littelfuse（熔絲）','Amphenol（連接器）']},
       {k:'5｜電源櫃 Sidecar：Power Shelf＋BBU＋超級電容',w:'電源從 GPU 機櫃搬出，獨立成一座 660kW 電源櫃（6×110kW Shelf），加 16kW BBU 模組與超級電容櫃，供 1～4 個運算櫃。',c:'單櫃電源價值 3.6 萬 → 40 萬美元；BBU 由選配變必備（2027 滲透率 &gt;85%）；超級電容在 1 毫秒內吸收 GPU 300～500kW 的抽載尖峰。',tw:['台達電 2308（電源櫃／PSU）','光寶科 2301（電源櫃／PSU）','康舒 6282（電源櫃／PSU）','順達 3211（BBU）','AES-KY 6781（BBU）','新盛力 4931（BBU）','金山電 8042（電容）'],intl:['Vertiv','Flex','Schneider（電源櫃系統）']},
       {k:'6｜800V → 50V：機櫃入口的第一次降壓',w:'800V 進 GPU 機櫃先降到 50V 級（800V-50V DC/DC Power Shelf），保留既有 54V 生態的 IBC／VRM——這是 Vera Rubin 的過渡設計。',c:'Kyber 進一步把 800V 直接送進托盤、每顆 GPU 一顆 64:1 LLC 轉換器（800V 一次降到 12V）：IBC 每櫃價值 2,200 → &gt;30,000 美元（BNP）。',tw:['台達電 2308（800V→50V 電源層架）','光寶科 2301（電源層架）'],intl:['Flex','Vertiv','Megmeet（電源層架）','Infineon','TI','onsemi','STMicro（功率半導體）','Navitas（GaN）']},
@@ -1213,7 +1213,7 @@ button.more{font-size:12px;padding:4px 8px}
 <section class="layer" id="L1">
   <div class="lh rv">
     <div class="volt"><span>13.8～34.5kV AC</span></div>
-    <div class="lt"><div class="ln">STATION 1 · GRID · TIME-TO-POWER</div><h2>電網接入與自備電力</h2><div class="plain"><b>白話一句</b>先要有電，而且要快。</div></div>
+    <div class="lt"><div class="ln">STATION 1 · GRID · TIME-TO-POWER</div><h2>電網接入與自備電力</h2><div class="plain">先要有電，而且要快。</div></div>
     <div class="lk">接電 3～7 年</div>
   </div>
   <div class="lgrid rv">
@@ -1230,7 +1230,7 @@ button.more{font-size:12px;padding:4px 8px}
 <section class="layer" id="L2">
   <div class="lh rv">
     <div class="volt"><span>480V AC</span></div>
-    <div class="lt"><div class="ln">STATION 2 · TRANSFORMER · SWITCHGEAR</div><h2>變壓器・重電・開關設備</h2><div class="plain"><b>白話一句</b>把電網的高壓降成機房能用的低壓；現在缺貨、交期最長。</div></div>
+    <div class="lt"><div class="ln">STATION 2 · TRANSFORMER · SWITCHGEAR</div><h2>變壓器・重電・開關設備</h2><div class="plain">把電網的高壓降成機房能用的低壓；現在缺貨、交期最長。</div></div>
     <div class="lk">缺口約 30%</div>
   </div>
   <div class="lgrid rv">
@@ -1247,11 +1247,11 @@ button.more{font-size:12px;padding:4px 8px}
 <section class="layer" id="L3">
   <div class="lh rv">
     <div class="volt"><span>AC → 800V DC</span></div>
-    <div class="lt"><div class="ln">STATION 3 · RECTIFIER · SOLID-STATE TRANSFORMER</div><h2>整流器／SST：交流變 800V 直流</h2><div class="plain"><b>白話一句</b>交流變直流的那一刀；800V 架構的心臟。</div></div>
+    <div class="lt"><div class="ln">STATION 3 · RECTIFIER · SOLID-STATE TRANSFORMER</div><h2>整流器／SST：交流變 800V 直流</h2><div class="plain">交流變直流的那一刀；800V 架構的心臟。</div></div>
     <div class="lk">SST 2028 年後</div>
   </div>
   <div class="lgrid rv">
-    <div class="lbox what"><i>這一站做什麼</i>交流電要先變成 800V 直流才能往下送，做這件事的機器叫<b>整流器</b>。第一～三階段用 MW 級整流器把 480V（或 415V）交流變 800V 直流；終極版是 <b>SST 固態變壓器</b>：一台吃 13.8～35kV 中壓、直接吐 800V 直流，把「變壓器＋整流器＋UPS」三層合成一層。</div>
+    <div class="lbox what"><i>這一站做什麼</i>交流電要先變成 800V 直流才能往下送，做這件事的機器叫<b>整流器</b>。第一～三階段用 MW 級整流器把 480V（或 415V）交流變 800V 直流；終極版是 <b>SST 固態變壓器</b>：一台吃 13.8～35kV 中壓、直接吐 800V 直流，把「低壓變壓器＋整流器＋UPS」三層合成一層；由於出來就是直流，上一站那組交流配電盤也換成直流母線槽（這一步在第三階段就先發生，見下方四階段表）。</div>
     <div class="lbox change"><i>800V 改了什麼</i><b>對台廠是全新品類。</b>好處：UPS 兩次轉換（交流→直流→交流，各掉 2～5%）消失。難處：3～6MW 級 SST 要 24 小時滿載、效率 >99%，目前沒人做到；2026/5 前沒有任何資料中心用的 SST 拿到 UL 安規認證；美國電工法規 NEC 要到 2029 版才開始納入 800V 直流（⚠ 來源指 2029 僅部分覆蓋、完整成熟可能要 2032～2035）。</div>
     <div class="lbox nums"><i>關鍵數字</i><div class="chips"><span class="num">SST 佔地面積 −63%、方案成本 −46%</span><span class="num">效率 97.5～98.5%（ETH 樣機 98%@400kW）</span><span class="num">SST 市場 2030：130 億美元（華爾街見聞轉述）／320 億美元（SemiAnalysis 原文）</span><span class="num">SST 消耗的 SiC 是 Sidecar 的 7～10 倍</span><span class="num">台達 SST 送樣四大 CSP、FY27 少量</span><span class="num">新創 12 個月融資 >3.2 億美元</span></div></div>
     <div class="lbox who"><i>誰在做</i><div class="chips"><b>台廠</b><span class="twc">台達電 2308</span></div><div class="chips"><b>國際</b><span class="">Eaton（Resilient Power）</span><span class="">DG Matrix（MGX 唯一 SST）</span><span class="">Amperesand</span><span class="">Heron Power</span><span class="">Vertiv</span><span class="">Schneider</span><span class="">ABB</span></div></div>
@@ -1276,7 +1276,7 @@ button.more{font-size:12px;padding:4px 8px}
 <section class="layer" id="L4">
   <div class="lh rv">
     <div class="volt"><span>800V DC 匯流</span></div>
-    <div class="lt"><div class="ln">STATION 4 · BUSWAY · SSCB · POWER WHIP</div><h2>直流匯流排・斷路保護・連接線束</h2><div class="plain"><b>白話一句</b>電從機房送到每一列機櫃；直流的電弧不會自己熄，保護元件全部要重做。</div></div>
+    <div class="lt"><div class="ln">STATION 4 · BUSWAY · SSCB · POWER WHIP</div><h2>直流匯流排・斷路保護・連接線束</h2><div class="plain">電從機房送到每一列機櫃；直流的電弧不會自己熄，保護元件全部要重做。</div></div>
     <div class="lk">電弧不自熄</div>
   </div>
   <div class="lgrid rv">
@@ -1293,7 +1293,7 @@ button.more{font-size:12px;padding:4px 8px}
 <section class="layer" id="L5">
   <div class="lh rv">
     <div class="volt"><span>800V → 電源櫃</span></div>
-    <div class="lt"><div class="ln">STATION 5 · POWER RACK · BBU · CAPACITOR</div><h2>電源櫃 Sidecar：Power Shelf＋BBU＋超級電容</h2><div class="plain"><b>白話一句</b>電源從 GPU 櫃搬出來、自己一櫃；台達、光寶的主戰場。</div></div>
+    <div class="lt"><div class="ln">STATION 5 · POWER RACK · BBU · CAPACITOR</div><h2>電源櫃 Sidecar：Power Shelf＋BBU＋超級電容</h2><div class="plain">電源從 GPU 櫃搬出來、自己一櫃；台達、光寶的主戰場。</div></div>
     <div class="lk">單櫃 3.6 → 40 萬美元</div>
   </div>
   <div class="lgrid rv">
@@ -1310,7 +1310,7 @@ button.more{font-size:12px;padding:4px 8px}
 <section class="layer" id="L6">
   <div class="lh rv">
     <div class="volt"><span>800V → 50V／12V</span></div>
-    <div class="lt"><div class="ln">STATION 6 · DC-DC · SiC · GaN · Si</div><h2>機櫃入口降壓：DC-DC 與功率半導體</h2><div class="plain"><b>白話一句</b>800V 進機櫃先降到 50V；功率半導體換材料的拐點。</div></div>
+    <div class="lt"><div class="ln">STATION 6 · DC-DC · SiC · GaN · Si</div><h2>機櫃入口降壓：DC-DC 與功率半導體</h2><div class="plain">800V 進機櫃先降到 50V；功率半導體換材料的拐點。</div></div>
     <div class="lk">GaN 先、SiC 後</div>
   </div>
   <div class="lgrid rv">
@@ -1327,7 +1327,7 @@ button.more{font-size:12px;padding:4px 8px}
 <section class="layer" id="L7">
   <div class="lh rv">
     <div class="volt"><span>12V → 0.8V</span></div>
-    <div class="lt"><div class="ln">STATION 7 · ON-BOARD POWER · VPD</div><h2>板上電源：IBC・VRM・電感・封裝</h2><div class="plain"><b>白話一句</b>最後一哩：12V 變 0.8V、幾千安培餵給 GPU。</div></div>
+    <div class="lt"><div class="ln">STATION 7 · ON-BOARD POWER · VPD</div><h2>板上電源：IBC・VRM・電感・封裝</h2><div class="plain">最後一哩：12V 變 0.8V、幾千安培餵給 GPU。</div></div>
     <div class="lk">DrMOS 20 → 50 顆</div>
   </div>
   <div class="lgrid rv">
@@ -1344,7 +1344,7 @@ button.more{font-size:12px;padding:4px 8px}
 <section class="layer" id="L8">
   <div class="lh rv">
     <div class="volt"><span>0.8V · 數千安培</span></div>
-    <div class="lt"><div class="ln">STATION 8 · CHIP · ODM · TEST</div><h2>GPU、整機與測試</h2><div class="plain"><b>白話一句</b>整櫃組起來、測完出貨；效率每多 1% 都是真金白銀。</div></div>
+    <div class="lt"><div class="ln">STATION 8 · CHIP · ODM · TEST</div><h2>GPU、整機與測試</h2><div class="plain">整櫃組起來、測完出貨；效率每多 1% 都是真金白銀。</div></div>
     <div class="lk">效率 82% → 92%+</div>
   </div>
   <div class="lgrid rv">
