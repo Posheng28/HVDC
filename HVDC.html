@@ -809,7 +809,7 @@ table.tbl.wrapall td:first-child{white-space:normal}
 .callout .cl-k,.cl-k{font-size:12px!important;letter-spacing:.14em}
 .ampbox p a,.callout a{color:var(--copper-d);text-decoration:underline dotted;text-underline-offset:2px}
 /* 第四輪收尾：功能性文字對比與按鈕 */
-/* 反面證據標籤：赤土 3.53 → 深赤土 5.1 */
+/* 紅底提醒框標籤：赤土 3.53 → 深赤土 5.1 */
 .callout .cl-k[style*="--red"],.callout .cl-k{color:var(--copper-d)!important}
 .callout[style*="--red"] .cl-k,.callout[style*="fbf1ea"] .cl-k{color:#a33f16!important}
 /* 選中狀態按鈕：白字配銅底 3.23 → 配深銅 5.3，並加粗 */
@@ -986,13 +986,6 @@ button.more{font-size:12px;padding:4px 8px}
       <p>村田把電容整合進基板（<b>iPaS</b>）、供電改由<b>晶片正下方垂直進入</b>，2027 年量產。<b>垂直供電（縮短路徑）與提高電壓（降低電流）是兩條可以並行的路線</b>，不是二選一——這是<a href="#L7">第 7 站</a>「水平 → 垂直供電」那條路線上的另一個解法。</p>
     </div>
   </div>
-
-  <div class="callout rv" style="background:#fbf1ea;border-left:3px solid var(--red)"><span class="cl-k" style="color:var(--red)">這段的反面證據</span>
-    ① <b>800V 目前是規格路線圖，不是已量產的標準</b>：Infineon 與 SolarEdge 是「擴大合作、共同開發」，村田 iPaS 要 2027 年，Bloom 的 800V 直流輸出目前也只在自家設備端。<b>相關標的 2026 年的 800V 營收貢獻接近零。</b>
-    ② 原文<b>沒有點名任何台股</b>，全文具名的只有 Infineon 與 SolarEdge；台股的對應是後續推導，不是原文結論。
-    ③ 富邦同期明確註記：<b>直流供電只能簡化不斷電系統的前端架構，不代表可以取消完整備援與儲能系統</b>——本頁<a href="#L5">第 5 站</a>寫的「集中式 UPS 消失」要配這句一起讀。
-    <span class="src" style="display:block;margin-top:6px">來源：SemiVision 2026/9/14、TechNews 2026/9/14、富邦投顧 2026/9/10。⚠ 其中①②兩點是<b>研究筆記在 2026/9/15 入庫時所加的編者總結</b>，不是上述三份原文的字句；③ 出自富邦報告原文。</span>
-  </div>
 </section>
 
 <!-- ══════════ 01 ══════════ -->
@@ -1004,7 +997,7 @@ button.more{font-size:12px;padding:4px 8px}
 
   <div class="why rv">
     <span class="big">GPU 機櫃的功率從 GB200 的 120kW 一路衝向 Kyber 的 1MW，電壓不變的話電流會大到「銅排比人粗、電源擱架佔滿整櫃」。於是電壓拉高 15 倍，電流就剩 1/15、線損剩 1/219。</span>
-    功率 P ＝ 電壓 V × 電流 I。同樣 600kW，<b>54V 要推 11,111A，800V 只要 750A</b>；導體損耗 I²R 跟電流平方成正比，所以電流降約 14.8 倍、熱損降約 219 倍。<span class="src">⚠ 部分報告（SemiAnalysis 經轉述）寫「54V 需 12,500A」，那個數字是<b>用 48V 級推算</b>的（600kW÷48V＝12,500A）；本頁一律用 54V 實算的 11,111A，才能和「電流降約 15 倍、熱損降 219 倍」這組比值自洽。</span>⚠ 效率的 87.4% 指的是<b>第四階段 SST 終態</b>，800V 第二階段為 86.5%；另一套中信口徑是 87.6% → 92% 以上，兩套基準不同不要混用。<br>NVIDIA 官方口徑：同樣線規下 800V 直流的傳輸功率比 415V 交流<b>多 157%</b>、整體省 <b>45% 銅</b>、端到端效率最多<b>提升 5 個百分點</b>；如果 1MW 機櫃還留在 54V，<b>光是電源擱架就要佔掉 64U</b>——一整個機櫃都不夠放電源。
+    功率 P ＝ 電壓 V × 電流 I。同樣 600kW，<b>54V 要推 11,111A，800V 只要 750A</b>；導體損耗 I²R 跟電流平方成正比，所以電流降約 14.8 倍、熱損降約 219 倍。<br>NVIDIA 官方口徑：同樣線規下 800V 直流的傳輸功率比 415V 交流<b>多 157%</b>、整體省 <b>45% 銅</b>、端到端效率最多<b>提升 5 個百分點</b>；如果 1MW 機櫃還留在 54V，<b>光是電源擱架就要佔掉 64U</b>——一整個機櫃都不夠放電源。
   </div>
 
   <div class="kpiband rv" style="margin:18px 0 6px">
@@ -2991,10 +2984,16 @@ const annotate=root=>{breakSemi(root);root.querySelectorAll(HOSTSEL).forEach(h=>
 window.hvdcAnnotate=annotate; annotate(document);
 const tip=document.createElement('div'); tip.id='tip'; document.body.appendChild(tip);
 let tipFor=null;
-const showTip=el=>{const k=el.dataset.k; const def=el.dataset.def||G[k]; if(!def)return; tip.innerHTML='<b>'+k+'</b>'+def+(el.dataset.def?'':'<span class="tg" data-open-gloss>全部名詞 →</span>'); tip.classList.add('on'); tipFor=el; el.classList.add('on');
+/* 可視範圍用 visualViewport：觸控板 pinch 放大時版面不重排、只看得到一部分，innerWidth 會騙人（也不含捲軸） */
+const visRect=()=>{const v=window.visualViewport; return v?{L:v.offsetLeft,T:v.offsetTop,W:v.width,H:v.height}:{L:0,T:0,W:document.documentElement.clientWidth,H:innerHeight}};
+const placeTip=el=>{const {L,T,W,H}=visRect();
   /* body 有 zoom:1.1：rect 是螢幕座標、style.left 會再被乘上 zoom，所以量出實際倍率後換算回去 */
-  const r=el.getBoundingClientRect(); tip.style.left='0px'; tip.style.top='0px'; const tr=tip.getBoundingClientRect(), z=tr.width/tip.offsetWidth||1, tw=tr.width, th=tr.height;
-  let x=Math.min(Math.max(8,r.left),innerWidth-tw-8), y=r.bottom+8; if(y+th>innerHeight-8)y=r.top-th-8; tip.style.left=x/z+'px'; tip.style.top=y/z+'px'};
+  tip.style.left='0px'; tip.style.top='0px'; tip.style.maxWidth=''; let tr=tip.getBoundingClientRect(); const z=tr.width/tip.offsetWidth||1;
+  if(tr.width>W-16){tip.style.maxWidth=(W-16)/z+'px'; tr=tip.getBoundingClientRect()}
+  const r=el.getBoundingClientRect(), tw=tr.width, th=tr.height;
+  const x=Math.max(L+8,Math.min(r.left,L+W-tw-8)); let y=r.bottom+8; if(y+th>T+H-8)y=Math.max(T+8,r.top-th-8);
+  tip.style.left=x/z+'px'; tip.style.top=y/z+'px'};
+const showTip=el=>{const k=el.dataset.k; const def=el.dataset.def||G[k]; if(!def)return; tip.innerHTML='<b>'+k+'</b>'+def+(el.dataset.def?'':'<span class="tg" data-open-gloss>全部名詞 →</span>'); tip.classList.add('on'); tipFor=el; el.classList.add('on'); placeTip(el)};
 const hideTip=()=>{tip.classList.remove('on'); if(tipFor)tipFor.classList.remove('on'); tipFor=null};
 let lastScrollT=0; addEventListener('scroll',()=>{lastScrollT=Date.now()},{passive:true});
 document.addEventListener('mouseover',e=>{if(Date.now()-lastScrollT<300)return; const t=e.target.closest('.term,.hasrole'); if(t&&t!==tipFor&&!document.querySelector('[data-pin]'))showTip(t)});
@@ -3004,7 +3003,12 @@ document.addEventListener('click',e=>{const t=e.target.closest('.term,.hasrole')
   if(!e.target.closest('#tip')){document.querySelectorAll('[data-pin]').forEach(x=>delete x.dataset.pin);hideTip()}});
 document.addEventListener('focusin',e=>{const t=e.target.closest('.term,.hasrole'); if(t)showTip(t)});
 addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('[data-pin]').forEach(x=>delete x.dataset.pin);hideTip();closeGloss()}});
-addEventListener('scroll',()=>{if(tipFor&&!tipFor.dataset.pin)hideTip()},{passive:true});
+/* 捲動或 pinch 平移：沒釘住就收；釘住的跟著字走，字離開可視範圍才收 */
+const onViewMove=()=>{if(!tipFor)return; if(!tipFor.dataset.pin){hideTip();return}
+  const r=tipFor.getBoundingClientRect(), {L,T,W,H}=visRect();
+  if(r.bottom<T||r.top>T+H||r.right<L||r.left>L+W){delete tipFor.dataset.pin;hideTip()}else placeTip(tipFor)};
+addEventListener('scroll',onViewMove,{passive:true});
+if(window.visualViewport){visualViewport.addEventListener('scroll',onViewMove);visualViewport.addEventListener('resize',onViewMove)}
 /* 名詞速查面板 */
 const gl=document.createElement('div'); gl.id='gloss';
 gl.innerHTML='<div class="gp"><span class="gx" title="關閉">×</span><h3>名詞速查</h3><p class="gsub">'+Object.keys(G).length+' 個詞。全頁看到<span class="term" style="pointer-events:none">虛線底的字</span>，滑過去或點一下就有解釋。</p><input type="search" placeholder="輸入關鍵字，例如 BBU、SST、電弧"><dl>'+Object.keys(G).sort((a,b)=>a.localeCompare(b,'zh-Hant')).map(k=>'<dt>'+k+'</dt><dd>'+G[k]+'</dd>').join('')+'</dl></div>';
