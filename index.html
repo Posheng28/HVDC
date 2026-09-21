@@ -2992,8 +2992,9 @@ window.hvdcAnnotate=annotate; annotate(document);
 const tip=document.createElement('div'); tip.id='tip'; document.body.appendChild(tip);
 let tipFor=null;
 const showTip=el=>{const k=el.dataset.k; const def=el.dataset.def||G[k]; if(!def)return; tip.innerHTML='<b>'+k+'</b>'+def+(el.dataset.def?'':'<span class="tg" data-open-gloss>全部名詞 →</span>'); tip.classList.add('on'); tipFor=el; el.classList.add('on');
-  const r=el.getBoundingClientRect(); tip.style.left='0px'; tip.style.top='0px'; const tw=tip.offsetWidth,th=tip.offsetHeight;
-  let x=Math.min(Math.max(8,r.left),innerWidth-tw-8), y=r.bottom+8; if(y+th>innerHeight-8)y=r.top-th-8; tip.style.left=x+'px'; tip.style.top=y+'px'};
+  /* body 有 zoom:1.1：rect 是螢幕座標、style.left 會再被乘上 zoom，所以量出實際倍率後換算回去 */
+  const r=el.getBoundingClientRect(); tip.style.left='0px'; tip.style.top='0px'; const tr=tip.getBoundingClientRect(), z=tr.width/tip.offsetWidth||1, tw=tr.width, th=tr.height;
+  let x=Math.min(Math.max(8,r.left),innerWidth-tw-8), y=r.bottom+8; if(y+th>innerHeight-8)y=r.top-th-8; tip.style.left=x/z+'px'; tip.style.top=y/z+'px'};
 const hideTip=()=>{tip.classList.remove('on'); if(tipFor)tipFor.classList.remove('on'); tipFor=null};
 let lastScrollT=0; addEventListener('scroll',()=>{lastScrollT=Date.now()},{passive:true});
 document.addEventListener('mouseover',e=>{if(Date.now()-lastScrollT<300)return; const t=e.target.closest('.term,.hasrole'); if(t&&t!==tipFor&&!document.querySelector('[data-pin]'))showTip(t)});
