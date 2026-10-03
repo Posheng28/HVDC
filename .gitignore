@@ -2,3 +2,7 @@
 *.log
 Thumbs.db
 .DS_Store
+
+# 買方分析的本機資料與計畫（不公開）
+buyside/
+docs/
