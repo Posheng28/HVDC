@@ -3126,6 +3126,9 @@ const strip=h=>h.replace(/<[^>]+>/g,'');
 const short=(h,n)=>{const t=strip(h||'').trim(); if(t.length<=n)return t; const seg=t.slice(0,n+14); let m=seg.match(/^[\s\S]*[。；]/); let cut=m?m[0]:null; if(!cut){m=seg.match(/^[\s\S]*[，、）)]/); cut=m?m[0]:seg.slice(0,n);} cut=cut.replace(/[，、（(]$/,''); cut=cut.replace(/[\d][\d,.，]*\s*[A-Za-z%％／\/]*$/,function(x){return /[。；]$/.test(cut)?x:''}); cut=cut.trim(); return (cut.length?cut:t.slice(0,n))+(t.length>cut.length?'…':'')};
 const flow=document.querySelector('main.main');
 /*BS-START*/
+/* 環節編號照頁面由上到下的順序（01、02、03…，跟光通訊頁一樣）；chain 陣列的原始順序只拿來對位置（data-seg） */
+const segOrder=[...document.querySelectorAll('.chainseg[data-seg]')].map(e=>+e.dataset.seg);
+const segNo=i=>{const k=segOrder.indexOf(i+1); return k<0?i+1:k+1};
 const BSV={A:['A｜題材純、股價還沒反映','A 還沒反映'],B:['B｜題材是真的、股價已反映','B 已反映'],C:['C｜題材占比小，看本業','C 看本業'],D:['D｜不是核心族群','D 非核心'],U:['U｜未上市：當訊號看','U 當訊號']};
 const bsOf=s=>{if(typeof BS==='undefined')return null; let b=BS[s.nm]; if(b&&b.same)b=BS[b.same]; return b||null};
 /* 9/18 之後的新進展：放在卡片「最新進展」最前面（總覽表那一欄也會先顯示新的） */
@@ -3174,7 +3177,7 @@ const segHTML=chain.map((c,i)=>{
   return `
 <details class="acc">
   <summary>
-    <span class="s-no"><small>供應鏈環節</small>${String(i+1).padStart(2,'0')}</span>
+    <span class="s-no"><small>供應鏈環節</small>${String(segNo(i)).padStart(2,'0')}</span>
     ${icon(c.ic)}
     <div class="s-mid">
       <div class="s-tt">${c.tt}<span class="en">${c.en}</span><span class="cnt">${c.items.length} 家 · 台股 ${tw}</span></div>
